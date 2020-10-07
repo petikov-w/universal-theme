@@ -1,10 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes();?>>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Universal</title>
 	<?php wp_head();?>
 </head>
-<body>
-
+<body <?php body_class(); ?>>
+<?php wp_body_open();?>
+<header class="header">
+    <div class="container">
+        <div class="header-wrapper">
+	        <?php
+              //Вывод логотипа
+	          if(has_custom_logo()){
+		        the_custom_logo();
+	          } else {
+		        echo 'Universal';
+	          }
+	          // Вывод основного меню сайта
+	          wp_nav_menu( [
+		        'theme_location'  => 'header_menu',
+		        'container'       => 'nav',
+		        'container_class' => 'header-nav',
+		        'menu_class'      => 'header-menu',
+		        'echo'            => true,
+	        ] );
+	        // Вывод поля для поискового запроса
+	          echo get_search_form();
+	       ?>
+        </div>
+    </div>
+</header>
