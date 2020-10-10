@@ -21,6 +21,5 @@
 }
 
 body {
-  font-family: "Lato Regular", sans-serif;
-  font-size: 14px;
+  @include use_font($LatoRegular,14px);
 }

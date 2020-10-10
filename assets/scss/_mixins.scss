@@ -1,0 +1,20 @@
+// Миксины
+
+@mixin use_font($font, $size) {
+  font-family: $font;
+  font-size: $size;
+}
+
+@mixin wh_size($width, $height, $type-circle:none) {
+  width: $width;
+  height: $height;
+
+  @if $type-circle == circle {
+    border-radius:100%;
+  }
+  @else if $type-circle == edge {
+    border-radius:30px;
+  }
+  @else {
+  }
+}
