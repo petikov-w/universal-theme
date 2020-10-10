@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-
+<main class="front-page-header">
 <div class="container">
 	<div class="hero">
 		<div class="left">
@@ -15,15 +15,38 @@ get_header();
 			</a><!-- /.author -->
             <div class="post-text">
                 <a href="#" class="category-name">Рубрика</a>
-                <h2 class="post-title">Название поста Название поста Название поста Название поста</h2>
+                <h2 class="post-title">Название поста</h2>
                 <a href="#" class="more">Читать далее</a>
             </div>
 		</div><!-- /.left -->
 		<div class="right">
+            <h3 class="recommend">Рекомендуем</h3>
+            <ul class="posts-list">
+                <li class="post">
+                    <span class="category-name">Категория</span>
+                    <h4 class="post-title">Название поста<br>в две строки</h4>
+                </li>
+                <li class="post">
+                    <span class="category-name">Категория</span>
+                    <h4 class="post-title">Название поста<br>в две строки</h4>
+                </li>
+                <li class="post">
+                    <span class="category-name">Категория</span>
+                    <h4 class="post-title">Название поста<br>в две строки</h4>
+                </li>
+                <li class="post">
+                    <span class="category-name">Категория</span>
+                    <h4 class="post-title">Название поста<br>в две строки</h4>
+                </li>
+                <li class="post">
+                    <span class="category-name">Категория</span>
+                    <h4 class="post-title">Название поста<br>в две строки</h4>
+                </li>
+            </ul>
 
 		</div><!-- /.right -->
 	</div><!-- /.hero -->
 </div><!-- /.container -->
-
+</main>
 <?php
 get_footer();

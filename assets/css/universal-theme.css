@@ -15,7 +15,7 @@ body {
   font-size: 14px;
 }
 
-body {
+* {
   box-sizing: border-box;
 }
 
@@ -86,12 +86,35 @@ body {
   cursor: pointer;
 }
 
+.home {
+  background-color: #e5e5e5;
+}
+
+.front-page-header {
+  background-color: #262D33;
+  position: relative;
+  padding-top: 30px;
+}
+
+.front-page-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 0;
+  background-color: #e5e5e5;
+}
+
 .hero {
-  border: 2px solid red;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
   min-height: 570px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .left {
@@ -103,7 +126,7 @@ body {
   justify-content: space-between;
 }
 
-.hero .left::after {
+.hero .left::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -111,7 +134,7 @@ body {
   top: 0;
   background-color: rgba(64, 48, 61, 0.35);
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero .left .post-thumb {
@@ -121,13 +144,16 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -2;
+  z-index: 0;
+  height: 100%;
 }
 
 .hero .left .author {
   display: flex;
   align-items: center;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 
 .hero .left .author-bio {
@@ -153,6 +179,11 @@ body {
   border-radius: 100%;
 }
 
+.post-text {
+  position: relative;
+  z-index: 2;
+}
+
 .post-text .category-name {
   color: #5f9ef6;
   font-family: "Lato Black", sans-serif;
@@ -174,17 +205,58 @@ body {
 .post-text .more {
   display: inline-block;
   color: #fff;
-  font-family: "Lato Black", sans-serif;
+  font-family: "Lato Regular", sans-serif;
   font-size: 14px;
+  font-weight: 500;
   line-height: 20px;
   padding: 10px 50px 10px 20px;
   border-radius: 20px;
   background: #5f9ef6;
   text-decoration: none;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
 }
 
 .hero .right {
   flex-basis: 25%;
 }
 
-/*# sourceMappingURL=universal-theme.css.map */
+.right .recommend {
+  margin: 20px 0 20px 25px;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.right .posts-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.right .post {
+  padding: 17px 25px 19px 25px;
+  border-top: 1px solid #D9DADB;
+  margin: 0;
+}
+
+.right .post:hover {
+  background-color: #f5f5f5;
+}
+
+.post .category-name {
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.post .post-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 8px 0 0 0;
+}
