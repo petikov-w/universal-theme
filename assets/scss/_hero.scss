@@ -54,6 +54,7 @@
   right: 0;
   z-index: 0;
   height: 100%;
+  object-fit: cover;
 }
 
 // Блок author в левой части
@@ -102,7 +103,8 @@
 
 .post-text .post-categories a {
   color: #5f9ef6;
-  @include use_font($LatoBlack,12px);
+  font-size: 12px;
+  font-weight: 900;
   line-height: 15px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
