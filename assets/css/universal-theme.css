@@ -75,7 +75,7 @@ body {
 .search-form .search-button {
   position: absolute;
   right: 20px;
-  top: 0px;
+  top: 0;
   width: 25px;
   height: 40px;
   background-image: url(../images/search.svg);
@@ -179,16 +179,6 @@ body {
 .post-text .post-categories {
   margin: 0;
   padding: 0;
-}
-
-.post-text .post-categories a {
-  color: #5f9ef6;
-  font-size: 12px;
-  font-weight: 900;
-  line-height: 15px;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  text-decoration: none;
   list-style: none;
 }
 
@@ -324,4 +314,12 @@ body {
 .article-title {
   margin: 0;
   font-weight: 400;
+}
+
+.category-color {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
