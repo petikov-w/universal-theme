@@ -273,6 +273,14 @@ body {
   color: #4B5157;
 }
 
+.category-color {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .article-list {
   margin: 0;
   padding: 0;
@@ -316,10 +324,65 @@ body {
   font-weight: 400;
 }
 
-.category-color {
+.article-grid {
+  display: grid;
+  grid-gap: 30px;
+  padding: 0;
+  margin: 30px 0;
+  color: #fff;
+  grid-template-columns: [start] 263px [line-1] 263px [line-2] 263px [line-3] 263px [end];
+  grid-template-rows: [top] 170px [line-1] 170px [center] 170px [line-2] 170px [bootom];
+}
+
+.article-grid-item {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #ef1010;
+  list-style: none;
+}
+
+.article-gri-01 {
+  grid-column: start/line-2;
+  grid-row: top/center;
+}
+
+.article-gri-02 {
+  grid-column: line-2/line-3;
+  grid-row: top/center;
+}
+
+.article-gri-03 {
+  grid-column: line-3/end;
+  grid-row: line-1/line-2;
+}
+
+.article-gri-04 {
+  grid-column: start/line-1;
+  grid-row: center/bootom;
+}
+
+.article-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.cs3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.exp-txt {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4B5157;
+}
+
+.date-post {
   font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  text-decoration: none;
+  font-weight: 400;
+  color: #939699;
 }
