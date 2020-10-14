@@ -36,7 +36,8 @@ get_header();
                         </div>
                     </a><!-- /.author -->
                     <div class="post-text">
-                        <? category_colors(variables::$color_category); ?>
+                        <? category_colors2(variables::$color_category, get_the_category()[0]); ?>
+<!--                        --><?// category_colors(variables::$color_category); ?>
                         <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(),0,60,'...'); ?></h2>
                         <a href="<?php echo get_the_permalink(); ?>" class="more">Читать далее</a>
                     </div>
@@ -138,6 +139,7 @@ get_header();
 
 	    $query = new WP_Query( [
 		    'posts_per_page' => 7,
+		    'tag' => 'популярное',
 	    ] );
 
 	    if ( $query->have_posts() ) {
@@ -157,8 +159,33 @@ get_header();
 
                    case '2': ?>
 <!--                   ---------------------------- 2 статья-------------------------------->
-                       <li class="article-grid-item article-gri-02">
-                           <h4><?php the_title() ?></h4>
+                       <li class="article-grid-item article-gri-02 csm">
+                           <img class="img-cs2" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
+                           <div class="sss">
+                               <div class="top-blc">
+                                   <span class="tag-info">Популярное</span>
+                               </div>
+
+                               <div class="bottom-blc">
+                                   <span class="category-info"><?php echo get_the_category()[0]->name ?></span>
+                                   <span class="article-title-2"><p><?php the_title() ?></p> </span>
+
+	                               <?php $author_id=get_the_author_meta('ID') ?>
+                                   <div class="author2">
+                                       <a href="<?php echo get_author_posts_url($author_id)?>" class="author2">
+                                           <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar2">
+                                           <div class="author-bio2">
+                                               <span class="author-name2"><?php the_author() ?></span>
+                                               <span class="date-post"><?php echo get_the_date('j F') ?></span>
+                                           </div>
+                                       </a><!-- /.author -->
+                                   </div>
+                               </div>
+
+
+
+
+                           </div>
                        </li>
 <!--                   ---------------------------- 2 статья (конец блока) ----------------->
                        <?php
@@ -177,10 +204,11 @@ get_header();
                             <h3>Облако тегов</h3>
                         </li>
 <!--                   ---------------------------- Облако тегов (конец блока) ------------->
-                        <li class="article-grid-item article-gri-04">
-                            <div class="cs3">
-							    <?php echo mb_strimwidth(get_the_title(),0,50,'...'); ?>
-                            </div>
+                        <li class="article-grid-item article-gri-04 csm">
+                            <a href="<?php echo get_the_permalink() ?>">
+                                <img class="img-cs3" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
+                                <span class="cs3"><p><?php echo mb_strimwidth(get_the_title(),0,44,'...'); ?></p></span>
+                            </a>
                         </li>
 <!--                   ----------------------------- 3 статья (конец блока) ---------------->
 					    <?php
@@ -189,9 +217,11 @@ get_header();
 				    case '4': ?>
 <!--                   ---------------------------- 4 статья-------------------------------->
                         <li class="article-grid-item">
-                            <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
-                            <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
-                            <div class="date-post">15 сентября</div>
+                            <a href="<?php echo get_the_permalink() ?>">
+                                <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
+                                <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
+                            </a>
+                            <div class="date-post"><?php echo get_the_date('j F') ?></div>
                         </li>
 <!--                   ---------------------------- 4 статья (конец блока)------------------>
 					    <?php
@@ -200,9 +230,11 @@ get_header();
 				    case '5': ?>
 <!--                   ---------------------------- 5 статья-------------------------------->
                         <li class="article-grid-item">
-                            <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
-                            <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
-                            <div class="date-post">15 сентября</div>
+                            <a href="<?php echo get_the_permalink() ?>">
+                                <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
+                                <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
+                            </a>
+                                <div class="date-post"><?php echo get_the_date('j F') ?></div>
                         </li>
 <!--                   ---------------------------- 5 статья (конец блока) ----------------->
 					    <?php
@@ -211,9 +243,11 @@ get_header();
 				    case '6': ?>
 <!--                   ---------------------------- 6 статья ------------------------------->
                         <li class="article-grid-item">
-                            <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
-                            <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
-                            <div class="date-post">15 сентября</div>
+                            <a href="<?php echo get_the_permalink() ?>">
+                                <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
+                                <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
+                            </a>
+                            <div class="date-post"><?php echo get_the_date('j F') ?></div>
                         </li>
 <!--                   --------------------------- 6 статья (конец блока) ------------------>
 					    <?php
@@ -222,9 +256,11 @@ get_header();
 				    case '7': ?>
 <!--                   ---------------------------- 7 статья ------------------------------->
                         <li class="article-grid-item">
-                            <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
-                            <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
-                            <div class="date-post">15 сентября</div>
+                            <a href="<?php echo get_the_permalink() ?>">
+                                <div class="cs3"><?php echo mb_strimwidth(get_the_title(),0,22,'...'); ?></div>
+                                <div class="exp-txt"><?php echo mb_strimwidth(get_the_excerpt(),0,80,'...'); ?></div>
+                            </a>
+                            <div class="date-post"><?php echo get_the_date('j F') ?></div>
                         </li>
 <!--                   ---------------------------- 7 статья (конец блока) ----------------->
 					    <?php

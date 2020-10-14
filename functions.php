@@ -63,3 +63,14 @@ function category_colors ($colors) {
 		}
 	}
 }
+
+function category_colors2 ($colors, $category) {
+	foreach($colors as $item => $item_count) {
+		if ($item==$category->name) {
+			$color = $item_count;?>
+            <a class="category-color" href="<?php echo get_category_link($category->term_id) ?>"
+               style="color:<?= $color; ?>"><?php echo $item  ?></a>
+			<?php
+		}
+	}
+}
