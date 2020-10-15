@@ -149,29 +149,34 @@ get_header();
 			    $query->the_post();
 			    $cnt++;
 			    switch ($cnt) {
-                    case '1': ?>
+                   case '1': ?>
 <!--                   --------------------------- 1 --------------------------------------->
                     <li class="article-grid-item article-gri-01">
                         <div class="top-blc-01">
-                            <div class="left-blc">
-                                <span class="category-info2"><?php echo get_the_category()[0]->name ?></span>
-                                <span class="article-title-3"><p><?php the_title() ?></p> </span>
-                                <div class="exp-txt2"><?php echo mb_strimwidth(get_the_excerpt(),0,120,'...'); ?></div>
-                            </div>
-                            <div class="img-blc">
-                                <img src="<?php echo get_the_post_thumbnail_url()?>" alt="" class="img2">
-                            </div>
+
+                            <a href="<?php echo get_the_permalink() ?>">
+                                <div class="left-blc">
+                                    <span class="category-info2"><?php echo get_the_category()[0]->name ?></span>
+                                    <span class="article-title-3"><p><?php the_title() ?></p> </span>
+                                    <div class="exp-txt2"><?php echo mb_strimwidth(get_the_excerpt(),0,200,'...'); ?></div>
+                                </div>
+                            </a>
+
+<!--                            <div class="img-blc">-->
+<!--                                <img src="--><?php //echo get_the_post_thumbnail_url()?><!--" alt="" class="img2">-->
+<!--                            </div>-->
                         </div>
+                        <div class="bottom-blc-top-line"></div>
                         <div class="bottom-blc">
-                            <div class="author2">
-                                <a href="<?php echo get_author_posts_url($author_id)?>" class="author3">
-                                    <div class="author-blc">
+                            <a href="<?php echo get_author_posts_url($author_id)?>" >
+                            <div class="author-blc">
                                         <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar3">
                                         <span class="author-name3"><?php the_author() ?></span>
-                                        <!--  <span class="date-post">--><?php //echo get_the_date('j F') ?><!--</span>-->
-                                    </div>
-                                </a>
+                                        <span class="author-desc"><?php echo mb_strimwidth(get_the_author_meta('description'),0,40,'...'); ?></span>
+                                        <img class="icon-comment" src="<?php echo get_template_directory_uri().'/assets/images/comment.svg' ?>" alt="">
+                                        <span class="comments-counter"><?php comments_number('0','1','%'); ?></span>
                             </div>
+                            </a>
                         </div>
                     </li>
 <!--                   --------------------------- 1 статья (конец блока) ------------------>
@@ -183,10 +188,14 @@ get_header();
                        <li class="article-grid-item article-gri-02 csm">
                            <img class="img-cs2" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
                            <div class="sss">
-                               <div class="top-blc">
-                                   <span class="tag-info"><?php echo $tag_filters ?></span>
-                               </div>
 
+                                   <div class="top-blc">
+                                       <a href="<?php echo get_the_permalink() ?>">
+                                       <span class="tag-info"><?php echo $tag_filters ?></span>
+                                       </a>
+                                   </div>
+
+                               <a href="<?php echo get_the_permalink() ?>">
                                <div class="bottom-blc2">
                                    <span class="category-info"><?php echo get_the_category()[0]->name ?></span>
                                    <span class="article-title-2"><p><?php the_title() ?></p> </span>
@@ -197,15 +206,20 @@ get_header();
                                            <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar2">
                                            <div class="author-bio2">
                                                <span class="author-name2"><?php the_author() ?></span>
-                                               <span class="date-post"><?php echo get_the_date('j F') ?></span>
+                                               <a href="<?php echo get_the_permalink() ?>">
+                                               <div class="date-comm-like">
+                                                   <span class="date-post2"><?php echo get_the_date('j F') ?></span>
+                                                   <img class="comment" src="<?php echo get_template_directory_uri().'/assets/images/comment-white.svg' ?>" alt="">
+                                                   <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
+                                                   <img class="like" src="<?php echo get_template_directory_uri().'/assets/images/heart.svg' ?>" alt="">
+                                                   <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
+                                               </div>
+                                               </a>
                                            </div>
                                        </a>
                                    </div>
                                </div>
-
-
-
-
+                               </a>
                            </div>
                        </li>
 <!--                   ---------------------------- 2 статья (конец блока) ----------------->
@@ -217,12 +231,12 @@ get_header();
 <!--                   ---------------------------- 3 статья-------------------------------->
 <!--                   ---------------------------- Чек-лист ------------------------------->
                         <li class="article-grid-item">
-                            <h3>Чек-лист</h3>
+                            <span class="social-text">Чек-лист</span>
                         </li>
 <!--                   ---------------------------- Чек-лист (конец блока) ----------------->
 <!--                   ---------------------------- Облако тегов --------------------------->
                         <li class="article-grid-item article-gri-03">
-                            <h3>Облако тегов</h3>
+                            <span class="social-text">Облако тегов</span>
                         </li>
 <!--                   ---------------------------- Облако тегов (конец блока) ------------->
                         <li class="article-grid-item article-gri-04 csm">
@@ -300,8 +314,14 @@ get_header();
 	    wp_reset_postdata(); // Сбрасываем $post
 	    ?>
         <!--            ===================================================================-->
-        <li class="article-grid-item">
-            <h3>Социальные сети</h3>
+
+        <li class="article-grid-item social-blc">
+            <span class="social-text">Наши соцсети</span>
+            <div class="set-social-icons">
+                <a href="#"><img width="10" height="18" class="icon-social facebook" src="<?php echo get_template_directory_uri().'/assets/images/facebook.svg' ?>" alt="facebook"></a>
+                <a href="#"><img class="icon-social twitter" src="<?php echo get_template_directory_uri().'/assets/images/twitter.svg' ?>" alt="twitter"></a>
+                <a href="#"><img class="icon-social youtube" src="<?php echo get_template_directory_uri().'/assets/images/youtube.svg' ?>" alt="youtube"></a>
+            </div>
         </li>
     </ul>
 

@@ -1,3 +1,6 @@
+//===================================
+//========= Разметка сетки ==========
+//===================================
 .article-grid {
   display: grid;
   grid-gap: 30px;
@@ -24,8 +27,8 @@
   padding: 25px;
   background-color: #fff;
   border-radius: 10px;
-  color: #ef1010;
   list-style: none;
+  overflow: hidden;
 }
 
 .article-gri-01 {
@@ -36,6 +39,17 @@
 .article-gri-02 {
   grid-column: line-2/line-3;
   grid-row: top/center;
+  position: relative;
+}
+
+.article-gri-02::before {
+  content: '';
+  position: absolute;
+ // background: linear-gradient(0deg,rgba(64,48,61,0.35),rgba(64,48,61,0.35));
+  background-color: rgba(#40303D, 0.35);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .article-gri-03 {
@@ -48,36 +62,148 @@
   grid-row: center/bootom;
 }
 
-
-
 .article-grid-item a {
   text-decoration: none;
 }
+//============================================
+//======== Разметка сетки (конец) ============
+//============================================
 
-.cs3  {
-  @include use_font($RobotoSlab, 16px);
-  color: #000;
-}
-
-.exp-txt {
-  font-size: 14px;
-  font-weight: 400;
-  color: #4B5157;
-  margin-top: 5px;
-}
-
-
-
-.date-post {
-  font-size: 12px;
-  font-weight: 400;
-  color: #939699;
-}
 
 .csm {
   margin: 0;
   padding: 0;
 }
+
+.author2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//============================================
+//============ Стили для 1 статьи ============
+//============================================
+
+.top-blc-01 {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  margin-top: -10px;
+  margin-right: -25px;
+}
+
+
+
+.left-blc {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+//===== Картинка ===
+.img-blc {
+  width: 40%;
+}
+
+.img2 {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+//====================
+
+.category-info2 {
+  font-size: 12px;
+  color: #6E99AE;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.article-title-3 {
+  color: #000;
+  @include use_font($RobotoSlab, 25px);
+  letter-spacing: 0.7px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.exp-txt2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4B5157;
+  margin-top: 5px;
+  width: 270px;
+}
+
+.bottom-blc {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: -18px;
+}
+
+.bottom-blc-top-line {
+    height: 1px;
+    width: 600px;
+    margin-left: -25px;
+    background-color: #D9DADB;
+  }
+
+.avatar3 {
+  @include wh_size(30px,30px,circle);
+  margin-right: 10px;
+}
+
+.author-blc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.author-name3 {
+  font-size: 14px;
+  color: #262D33;
+  font-weight: 900;
+}
+
+.author-name3:after {
+  content: ':';
+  margin-right: 10px;
+}
+
+.author-desc {
+  font-size: 14px;
+  color: #4B5157;
+  font-weight: 400;
+  margin-right: 15px;
+}
+
+.icon-comment {
+  margin-right: 5px;
+}
+
+.comments-counter {
+  font-size: 12px;
+  color: #939699;
+  font-weight: 400;
+}
+
+
+//============================================
+//======= Стили для 1 статьи (конец) =========
+//============================================
+
+//============================================
+//========= Стили для 2 и 3 статей ===========
+//============================================
+
 
 .img-cs2 {
   height: 100%;
@@ -85,6 +211,7 @@
   border-radius: 10px;
   object-fit: cover;
   position: relative;
+  z-index: 0;
 
 }
 
@@ -103,19 +230,11 @@
   line-height: 25px;
 }
 
-.article-title-3 {
-  color: #000;
-  @include use_font($RobotoSlab, 25px);
-  letter-spacing: 0.7px;
-  font-weight: 700;
-  line-height: 30px;
-}
-
 .article-title-2 p {
   width: 200px;
   height: 75px;
-  //margin: 10px 25px 30px 100px;
 }
+
 .cs3 p {
   width: 215px;
   height: 50px;
@@ -125,7 +244,7 @@
 .tag-info {
   border-radius: 3px;
   background-color: #3DC47E;
-  padding: 5px 12px;
+  padding: 7px 12px;
   color: #fff;
   font-size: 12px;
   text-transform: capitalize;
@@ -149,11 +268,7 @@
   padding: 25px;
 }
 
-.author2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .author-bio2 {
   display: flex;
   flex-direction: column;
@@ -161,10 +276,10 @@
   align-items: flex-start;
   margin-left: 10px;
 
-.author-name2 {
-   font-size: 14px;
-  color:#fff;
-}
+  .author-name2 {
+    font-size: 14px;
+    color:#fff;
+  }
 
 }
 .avatar2 {
@@ -177,6 +292,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 130px;
+  z-index: 2;
 }
 
 .bottom-blc2 {
@@ -185,82 +301,103 @@
   justify-content: space-between;
   align-items: flex-start;
   height: 190px;
+  z-index: 2;
 }
 
-
-
-
-
-// Блок для 1 статьи
-
-.top-blc-01 {
+.date-comm-like {
   display: flex;
-  justify-content: center;
-  height: 300px;
-  margin-top: -10px;
-  margin-right: -25px;
-}
-
-
-
-.left-blc {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+  width: 120px;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 0;
+  color: rgba(#fff,0.6);
 }
 
-.img-blc {
-  width: 50%;
-}
-
-.img2 {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.category-info2 {
+.date-post2 {
   font-size: 12px;
-  color: #6E99AE;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
-.exp-txt2 {
+.comments-counter2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.comment, .like {
+   opacity: 0.6;
+}
+
+//============================================
+//===== Стили для 2 и 3 статей (конец) =======
+//============================================
+
+//============================================
+//====== Стили для 4, 5, 6, 7 статей =========
+//============================================
+.cs3  {
+  @include use_font($RobotoSlab, 16px);
+  color: #000;
+}
+
+.exp-txt {
   font-size: 14px;
   font-weight: 400;
   color: #4B5157;
   margin-top: 5px;
-  width: 230px;
 }
 
-.bottom-blc {
+.date-post {
+  font-size: 12px;
+  font-weight: 400;
+  color: #939699;
+}
+
+//============================================
+//=== Стили для 4, 5, 6, 7 статей (конец) ====
+//============================================
+
+
+//============================================
+//===== Блок иконок социальных сетей =========
+//============================================
+.social-blc {
   display: flex;
-  justify-content: flex-start;
-  //align-items: center;
-  margin-bottom: -10px;
-}
-
-.avatar3 {
-  @include wh_size(30px,30px,circle);
-  margin-right: 10px;
-}
-
-.author-blc {
-  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
-.author-name3 {
-  font-size: 14px;
-  color: #262D33;
-  font-weight: 900;
+.social-text {
+  color: #000;
+  @include use_font($RobotoSlab, 20px);
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  line-height: 25px;
 }
 
-.author-name3:after {
-  content: ':';
+.icon-social {
+  @include wh_size(50px,50px,circle);
+  padding: 16px 14px;
 }
+
+.set-social-icons {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+}
+
+.facebook {
+  background: #4267B2;
+}
+
+.twitter {
+  background: #1DA1F2;
+}
+
+.youtube {
+  background: #FF0000;
+}
+
+//============================================
+//=== Блок иконок социальных сетей (конец) ===
+//============================================
