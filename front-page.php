@@ -1,7 +1,7 @@
 <?php
 use ru\universal_theme\variables;
 require_once 'variables.php';
-
+$tag_filters = 'популярное';
 get_header();
 ?>
 <main class="front-page-header">
@@ -139,7 +139,8 @@ get_header();
 
 	    $query = new WP_Query( [
 		    'posts_per_page' => 7,
-		    'tag' => 'популярное',
+		    'tag' => $tag_filters,
+//		    'tag' => 'популярное',
 	    ] );
 
 	    if ( $query->have_posts() ) {
@@ -151,7 +152,27 @@ get_header();
                     case '1': ?>
 <!--                   --------------------------- 1 --------------------------------------->
                     <li class="article-grid-item article-gri-01">
-                        <h4><?php the_title() ?></h4>
+                        <div class="top-blc-01">
+                            <div class="left-blc">
+                                <span class="category-info2"><?php echo get_the_category()[0]->name ?></span>
+                                <span class="article-title-3"><p><?php the_title() ?></p> </span>
+                                <div class="exp-txt2"><?php echo mb_strimwidth(get_the_excerpt(),0,120,'...'); ?></div>
+                            </div>
+                            <div class="img-blc">
+                                <img src="<?php echo get_the_post_thumbnail_url()?>" alt="" class="img2">
+                            </div>
+                        </div>
+                        <div class="bottom-blc">
+                            <div class="author2">
+                                <a href="<?php echo get_author_posts_url($author_id)?>" class="author3">
+                                    <div class="author-blc">
+                                        <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar3">
+                                        <span class="author-name3"><?php the_author() ?></span>
+                                        <!--  <span class="date-post">--><?php //echo get_the_date('j F') ?><!--</span>-->
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </li>
 <!--                   --------------------------- 1 статья (конец блока) ------------------>
                     <?php
@@ -163,10 +184,10 @@ get_header();
                            <img class="img-cs2" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
                            <div class="sss">
                                <div class="top-blc">
-                                   <span class="tag-info">Популярное</span>
+                                   <span class="tag-info"><?php echo $tag_filters ?></span>
                                </div>
 
-                               <div class="bottom-blc">
+                               <div class="bottom-blc2">
                                    <span class="category-info"><?php echo get_the_category()[0]->name ?></span>
                                    <span class="article-title-2"><p><?php the_title() ?></p> </span>
 
@@ -178,7 +199,7 @@ get_header();
                                                <span class="author-name2"><?php the_author() ?></span>
                                                <span class="date-post"><?php echo get_the_date('j F') ?></span>
                                            </div>
-                                       </a><!-- /.author -->
+                                       </a>
                                    </div>
                                </div>
 
