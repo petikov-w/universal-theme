@@ -230,13 +230,13 @@ get_header();
 				    case '3': ?>
 <!--                   ---------------------------- 3 статья-------------------------------->
 <!--                   ---------------------------- Чек-лист ------------------------------->
-                        <li class="article-grid-item">
-                            <span class="social-text">Чек-лист</span>
+                        <li class="article-grid-widget2">
+	                        <?php get_sidebar('main-01') ?>
                         </li>
 <!--                   ---------------------------- Чек-лист (конец блока) ----------------->
 <!--                   ---------------------------- Облако тегов --------------------------->
-                        <li class="article-grid-item article-gri-03">
-                            <span class="social-text">Облако тегов</span>
+                        <li class="article-grid-widget article-gri-03">
+						    <?php get_sidebar('main-02') ?>
                         </li>
 <!--                   ---------------------------- Облако тегов (конец блока) ------------->
                         <li class="article-grid-item article-gri-04 csm">
@@ -324,8 +324,6 @@ get_header();
             </div>
         </li>
     </ul>
-
 </div>
-
 <?php
 get_footer();

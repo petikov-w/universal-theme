@@ -674,3 +674,104 @@ body {
 .youtube {
   background: #FF0000;
 }
+
+.article-grid-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.widget-title {
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  color: #262D33;
+  text-transform: uppercase;
+  line-height: 20px;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #D9DADB;
+  padding: 10px 25px 20px 25px;
+}
+
+.widget_tag_cloud ul li {
+  display: inline-block;
+  background: #fff;
+}
+
+.tagcloud {
+  margin: 25px 5px 20px 25px;
+}
+
+.widget_tag_cloud a {
+  display: inline-block;
+  border: 1px solid #D9DADB;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-bottom: 17px;
+  margin-right: 7px;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  color: #262D33;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.widget_tag_cloud a:hover {
+  background: #D9DADB;
+  transition: 0.5s;
+}
+
+.article-grid-widget2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  list-style: none;
+  background: #3BBDC4 url("../images/file.svg") no-repeat top 22px right 24px;
+  overflow: hidden;
+}
+
+.widget_downloader {
+  top: 0;
+  left: 0;
+  padding: 10px 25px 65px 25px;
+  position: relative;
+}
+
+.widget-downloader-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 25px;
+}
+
+.widget_downloader .description {
+  color: #C1F4F5;
+  margin: 0;
+}
+
+.widget_downloader .widget-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 12px 0 13px 0;
+  text-decoration: none;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.75);
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.widget_downloader .widget-link-icon {
+  margin-right: 10px;
+}

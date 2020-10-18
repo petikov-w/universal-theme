@@ -48,29 +48,65 @@ function delete_intermediate_image_sizes( $sizes ){
 	] );
 }
 
-//========================================================
-//=================== Мои функции ========================
-//========================================================
+// Регистрация области виджетов
 
-// Функция меняющая цвет рубрики в зависимости от её названия
-function category_colors ($colors) {
-	foreach($colors as $item => $item_count) {
-		if ($item==get_the_category()[0]->name) {
-			$color = $item_count;?>
-			<a class="category-color" href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"
-			   style="color:<?= $color; ?>"><?php echo $item  ?></a>
-			<?php
-		}
-	}
-}
+function universal_theme_widgets_init() {
+	// Сайдбар для скачивания файла чек-листа на главной странице
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Сайдбар на главной - 01', 'universal-theme' ),
+			'id'            => 'main-01',
+			'description'   => esc_html__( 'Добавте виджеты здесь', 'universal-theme' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-downloader-title">',
+			'after_title'   => '</h2>',
+             )
+		);
 
-function category_colors2 ($colors, $category) {
-	foreach($colors as $item => $item_count) {
-		if ($item==$category->name) {
-			$color = $item_count;?>
-            <a class="category-color" href="<?php echo get_category_link($category->term_id) ?>"
-               style="color:<?= $color; ?>"><?php echo $item  ?></a>
-			<?php
-		}
-	}
+    // Сайдбар для облака тегов на главной странице
+    register_sidebar(
+	    array(
+		    'name' => esc_html__('Сайдбар на главной - 02', 'universal-theme' ),
+		    'id' => 'main-02',
+		    'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h2 class="widget-title">',
+		    'after_title' => '</h2>',
+             )
+	    );
+
+	// Сайдбар для вывода последних статей на главной странице
+	register_sidebar(
+		array(
+			'name' => esc_html__('Сайдбар на главной - 03', 'universal-theme' ),
+			'id' => 'main-03',
+			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widget-title">',
+			'after_title' => '</h2>',
+		)
+	);
 }
+add_action( 'widgets_init', 'universal_theme_widgets_init' );
+
+
+// Настройка виджета облака тегов
+function universal_tag_cloud($args){
+	$args['smallest']= 14;
+	$args['largest']= 14;
+	$args['unit']= 'px';
+	$args['order']= 'DESC';
+	return $args;
+}
+add_filter('widget_tag_cloud_args','universal_tag_cloud');
+
+
+// Регистрвция нового виджета - Полезные файлы (downloader)
+get_template_part( 'template-parts/function', 'widget-downloader' );
+
+// Мои функции
+get_template_part( 'template-parts/function', 'my-functions' );
+
