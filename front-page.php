@@ -315,13 +315,15 @@ get_header();
 	    ?>
         <!--            ===================================================================-->
 
-        <li class="article-grid-item social-blc">
-            <span class="social-text">Наши соцсети</span>
-            <div class="set-social-icons">
-                <a href="#"><img width="10" height="18" class="icon-social facebook" src="<?php echo get_template_directory_uri().'/assets/images/facebook.svg' ?>" alt="facebook"></a>
-                <a href="#"><img class="icon-social twitter" src="<?php echo get_template_directory_uri().'/assets/images/twitter.svg' ?>" alt="twitter"></a>
-                <a href="#"><img class="icon-social youtube" src="<?php echo get_template_directory_uri().'/assets/images/youtube.svg' ?>" alt="youtube"></a>
-            </div>
+        <li class="article-grid-widget3 social-blc">
+	        <?php get_sidebar('main-03') ?>
+
+<!--            <span class="social-text">Наши соцсети</span>-->
+<!--            <div class="set-social-icons">-->
+<!--                <a href="#"><img width="10" height="18" class="icon-social facebook" src="--><?php //echo get_template_directory_uri().'/assets/images/facebook.svg' ?><!--" alt="facebook"></a>-->
+<!--                <a href="#"><img class="icon-social twitter" src="--><?php //echo get_template_directory_uri().'/assets/images/twitter.svg' ?><!--" alt="twitter"></a>-->
+<!--                <a href="#"><img class="icon-social youtube" src="--><?php //echo get_template_directory_uri().'/assets/images/youtube.svg' ?><!--" alt="youtube"></a>-->
+<!--            </div>-->
         </li>
     </ul>
 </div>

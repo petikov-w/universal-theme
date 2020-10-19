@@ -365,49 +365,49 @@
 //============================================
 
 
-//============================================
-//===== Блок иконок социальных сетей =========
-//============================================
-.social-blc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-text {
-  color: #000;
-  @include use_font($RobotoSlab, 20px);
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  line-height: 25px;
-}
-
-.icon-social {
-  @include wh_size(50px,50px,circle);
-  padding: 16px 14px;
-}
-
-.set-social-icons {
-  width: 190px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-
-}
-
-.facebook {
-  background: #4267B2;
-}
-
-.twitter {
-  background: #1DA1F2;
-}
-
-.youtube {
-  background: #FF0000;
-}
-
-//============================================
-//=== Блок иконок социальных сетей (конец) ===
-//============================================
+////============================================
+////===== Блок иконок социальных сетей =========
+////============================================
+//.social-blc {
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  align-items: center;
+//}
+//
+//.social-text {
+//  color: #000;
+//  @include use_font($RobotoSlab, 20px);
+//  letter-spacing: 0.5px;
+//  font-weight: 700;
+//  line-height: 25px;
+//}
+//
+//.icon-social {
+//  @include wh_size(50px,50px,circle);
+//  padding: 16px 14px;
+//}
+//
+//.set-social-icons {
+//  width: 190px;
+//  display: flex;
+//  justify-content: space-between;
+//  margin-bottom: 8px;
+//
+//}
+//
+//.facebook {
+//  background: #4267B2;
+//}
+//
+//.twitter {
+//  background: #1DA1F2;
+//}
+//
+//.youtube {
+//  background: #FF0000;
+//}
+//
+////============================================
+////=== Блок иконок социальных сетей (конец) ===
+////============================================

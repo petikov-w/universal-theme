@@ -51,6 +51,18 @@ function delete_intermediate_image_sizes( $sizes ){
 // Регистрация области виджетов
 
 function universal_theme_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Сайдбар на главной', 'universal-theme' ),
+			'id'            => 'main',
+			'description'   => esc_html__( 'Добавте виджеты здесь', 'universal-theme' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
 	// Сайдбар для скачивания файла чек-листа на главной странице
 	register_sidebar(
 		array(
@@ -77,11 +89,24 @@ function universal_theme_widgets_init() {
              )
 	    );
 
-	// Сайдбар для вывода последних статей на главной странице
+	// Сайдбар для вывода блока социальных сетей
 	register_sidebar(
 		array(
 			'name' => esc_html__('Сайдбар на главной - 03', 'universal-theme' ),
 			'id' => 'main-03',
+			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widget-socialnetwork-title">',
+			'after_title' => '</h2>',
+		)
+	);
+
+	// Сайдбар для вывода последних статей на главной странице
+	register_sidebar(
+		array(
+			'name' => esc_html__('Сайдбар на главной - 04', 'universal-theme' ),
+			'id' => 'main-04',
 			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
