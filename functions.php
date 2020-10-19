@@ -104,8 +104,11 @@ function universal_tag_cloud($args){
 add_filter('widget_tag_cloud_args','universal_tag_cloud');
 
 
-// Регистрвция нового виджета - Полезные файлы (downloader)
+// Регистрация нового виджета - Полезные файлы (downloader)
 get_template_part( 'template-parts/function', 'widget-downloader' );
+
+// Регистрация нового виджета - Полезные файлы (downloader)
+get_template_part( 'template-parts/function', 'widget-socialnetwork' );
 
 // Мои функции
 get_template_part( 'template-parts/function', 'my-functions' );
