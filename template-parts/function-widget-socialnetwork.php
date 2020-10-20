@@ -32,12 +32,12 @@ class Socialnetwork_Widget extends WP_Widget {
 		$title = $instance['title'];
 		$facebook = $instance['facebook'];
 		$instagram = $instance['instagram'];
-		$vk = $instance['vk'];
+		$youtube = $instance['youtube'];
 		$twitter = $instance['twitter'];
 		$image_facebook = get_template_directory_uri() . '/assets/images/facebook.svg';
 		$image_twitter = get_template_directory_uri() . '/assets/images/twitter.svg';
 		$image_instagram = get_template_directory_uri() . '/assets/images/instagram.png';
-		$image_vk = get_template_directory_uri() . '/assets/images/vkontakte.png';
+		$image_youtube = get_template_directory_uri() . '/assets/images/youtube.svg';
 
 		echo $args['before_widget'];
 		echo '<div class="social-blc">';
@@ -48,14 +48,14 @@ class Socialnetwork_Widget extends WP_Widget {
             if ( ! empty( $facebook ) ) {
                 echo '<a class="widget-link" href="' . $facebook . '"><img class="icon-social facebook" src="'. $image_facebook . '""></a>';
             }
-            if ( ! empty( $twitter ) ) {
-                echo '<a class="widget-link" href="' . $twitter . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
-            }
             if ( ! empty( $instagram ) ) {
                 echo '<a class="widget-link" href="' . $instagram . '"><img  class="icon-social instagram" src="'. $image_instagram . '""></a>';
             }
-            if ( ! empty( $vk ) ) {
-                echo '<a class="widget-link" href="' . $vk . '"><img class="icon-social vk" src="'. $image_vk . '""></a>';
+            if ( ! empty( $youtube ) ) {
+                echo '<a class="widget-link" href="' . $youtube . '"><img class="icon-social youtube" src="'. $image_youtube . '""></a>';
+            }
+            if ( ! empty( $twitter ) ) {
+                echo '<a class="widget-link" href="' . $twitter . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
             }
 		echo '</div>';
 		echo '</div>';
@@ -71,7 +71,7 @@ class Socialnetwork_Widget extends WP_Widget {
 		$title = @ $instance['title'] ?: 'Заголовок по умолчанию';
 		$facebook = @ $instance['facebook'] ?: 'https://www.facebook.com';
         $instagram = @ $instance['instagram'] ?: 'https://www.instagram.com';
-        $vk = @ $instance['vk'] ?: 'https://vk.com';
+        $youtube = @ $instance['youtube'] ?: 'https://youtube.com';
         $twitter = @ $instance['twitter'] ?: 'https://twitter.com';
 		?>
 		<p>
@@ -90,9 +90,9 @@ class Socialnetwork_Widget extends WP_Widget {
 			echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>">
 		</p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'vk' ); ?>"><?php _e( 'VK:' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'vk' ); ?>" name="<?php
-			echo $this->get_field_name( 'vk' ); ?>" type="text" value="<?php echo esc_attr( $vk ); ?>">
+            <label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Youtube:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'youtube' ); ?>" name="<?php
+			echo $this->get_field_name( 'youtube' ); ?>" type="text" value="<?php echo esc_attr( $youtube ); ?>">
         </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Twitter:' ); ?></label>
@@ -117,7 +117,7 @@ class Socialnetwork_Widget extends WP_Widget {
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
 		$instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
-		$instance['vk'] = ( ! empty( $new_instance['vk'] ) ) ? strip_tags( $new_instance['vk'] ) : '';
+		$instance['youtube'] = ( ! empty( $new_instance['youtube'] ) ) ? strip_tags( $new_instance['youtube'] ) : '';
 		$instance['twitter'] = ( ! empty( $new_instance['twitter'] ) ) ? strip_tags( $new_instance['twitter'] ) : '';
 
 		return $instance;
