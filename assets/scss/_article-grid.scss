@@ -10,13 +10,12 @@
   grid-template-columns: [start]
                           263px [line-1]
                           263px [line-2]
-                          263px [line-3]
                           263px [end];
   grid-template-rows: [top]
                       170px [line-1]
                       170px [center]
                       170px [line-2]
-                      170px [bootom];
+                      170px [bottom];
 }
 
 
@@ -31,15 +30,6 @@
   overflow: hidden;
 }
 
-//.article-grid-widget {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//  background-color: #fff;
-//  border-radius: 10px;
-//  list-style: none;
-//  overflow: hidden;
-//}
 
 .article-gri-01 {
   grid-column: start/line-2;
@@ -47,7 +37,7 @@
 }
 
 .article-gri-02 {
-  grid-column: line-2/line-3;
+  grid-column: line-2/end;
   grid-row: top/center;
   position: relative;
 }
@@ -55,21 +45,15 @@
 .article-gri-02::before {
   content: '';
   position: absolute;
- // background: linear-gradient(0deg,rgba(64,48,61,0.35),rgba(64,48,61,0.35));
   background-color: rgba(#40303D, 0.35);
   z-index: 1;
   width: 100%;
   height: 100%;
 }
 
-.article-gri-03 {
-  grid-column: line-3/end;
-  grid-row: line-1/line-2;
-}
-
 .article-gri-04 {
   grid-column: start/line-1;
-  grid-row: center/bootom;
+  grid-row: center/bottom;
 }
 
 .article-grid-item a {
@@ -77,6 +61,18 @@
 }
 //============================================
 //======== Разметка сетки (конец) ============
+//============================================
+
+//============================================
+//======== Разметка сайдбара main ============
+//============================================
+.main-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+//============================================
+//======== Разметка сайдбара main (конец) ====
 //============================================
 
 
@@ -363,51 +359,3 @@
 //============================================
 //=== Стили для 4, 5, 6, 7 статей (конец) ====
 //============================================
-
-
-////============================================
-////===== Блок иконок социальных сетей =========
-////============================================
-//.social-blc {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//  align-items: center;
-//}
-//
-//.social-text {
-//  color: #000;
-//  @include use_font($RobotoSlab, 20px);
-//  letter-spacing: 0.5px;
-//  font-weight: 700;
-//  line-height: 25px;
-//}
-//
-//.icon-social {
-//  @include wh_size(50px,50px,circle);
-//  padding: 16px 14px;
-//}
-//
-//.set-social-icons {
-//  width: 190px;
-//  display: flex;
-//  justify-content: space-between;
-//  margin-bottom: 8px;
-//
-//}
-//
-//.facebook {
-//  background: #4267B2;
-//}
-//
-//.twitter {
-//  background: #1DA1F2;
-//}
-//
-//.youtube {
-//  background: #FF0000;
-//}
-//
-////============================================
-////=== Блок иконок социальных сетей (конец) ===
-////============================================

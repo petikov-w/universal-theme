@@ -51,6 +51,7 @@ function delete_intermediate_image_sizes( $sizes ){
 // Регистрация области виджетов
 
 function universal_theme_widgets_init() {
+	// Сайдбар для вывода трех виджетов (файлом, тегами и соцсетями) на главной странице
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Сайдбар на главной', 'universal-theme' ),
@@ -63,50 +64,11 @@ function universal_theme_widgets_init() {
 		)
 	);
 
-	// Сайдбар для скачивания файла чек-листа на главной странице
+	// Сайдбар для вывода виджета последних постов на главной странице
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Сайдбар на главной - 01', 'universal-theme' ),
-			'id'            => 'main-01',
-			'description'   => esc_html__( 'Добавте виджеты здесь', 'universal-theme' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="widget-downloader-title">',
-			'after_title'   => '</h2>',
-             )
-		);
-
-    // Сайдбар для облака тегов на главной странице
-    register_sidebar(
-	    array(
-		    'name' => esc_html__('Сайдбар на главной - 02', 'universal-theme' ),
-		    'id' => 'main-02',
-		    'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
-		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		    'after_widget' => '</div>',
-		    'before_title' => '<h2 class="widget-title">',
-		    'after_title' => '</h2>',
-             )
-	    );
-
-	// Сайдбар для вывода блока социальных сетей
-	register_sidebar(
-		array(
-			'name' => esc_html__('Сайдбар на главной - 03', 'universal-theme' ),
-			'id' => 'main-03',
-			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h2 class="widget-socialnetwork-title">',
-			'after_title' => '</h2>',
-		)
-	);
-
-	// Сайдбар для вывода последних статей на главной странице
-	register_sidebar(
-		array(
-			'name' => esc_html__('Сайдбар на главной - 04', 'universal-theme' ),
-			'id' => 'main-04',
+			'name' => esc_html__('Сайдбар на главной - 2', 'universal-theme' ),
+			'id' => 'main-2',
 			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
@@ -132,7 +94,7 @@ add_filter('widget_tag_cloud_args','universal_tag_cloud');
 // Регистрация нового виджета - Полезные файлы (downloader)
 get_template_part( 'template-parts/function', 'widget-downloader' );
 
-// Регистрация нового виджета - Полезные файлы (downloader)
+// Регистрация нового виджета - Наши соцсети (socialnetwork)
 get_template_part( 'template-parts/function', 'widget-socialnetwork' );
 
 // Мои функции

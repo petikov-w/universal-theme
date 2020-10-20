@@ -11,7 +11,7 @@ class Socialnetwork_Widget extends WP_Widget {
 		parent::__construct(
 			'socialnetwork_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: socialnetwork
 			'Социальные сети',
-			array( 'description' => 'Наши соцсети', 'classname' => 'widget_socialnetwork',)
+			array( 'description' => 'Наши соцсети', 'classname' => 'widget-socialnetwork',)
 		);
 
 		// скрипты/стили виджета, только если он активен
@@ -36,26 +36,29 @@ class Socialnetwork_Widget extends WP_Widget {
 		$twitter = $instance['twitter'];
 		$image_facebook = get_template_directory_uri() . '/assets/images/facebook.svg';
 		$image_twitter = get_template_directory_uri() . '/assets/images/twitter.svg';
-		$image_insagram = get_template_directory_uri() . '/assets/images/insagram.svg';
+		$image_instagram = get_template_directory_uri() . '/assets/images/instagram.png';
+		$image_vk = get_template_directory_uri() . '/assets/images/vkontakte.png';
 
 		echo $args['before_widget'];
+		echo '<div class="social-blc">';
 		if ( ! empty( $title ) ) {
 			echo $args['before_title'] . $title . $args['after_title'];
-//			echo $title ;
 		}
-		if ( ! empty( $facebook ) ) {
-			echo '<a class="widget-link" href="' . $facebook . '"><img class="icon-social facebook" src="'. $image_facebook . '""></a>';
-		}
-		if ( ! empty( $twitter ) ) {
-			echo '<a class="widget-link" href="' . $twitter . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
-		}
-		if ( ! empty( $instagram ) ) {
-			echo '<a class="widget-link" href="' . $instagram . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
-		}
-		if ( ! empty( $vk ) ) {
-			echo '<a class="widget-link" href="' . $vk . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
-		}
-
+		echo '<div class="set-social-icons">';
+            if ( ! empty( $facebook ) ) {
+                echo '<a class="widget-link" href="' . $facebook . '"><img class="icon-social facebook" src="'. $image_facebook . '""></a>';
+            }
+            if ( ! empty( $twitter ) ) {
+                echo '<a class="widget-link" href="' . $twitter . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
+            }
+            if ( ! empty( $instagram ) ) {
+                echo '<a class="widget-link" href="' . $instagram . '"><img  class="icon-social instagram" src="'. $image_instagram . '""></a>';
+            }
+            if ( ! empty( $vk ) ) {
+                echo '<a class="widget-link" href="' . $vk . '"><img class="icon-social vk" src="'. $image_vk . '""></a>';
+            }
+		echo '</div>';
+		echo '</div>';
 		echo $args['after_widget'];
 	}
 

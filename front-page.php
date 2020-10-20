@@ -129,10 +129,8 @@ get_header();
 		?>
         <!--            ===================================================================-->
     </ul>
-
-    <!--            ===================================================================-->
-
-    <ul class="article-grid">
+    <div class="main-grid">
+        <ul class="article-grid">
         <!--            ===================================================================-->
 	    <?php
 	    global $post;
@@ -149,7 +147,7 @@ get_header();
 			    $query->the_post();
 			    $cnt++;
 			    switch ($cnt) {
-                   case '1': ?>
+                    case '1': ?>
 <!--                   --------------------------- 1 --------------------------------------->
                     <li class="article-grid-item article-gri-01">
                         <div class="top-blc-01">
@@ -183,7 +181,7 @@ get_header();
                     <?php
                     break;
 
-                   case '2': ?>
+                    case '2': ?>
 <!--                   ---------------------------- 2 статья-------------------------------->
                        <li class="article-grid-item article-gri-02 csm">
                            <img class="img-cs2" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
@@ -226,19 +224,19 @@ get_header();
                        <?php
                        break;
 
-
 				    case '3': ?>
 <!--                   ---------------------------- 3 статья-------------------------------->
 <!--                   ---------------------------- Чек-лист ------------------------------->
-                        <li class="article-grid-widget2">
-	                        <?php get_sidebar('main-01') ?>
-                        </li>
+<!--                        <li class="article-grid-widget2">-->
+<!--	                        --><?php //get_sidebar('main-01') ?>
+<!--                        </li>-->
 <!--                   ---------------------------- Чек-лист (конец блока) ----------------->
 <!--                   ---------------------------- Облако тегов --------------------------->
-                        <li class="article-grid-widget article-gri-03">
-						    <?php get_sidebar('main-02') ?>
-                        </li>
+<!--                        <li class="article-grid-widget article-gri-03">-->
+<!--						    --><?php //get_sidebar('main-02') ?>
+<!--                        </li>-->
 <!--                   ---------------------------- Облако тегов (конец блока) ------------->
+<!--                        <li class="article-grid-item article-gri-04 csm">-->
                         <li class="article-grid-item article-gri-04 csm">
                             <a href="<?php echo get_the_permalink() ?>">
                                 <img class="img-cs3" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
@@ -314,18 +312,12 @@ get_header();
 	    wp_reset_postdata(); // Сбрасываем $post
 	    ?>
         <!--            ===================================================================-->
-
-        <li class="article-grid-widget3 social-blc">
-	        <?php get_sidebar('main-03') ?>
-
-<!--            <span class="social-text">Наши соцсети</span>-->
-<!--            <div class="set-social-icons">-->
-<!--                <a href="#"><img width="10" height="18" class="icon-social facebook" src="--><?php //echo get_template_directory_uri().'/assets/images/facebook.svg' ?><!--" alt="facebook"></a>-->
-<!--                <a href="#"><img class="icon-social twitter" src="--><?php //echo get_template_directory_uri().'/assets/images/twitter.svg' ?><!--" alt="twitter"></a>-->
-<!--                <a href="#"><img class="icon-social youtube" src="--><?php //echo get_template_directory_uri().'/assets/images/youtube.svg' ?><!--" alt="youtube"></a>-->
-<!--            </div>-->
         </li>
     </ul>
-</div>
+<!--        Подключаем сайдбар  -->
+        <?php get_sidebar('main') ?>
+    </div>
+
+</div><!-- /.container -->
 <?php
 get_footer();
