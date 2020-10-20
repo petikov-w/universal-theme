@@ -226,17 +226,6 @@ get_header();
 
 				    case '3': ?>
 <!--                   ---------------------------- 3 статья-------------------------------->
-<!--                   ---------------------------- Чек-лист ------------------------------->
-<!--                        <li class="article-grid-widget2">-->
-<!--	                        --><?php //get_sidebar('main-01') ?>
-<!--                        </li>-->
-<!--                   ---------------------------- Чек-лист (конец блока) ----------------->
-<!--                   ---------------------------- Облако тегов --------------------------->
-<!--                        <li class="article-grid-widget article-gri-03">-->
-<!--						    --><?php //get_sidebar('main-02') ?>
-<!--                        </li>-->
-<!--                   ---------------------------- Облако тегов (конец блока) ------------->
-<!--                        <li class="article-grid-item article-gri-04 csm">-->
                         <li class="article-grid-item article-gri-04 csm">
                             <a href="<?php echo get_the_permalink() ?>">
                                 <img class="img-cs3" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
