@@ -7,12 +7,12 @@
  * @package universal-example
  */
 
-if ( ! is_active_sidebar( 'main-03' ) ) {
+if ( ! is_active_sidebar( 'main-2' ) ) {
 	return;
 }
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'main-03' ); ?>
+	<?php dynamic_sidebar( 'main-2' ); ?>
 </aside><!-- #secondary -->
 
