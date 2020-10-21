@@ -8,126 +8,40 @@ get_header();
 <div class="container">
 	<div class="hero">
 		<div class="left">
-<!--            ===================================================================-->
-
-			<?php
-			// Объявляем глобальную переменнную $post
-			global $post;
-
-			$myposts = get_posts([
-				'numberposts' => 1,
-				'category_name'    => 'javascript, css, html, web-design'
-			]);
-			// проверяем есть ли посты в сформированном массиве $myposts
-			if( $myposts ){
-				// если есть запускаем цикл вывода постов
-				foreach( $myposts as $post ){
-					setup_postdata( $post ); // устанавливаем данные (из-за использования цикла get_posts)
-					?>
-<!--              --------------------------------Вывод постов----------------------------------------------   -->
-
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="post-thumb">
-                    <?php $author_id=get_the_author_meta('ID') ?>
-                    <a href="<?php echo get_author_posts_url($author_id)?>" class="author">
-                        <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar">
-                        <div class="author-bio">
-                            <span class="author-name"><?php the_author() ?></span>
-                            <span class="author-rank">Должность</span>
-                        </div>
-                    </a><!-- /.author -->
-                    <div class="post-text">
-                        <? category_colors2(variables::$color_category, get_the_category()[0]); ?>
-<!--                        --><?// category_colors(variables::$color_category); ?>
-                        <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(),0,60,'...'); ?></h2>
-                        <a href="<?php echo get_the_permalink(); ?>" class="more">Читать далее</a>
-                    </div>
-<!--              --------------------------------Вывод постов (конец) --------------------------------------   -->
-            <?php
-				}
-			} else {?>
-				<p>Постов не найдено</p>
-                <?php
-			}
-
-			wp_reset_postdata(); // Сбрасываем $post
-			?>
+        <?php
+            $args_list = array(
+                'posts_per_page' => 1,
+                'category_name'  => 'javascript, css, html, web-design'
+            );
+            cycle_wp_query($args_list, 'hero-left');
+        ?>
 		</div><!-- /.left -->
 		<div class="right">
             <h3 class="recommend">Рекомендуем</h3>
             <ul class="posts-list">
-                <!--            ===================================================================-->
-				<?php
-				// Объявляем глобальную переменнную $post
-				global $post;
-
-				$myposts = get_posts([
-					'numberposts' => 5,
-					'offset' => 1,
-					'category_name'  => 'javascript, css, html, web-design'
-				]);
-				// проверяем есть ли посты в сформированном массиве $myposts
-				if( $myposts ){
-					// если есть запускаем цикл вывода постов
-					foreach( $myposts as $post ){
-						setup_postdata( $post ); // устанавливаем данные (из-за использования цикла get_posts)
-						?>
-                        <!-- --------------------------------Вывод постов----------------------------------------------   -->
-                        <li class="post">
-							<?php category_colors(variables::$color_category); ?>
-                            <a class="post-permalink" href="<?php echo get_the_permalink(); ?>">
-                                <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(),0,60,'...'); ?></h2>
-                            </a>
-                        </li>
-                        <!-- --------------------------------Вывод постов (конец) --------------------------------------  -->
-						<?php
-					}
-				} else {?>
-                    <p>Постов не найдено</p>
-				<?php
-				}
-				wp_reset_postdata(); // Сбрасываем $post
-				?>
-                <!--            ===================================================================-->
-
+	            <?php
+                    $args_postlist = array(
+                        'posts_per_page' => 5,
+                        'offset' => 1,
+                        'category_name'  => 'javascript, css, html, web-design'
+                    );
+                    cycle_wp_query($args_postlist, 'hero-right');
+	            ?>
             </ul>
 		</div><!-- /.right -->
 	</div><!-- /.hero -->
 </div><!-- /.container -->
 </main>
+
 <div class="container">
     <ul class="article-list">
-        <!--            ===================================================================-->
-		<?php
-		// Объявляем глобальную переменнную $post
-		global $post;
-
-		$myposts = get_posts([
-			'numberposts' => 4,
-            'category_name'    => 'articles'
-		]);
-		// проверяем есть ли посты в сформированном массиве $myposts
-		if( $myposts ){
-			// если есть запускаем цикл вывода постов
-			foreach( $myposts as $post ){
-				setup_postdata( $post ); // устанавливаем данные (из-за использования цикла get_posts)
-				?>
-                <!-- --------------------------------Вывод постов----------------------------------------------   -->
-                <li class="article-item">
-                    <a class="article-permalink" href="<?php echo get_the_permalink(); ?>">
-                        <h4 class="article-title"><?php echo mb_strimwidth(get_the_title(),0,55,'...'); ?></h4>
-                    </a>
-                    <img width="65" height="65" src="<?php echo get_the_post_thumbnail_url(null,'thumbnail')?>" alt="">
-                </li>
-                <!-- --------------------------------Вывод постов (конец) --------------------------------------  -->
-				<?php
-			}
-		} else {?>
-            <p>Постов не найдено</p>
-			<?php
-		}
-		wp_reset_postdata(); // Сбрасываем $post
-		?>
-        <!--            ===================================================================-->
+	    <?php
+	    $args_articlelist = array(
+		    'posts_per_page' => 4,
+		    'category_name' => 'articles',
+	    );
+	    cycle_wp_query($args_articlelist, 'articlelist');
+	    ?>
     </ul>
     <div class="main-grid">
         <ul class="article-grid">
@@ -146,6 +60,7 @@ get_header();
 		    while ( $query->have_posts() ) {
 			    $query->the_post();
 			    $cnt++;
+			    $author_id=get_the_author_meta('ID');
 			    switch ($cnt) {
                     case '1': ?>
 <!--                   --------------------------- 1 --------------------------------------->
@@ -315,6 +230,17 @@ get_header();
     );
     cycle_wp_query($args_gation, 'investigation');
 ?>
+    <div class="container">
+        <ul class="article-list-2">
+	        <?php
+	        $args_list_2 = array(
+		        'posts_per_page' => 6,
+		       // 'category_name' => 'investigation',
+	        );
+	        cycle_wp_query($args_list_2, 'articlelist2');
+	        ?>
+        </ul>
+    </div>
 
 <?php
 get_footer();

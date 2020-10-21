@@ -30,6 +30,9 @@ body {
   background-repeat: no-repeat;
   background-position: center right 20px;
 }
+.more:focus, .more:visited, .more:hover {
+  color: #fff;
+}
 
 * {
   box-sizing: border-box;
@@ -808,4 +811,58 @@ body {
   color: #fff;
   max-width: 946px;
   margin: 0 auto 25px;
+}
+
+.article-list-2 {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+  max-width: 74%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.article-item-area {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 25px 35px;
+}
+
+.aricle-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 437px;
+  margin-left: 30px;
+}
+
+.aricle-item-info a {
+  text-decoration: none;
+}
+
+.article-title-2 {
+  margin: 0;
+  color: #262D33;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  text-transform: none;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.exp-txt3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4B5157;
+  margin-top: 5px;
+}
+
+.date-comm-like {
+  color: #BCBFC2;
 }
