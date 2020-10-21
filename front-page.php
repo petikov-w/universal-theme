@@ -306,7 +306,15 @@ get_header();
 <!--        Подключаем сайдбар  -->
         <?php get_sidebar('main') ?>
     </div>
-
 </div><!-- /.container -->
+
+<?php
+    $args_gation = array(
+        'posts_per_page' => 1,
+        'category_name' => 'investigation',
+    );
+    cycle_wp_query($args_gation, 'investigation');
+?>
+
 <?php
 get_footer();

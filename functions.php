@@ -86,6 +86,8 @@ function universal_tag_cloud($args){
 	$args['largest']= 14;
 	$args['unit']= 'px';
 	$args['order']= 'DESC';
+	$args['number']= 10;
+
 	return $args;
 }
 add_filter('widget_tag_cloud_args','universal_tag_cloud');
@@ -99,4 +101,5 @@ get_template_part( 'template-parts/function', 'widget-socialnetwork' );
 
 // Мои функции
 get_template_part( 'template-parts/function', 'my-functions' );
+get_template_part( 'template-parts/function', 'cycle-wp-query' );
 

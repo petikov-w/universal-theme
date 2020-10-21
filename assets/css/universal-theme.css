@@ -15,6 +15,22 @@ body {
   font-size: 14px;
 }
 
+.more {
+  display: inline-block;
+  color: #fff;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px 50px 10px 20px;
+  border-radius: 20px;
+  background: #5f9ef6;
+  text-decoration: none;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -189,22 +205,6 @@ body {
   color: #fff;
   max-width: 600px;
   margin: 20px 0 50px 0;
-}
-
-.post-text .more {
-  display: inline-block;
-  color: #fff;
-  font-family: "Lato Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 10px 50px 10px 20px;
-  border-radius: 20px;
-  background: #5f9ef6;
-  text-decoration: none;
-  background-image: url("../images/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center right 20px;
 }
 
 .hero .right {
@@ -794,4 +794,18 @@ body {
 .vk {
   background: #0f4eb8;
   padding: 17px 13px;
+}
+
+.investigation {
+  padding: 50px 0 55px;
+  text-align: center;
+}
+
+.investigation-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: #fff;
+  max-width: 946px;
+  margin: 0 auto 25px;
 }
