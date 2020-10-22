@@ -1,26 +1,30 @@
-<li class="article-item-area">
-    <img width="335" height="195" src="<?php echo get_the_post_thumbnail_url(null,'post-img')?>" alt="">
-
-    <div class="aricle-item-info">
-        <a class="article-permalink" href="<?php echo get_the_permalink(); ?>">
-            <h4 class="article-title-2"><?php echo mb_strimwidth(get_the_title(),0,55,'...'); ?></h4>
+<?php
+use ru\universal_theme\variables;
+?>
+<div class="box">
+    <li class="article-item-area">
+        <a href="<?php echo get_the_permalink() ?>">
+            <img class="img-33" src="<?php echo get_the_post_thumbnail_url()?>" alt="">
         </a>
 
-        <div class="exp-txt3">
-            <p><?php echo mb_strimwidth(get_the_excerpt(),0,200,'...'); ?></p>
+        <div class="aricle-item-info">
+            <div class="post-text-info">
+	            <?php category_colors(variables::$color_category); ?>
+                <a class="article-permalink" href="<?php echo get_the_permalink(); ?>">
+                    <h4 class="title-article"><?php echo mb_strimwidth(get_the_title(),0,65,'...'); ?></h4>
+                </a>
+                <p class="exp-txt3"><?php echo mb_strimwidth(get_the_excerpt(),0,200,'...'); ?></p>
+            </div>
+          <a href="<?php echo get_the_permalink() ?>">
+            <div class="post-total-info">
+                <span class="date-post3"><?php echo get_the_date('j F') ?></span>
+                <img src="<?php echo get_template_directory_uri().'/assets/images/comment-silver.svg' ?>" alt="">
+                <span class="comments-counter3"><?php comments_number('0','1','%'); ?></span>
+                <img src="<?php echo get_template_directory_uri().'/assets/images/heart-silver.svg' ?>" alt="">
+                <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
+            </div>
+          </a>
         </div>
-        <div class="author-bio2">
-            <a href="<?php echo get_the_permalink() ?>">
-                <div class="date-comm-like">
-                    <span class="date-post2"><?php echo get_the_date('j F') ?></span>
-                    <img class="comment" src="<?php echo get_template_directory_uri().'/assets/images/comment.svg' ?>" alt="">
-                    <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
-                    <img class="like" src="<?php echo get_template_directory_uri().'/assets/images/heart.svg' ?>" alt="">
-                    <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
-                </div>
-            </a>
-        </div>
-    </div>
-
+</div>
 
 </li>

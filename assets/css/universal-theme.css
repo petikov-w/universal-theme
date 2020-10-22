@@ -604,12 +604,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.date-post2 {
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.comments-counter2 {
+.date-post2, .comments-counter2 {
   font-size: 12px;
   font-weight: 400;
 }
@@ -816,7 +811,8 @@ body {
 .article-list-2 {
   margin: 0;
   padding: 0;
-  margin-top: 40px;
+  margin: 40px 0 40px 0;
+  padding: 0 25px;
   list-style: none;
   max-width: 74%;
   display: flex;
@@ -827,26 +823,33 @@ body {
 }
 
 .article-item-area {
-  width: 25%;
+  padding: 25px 0;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-  padding: 30px 25px 35px;
+}
+
+.box:not(:last-child) {
+  border-bottom: 1px solid #D9DADB;
 }
 
 .aricle-item-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 437px;
+  justify-content: space-between;
   margin-left: 30px;
+}
+
+.img-33 {
+  min-width: 335px;
+  height: 195px;
+  object-fit: cover;
 }
 
 .aricle-item-info a {
   text-decoration: none;
 }
 
-.article-title-2 {
+.title-article {
   margin: 0;
   color: #262D33;
   font-family: "Roboto Slab", serif;
@@ -854,15 +857,29 @@ body {
   text-transform: none;
   line-height: 25px;
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .exp-txt3 {
   font-size: 14px;
   font-weight: 400;
   color: #4B5157;
-  margin-top: 5px;
 }
 
-.date-comm-like {
+.post-text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 5px;
+}
+
+.post-total-info {
   color: #BCBFC2;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 12px;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 10px;
 }
