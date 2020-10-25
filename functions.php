@@ -104,6 +104,9 @@ get_template_part( 'template-parts/function', 'widget-downloader' );
 // Регистрация нового виджета - Наши соцсети (socialnetwork)
 get_template_part( 'template-parts/function', 'widget-socialnetwork' );
 
+// Регистрация нового виджета - Недавно опубликованные посты (resent_posts)
+get_template_part( 'template-parts/function', 'widget-recent-posts' );
+
 // Мои функции
 get_template_part( 'template-parts/function', 'my-functions' );
 get_template_part( 'template-parts/function', 'cycle-wp-query' );

@@ -66,7 +66,8 @@ get_header();
     );
     cycle_wp_query($args_gation, 'investigation');
 ?>
-    <div class="container">
+<!--    <div class="container">-->
+    <div class="container articles-grid">
         <ul class="article-list-2">
 	        <?php
 	        $args_list_2 = array(
@@ -76,6 +77,8 @@ get_header();
 	        cycle_wp_query($args_list_2, 'articlelist2');
 	        ?>
         </ul>
+        <!--        Подключаем сайдбар  -->
+	    <?php get_sidebar('main-2') ?>
     </div>
 
 <?php

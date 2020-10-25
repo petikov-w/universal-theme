@@ -634,6 +634,7 @@ body {
 
 .sidebar-front-page {
   margin: 30px 0 0 30px;
+  width: 23%;
 }
 
 .widget {
@@ -792,6 +793,44 @@ body {
 .vk {
   background: #0f4eb8;
   padding: 17px 13px;
+}
+
+.articles-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.widget-recent-posts .widget-title {
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  color: #262D33;
+  text-transform: uppercase;
+  line-height: 20px;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #D9DADB;
+  padding: 20px 25px;
+}
+
+.widget-recent-posts a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 25px;
+}
+
+.widget-recent-posts a:not(:last-child) {
+  border-bottom: 1px solid #D9DADB;
+}
+
+.widget-recent-posts img {
+  width: 60px;
+  height: 60px;
+}
+
+.recent-post-info:not(:last-child) {
+  border-bottom: 1px solid #D9DADB;
 }
 
 .investigation {
