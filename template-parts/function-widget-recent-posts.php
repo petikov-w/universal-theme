@@ -9,8 +9,8 @@ class Recent_Posts_Widget extends WP_Widget {
 		// вызов конструктора выглядит так:
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
-			'recent_posts_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: register-resent-posts
-			'Недавно опубликовано',
+			'recent_posts_widget',
+            'Недавно опубликовано',
 			array( 'description' => 'Последние посты', 'classname' => 'widget-recent-posts',)
 		);
 
@@ -37,10 +37,12 @@ class Recent_Posts_Widget extends WP_Widget {
 		if ( ! empty( $count ) ) {
 			if ( ! empty( $title ) ) {
 				echo $args['before_title'] . $title . $args['after_title'];
+				echo '<div class="widget-recent-posts-wrapper">';
 				$args_resent = array(
 					'posts_per_page'   => $count,
 				);
 				cycle_wp_query( $args_resent, 'recent-posts-widget' );
+				echo '</div>';
 			}
 		}
 //----------------------------------------------------------------------------------------------

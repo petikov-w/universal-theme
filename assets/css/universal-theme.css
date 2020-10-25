@@ -813,15 +813,41 @@ body {
   padding: 20px 25px;
 }
 
+.widget-recent-posts-wrapper {
+  padding: 0 25px;
+}
+
 .widget-recent-posts a {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 17px 25px;
+  text-decoration: none;
+  color: #4B5157;
+  padding-bottom: 17px;
+}
+
+.widget-recent-posts a:not(:first-child) {
+  padding-top: 17px;
+}
+
+.widget-recent-posts a:first-child {
+  padding-top: 7px;
 }
 
 .widget-recent-posts a:not(:last-child) {
   border-bottom: 1px solid #D9DADB;
+}
+
+.widget-recent-posts a:hover,
+.widget-recent-posts a:focus,
+.widget-recent-posts a:active {
+  color: #4B5157;
+}
+
+.recent-post-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
 }
 
 .widget-recent-posts img {
@@ -829,8 +855,17 @@ body {
   height: 60px;
 }
 
-.recent-post-info:not(:last-child) {
-  border-bottom: 1px solid #D9DADB;
+.recent-post-title {
+  font-family: "Lato Regular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recent-post-time {
+  font-family: "Lato Regular", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #939699;
 }
 
 .investigation {
