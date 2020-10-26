@@ -81,5 +81,26 @@ get_header();
 	    <?php get_sidebar('main-2') ?>
     </div>
 
+
+    <div class="special">
+        <div class="container">
+            <div class="special-grid">
+<!--                ----------------------------------------------------->
+	            <?php
+	            $args_photo_report = array(
+		            'posts_per_page' => 1,
+//		            'category_name' => ,
+	            );
+	            cycle_wp_query($args_photo_report, 'photo-report');
+	            ?>
+<!--                ----------------------------------------------------->
+
+                <div class="other">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 <?php
 get_footer();
