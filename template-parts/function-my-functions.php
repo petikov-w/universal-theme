@@ -16,12 +16,12 @@ function category_colors ($colors) {
 	}
 }
 
-function category_colors2 ($colors, $category) {
+function category_colors2 ($colors, $style = 'category-color') {
 	foreach($colors as $item => $item_count) {
-		if ($item==$category->name) {
+		if ($item==get_the_category()[0]->slug) {
 			$color = $item_count;?>
-			<a class="category-color" href="<?php echo get_category_link($category->term_id) ?>"
-			   style="color:<?= $color; ?>"><?php echo $item  ?></a>
+            <a class=<?php $style ?> href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"
+               style="color:<?= $color; ?>"><?php echo get_the_category()[0]->name  ?></a>
 			<?php
 		}
 	}

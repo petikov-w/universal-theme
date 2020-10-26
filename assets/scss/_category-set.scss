@@ -6,11 +6,14 @@
   text-decoration: none;
 }
 
-//.post-text .post-categories a {
-//  color: #5f9ef6;
-//  font-size: 12px;
-//  font-weight: 900;
-//  letter-spacing: 0.7px;
-//  text-transform: uppercase;
-//  text-decoration: none;
-//}
+.category-color-photoreport {
+  font-size: 12px;
+  letter-spacing: 0.7px;
+}
+
+.category-box {
+  padding: 5px 12px;
+  background: #3DC47E;
+  border-radius: 3px;
+  font-size: 12px;
+}

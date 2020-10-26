@@ -110,6 +110,19 @@ body {
   cursor: pointer;
 }
 
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+.avatar-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
 .home {
   background-color: #e5e5e5;
 }
@@ -187,12 +200,6 @@ body {
   font-size: 12px;
   line-height: 15px;
   color: rgba(255, 255, 255, 0.4);
-}
-
-.hero .left .author .avatar {
-  width: 45px;
-  height: 45px;
-  border-radius: 100%;
 }
 
 .post-text {
@@ -287,6 +294,18 @@ body {
   letter-spacing: 0.7px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.category-color-photoreport {
+  font-size: 12px;
+  letter-spacing: 0.7px;
+}
+
+.category-box {
+  padding: 5px 12px;
+  background: #3DC47E;
+  border-radius: 3px;
+  font-size: 12px;
 }
 
 .article-list {
@@ -464,13 +483,6 @@ body {
   background-color: #D9DADB;
 }
 
-.avatar3 {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  margin-right: 10px;
-}
-
 .author-blc {
   display: flex;
   align-items: center;
@@ -576,12 +588,6 @@ body {
 .author-bio2 .author-name2 {
   font-size: 14px;
   color: #fff;
-}
-
-.avatar2 {
-  width: 45px;
-  height: 45px;
-  border-radius: 100%;
 }
 
 .article-grid-item .top-blc {
@@ -975,4 +981,80 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 10px;
+}
+
+.special {
+  background-color: #262D33;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.special-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-report {
+  min-height: 570px;
+  border: 1px solid #fff;
+  width: 49%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding-top: 53px;
+}
+
+.category-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 19px;
+  margin-top: 18px;
+  margin-bottom: 7px;
+}
+
+.author-photo-report {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-name-photo-report {
+  line-height: 20px;
+}
+
+.author-rank-photo-report {
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 2px;
+  opacity: 0.4;
+}
+
+.photo-report-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.photo-report a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.other {
+  width: 49%;
+  border: 1px solid #fff;
+  border-radius: 10px;
 }

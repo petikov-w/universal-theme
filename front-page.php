@@ -89,7 +89,7 @@ get_header();
 	            <?php
 	            $args_photo_report = array(
 		            'posts_per_page' => 1,
-//		            'category_name' => ,
+		            'category_name' => 'photo-report',
 	            );
 	            cycle_wp_query($args_photo_report, 'photo-report');
 	            ?>

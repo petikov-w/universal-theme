@@ -159,18 +159,11 @@
     background-color: #D9DADB;
   }
 
-.avatar3 {
-  @include wh_size(30px,30px,circle);
-  margin-right: 10px;
-}
-
 .author-blc {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-
 
 
 .author-name3 {
@@ -286,10 +279,6 @@
     font-size: 14px;
     color:#fff;
   }
-
-}
-.avatar2 {
-  @include wh_size(45px,45px,circle);
 }
 
 .article-grid-item .top-blc {

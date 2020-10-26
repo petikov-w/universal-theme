@@ -22,7 +22,7 @@
                 <div class="bottom-blc">
                     <a href="<?php echo get_author_posts_url($author_id)?>" >
                     <div class="author-blc">
-                                <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar3">
+                                <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-sm">
                                 <span class="author-name3"><?php the_author() ?></span>
                                 <span class="author-desc"><?php echo mb_strimwidth(get_the_author_meta('description'),0,40,'...'); ?></span>
                                 <img class="icon-comment" src="<?php echo get_template_directory_uri().'/assets/images/comment-silver.svg' ?>" alt="">
@@ -54,7 +54,7 @@
                        <?php $author_id=get_the_author_meta('ID') ?>
                        <div class="author2">
                            <a href="<?php echo get_author_posts_url($author_id)?>" class="author2">
-                               <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar2">
+                               <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar">
                                <div class="author-bio2">
                                    <span class="author-name2"><?php the_author() ?></span>
                                    <a href="<?php echo get_the_permalink() ?>">

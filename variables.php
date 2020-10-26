@@ -9,6 +9,7 @@ class variables {
 		'web-design'    => '#ffa34d',
 		'articles'      => '#A0522D',
 		'investigation' => '#FF4F52',
+		'photo-report'  => '#ffa34d',
 	);
 }
 
