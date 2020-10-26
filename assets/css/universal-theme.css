@@ -15,6 +15,20 @@ body {
   font-size: 14px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  counter-reset: section;
+}
+
+.container {
+  max-width: 1140px;
+  width: 90%;
+  margin: auto;
+}
+
 .more {
   display: inline-block;
   color: #fff;
@@ -30,18 +44,9 @@ body {
   background-repeat: no-repeat;
   background-position: center right 20px;
 }
-.more:focus, .more:visited, .more:hover {
+
+.more:hover, .more:focus, .more:visited {
   color: #fff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 1140px;
-  width: 90%;
-  margin: auto;
 }
 
 .header {
@@ -823,6 +828,20 @@ body {
   text-decoration: none;
   color: #4B5157;
   padding-bottom: 17px;
+  position: relative;
+}
+
+.widget-recent-posts a::before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  right: 7px;
+  color: #262D33;
+  opacity: 0.08;
+  font-family: "Lato Black", sans-serif;
+  font-size: 70px;
+  font-style: italic;
+  line-height: 50px;
 }
 
 .widget-recent-posts a:not(:first-child) {

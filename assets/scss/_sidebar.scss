@@ -203,11 +203,29 @@
   text-decoration: none;
   color: #4B5157;
   padding-bottom: 17px;
+  position: relative;
 }
+
+.widget-recent-posts a::before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  //top: 0;
+  right: 7px;
+  color: #262D33;
+  opacity: 0.08;
+  @include use_font($LatoBlack,70px);
+  font-style: italic;
+  line-height: 50px;
+
+}
+
 
 .widget-recent-posts a:not(:first-child) {
   padding-top: 17px;
 }
+
+
 
 .widget-recent-posts a:first-child {
   padding-top: 7px;
