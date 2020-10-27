@@ -14,4 +14,6 @@
         </div>
     </a>
     <h3 class="photo-report-title"><?php the_title() ?></h3>
+    <a href="<?php get_the_permalink() ?>" class="button photo-report-button">Смотреть фото
+    <span class="button-photo-counter">26</span></a>
 </div>
