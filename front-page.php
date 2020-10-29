@@ -108,7 +108,7 @@ get_header();
 	                cycle_wp_query($args_career, 'career');
 	                ?>
                 </div>
-                <ul class="other-s">
+                <div class="other-grid">
 	                <?php
 	                $args_other = array(
 		                'posts_per_page' => 2,
@@ -116,9 +116,7 @@ get_header();
 	                );
 	                cycle_wp_query_switch2($args_other, 'other');
 	                ?>
-                </ul>
-
-
+                </div>
             </div>
             </div>
         </div>

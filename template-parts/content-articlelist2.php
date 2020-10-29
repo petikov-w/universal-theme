@@ -25,9 +25,17 @@ use ru\universal_theme\variables;
           <a href="<?php echo get_the_permalink() ?>">
             <div class="post-total-info">
                 <span class="date-post3"><?php echo get_the_date('j F') ?></span>
-                <img src="<?php echo get_template_directory_uri().'/assets/images/comment-silver.svg' ?>" alt="">
+                <svg width="15" height="15" class="icon comment-silver-icon">
+                     <use xlink:href="
+                     <?php echo get_template_directory_uri().'/assets/images/sprite-like.svg#comment'?>">
+                     </use>
+                </svg>
                 <span class="comments-counter3"><?php comments_number('0','1','%'); ?></span>
-                <img src="<?php echo get_template_directory_uri().'/assets/images/heart-silver.svg' ?>" alt="">
+                <svg width="15" height="15" class="icon comment-silver-icon">
+                     <use xlink:href="
+                     <?php echo get_template_directory_uri().'/assets/images/sprite-like.svg#like'?>">
+                     </use>
+                </svg>
                 <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
             </div>
           </a>

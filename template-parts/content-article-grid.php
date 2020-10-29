@@ -25,7 +25,11 @@
                                 <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-sm">
                                 <span class="author-name3"><?php the_author() ?></span>
                                 <span class="author-desc"><?php echo mb_strimwidth(get_the_author_meta('description'),0,40,'...'); ?></span>
-                                <img class="icon-comment" src="<?php echo get_template_directory_uri().'/assets/images/comment-silver.svg' ?>" alt="">
+                                <svg width="15" height="15" class="icon comment-silver-icon">
+                                    <use xlink:href="
+                                    <?php echo get_template_directory_uri().'/assets/images/sprite-like.svg#comment'?>">
+                                    </use>
+                                </svg>
                                 <span class="comments-counter"><?php comments_number('0','1','%'); ?></span>
                     </div>
                     </a>
@@ -60,9 +64,18 @@
                                    <a href="<?php echo get_the_permalink() ?>">
                                    <div class="date-comm-like">
                                        <span class="date-post2"><?php echo get_the_date('j F') ?></span>
-                                       <img class="comment" src="<?php echo get_template_directory_uri().'/assets/images/comment-white.svg' ?>" alt="">
+                                       <svg width="14" height="14" class="icon comment-white-icon">
+                                           <use xlink:href="
+                                             <?php echo get_template_directory_uri().'/assets/images/sprite-like.svg#comment'?>">
+                                           </use>
+                                       </svg>
                                        <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
-                                       <img class="like" src="<?php echo get_template_directory_uri().'/assets/images/heart-white.svg' ?>" alt="">
+
+                                       <svg width="13" height="12" class="icon comment-white-icon">
+                                           <use xlink:href="
+                                             <?php echo get_template_directory_uri().'/assets/images/sprite-like.svg#like'?>">
+                                           </use>
+                                       </svg>
                                        <span class="comments-counter2"><?php comments_number('0','1','%'); ?></span>
                                    </div>
                                    </a>

@@ -136,6 +136,15 @@ body {
   margin-left: 8px;
 }
 
+.comment-silver-icon {
+  fill: #BCBFC2;
+}
+
+.comment-white-icon {
+  fill: #fff;
+  opacity: 0.4;
+}
+
 .home {
   background-color: #e5e5e5;
 }
@@ -385,7 +394,6 @@ body {
   padding: 25px;
   background-color: #fff;
   border-radius: 10px;
-  list-style: none;
   overflow: hidden;
 }
 
@@ -532,6 +540,7 @@ body {
   font-size: 12px;
   color: #939699;
   font-weight: 400;
+  margin-left: 6px;
 }
 
 .img-cs2 {
@@ -936,8 +945,6 @@ body {
 }
 
 .article-list-2 {
-  margin: 0;
-  padding: 0;
   margin: 40px 0 40px 0;
   padding: 0 25px;
   list-style: none;
@@ -1137,7 +1144,6 @@ body {
 
 .other {
   width: 49%;
-  border: 1px solid red;
   border-radius: 10px;
   min-height: 570px;
   position: relative;
@@ -1153,16 +1159,17 @@ body {
 }
 
 .other-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
+  padding: 25px;
 }
 
-.other-grid-item2 {
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  min-width: 263px;
+.other-grid-item a {
+  text-decoration: none;
 }
 
 .other-gri-01 {
@@ -1193,14 +1200,6 @@ body {
   margin-top: 65px;
   margin-right: 30px;
   z-index: 0;
-}
-
-.other-s {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .career-info {
