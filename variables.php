@@ -10,6 +10,7 @@ class variables {
 		'articles'      => '#A0522D',
 		'investigation' => '#FF4F52',
 		'photo-report'  => '#ffa34d',
+		'career'        => '#6E99AE',
 	);
 }
 

@@ -94,10 +94,32 @@ get_header();
 	            cycle_wp_query($args_photo_report, 'photo-report');
 	            ?>
 <!--                ----------------------------------------------------->
-
-                <div class="other">
-
+            <div class="other other-grid">
+<!--                <div class="other-grid-item other-gri-01" style="background-color: #B4D1E0;">-->
+                <div class="other-grid-item other-gri-01">
+                    <img src="<?php echo get_template_directory_uri().'/assets/images/image-career.png' ?>" alt=""
+                         class="image-career">
+                    <span class="oval"></span>
+	                <?php
+	                $args_career = array(
+		                'posts_per_page' => 1,
+		                'category_name' => 'career',
+	                );
+	                cycle_wp_query($args_career, 'career');
+	                ?>
                 </div>
+                <ul class="other-s">
+	                <?php
+	                $args_other = array(
+		                'posts_per_page' => 2,
+		                'category_name' => 'javascript, css, html, web-design',
+	                );
+	                cycle_wp_query_switch2($args_other, 'other');
+	                ?>
+                </ul>
+
+
+            </div>
             </div>
         </div>
     </div>

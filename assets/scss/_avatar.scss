@@ -2,6 +2,10 @@
   @include wh_size(45px,45px,circle);
 }
 
+.photo-report .avatar {
+  z-index: 2;
+}
+
 .avatar-sm {
   @include wh_size(30px,30px,circle);
   margin-right: 10px;

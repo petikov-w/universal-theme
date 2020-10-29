@@ -9,5 +9,15 @@
   color: #fff;
   max-width: 946px;
   margin: 0 auto 25px;
+}
 
+.invest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invest a {
+  padding-right: 20px!important;
+  max-width: 161px;
 }

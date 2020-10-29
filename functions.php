@@ -8,7 +8,7 @@ if (! function_exists('universal_theme_setup')) :
 		add_theme_support( 'post-thumbnails', array( 'post' ) );
 
 		if (function_exists('add_image_size')){
-			add_image_size('post-img',335,195,true);
+//			add_image_size('post-img',335,195,true);
 		}
 
 		// добавление пользовательского логотипа
@@ -32,8 +32,11 @@ add_action( 'after_setup_theme', 'universal_theme_setup' );
 // подключаем стили и скрипты
 function enqueue_universal_style() {
 	wp_enqueue_style( 'style', get_stylesheet_uri());
+	wp_enqueue_style( 'swiper-slider', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css','style', time());
 	wp_enqueue_style( 'universal-theme', get_template_directory_uri() . '/assets/css/universal-theme.css','style', time());
 	wp_enqueue_style( 'Roboto-Slab', '//fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',null,time(),true);
+	wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/scripts.js','swiper',time(),true);
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );

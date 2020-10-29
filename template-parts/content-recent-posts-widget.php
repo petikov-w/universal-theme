@@ -1,6 +1,13 @@
 
    <a href="<?php echo get_the_permalink(); ?>" class="reсent-post-link">
-        <img src="<?php echo get_the_post_thumbnail_url(null,'thumbnail') ?>" alt="">
+        <img src="<?php
+        if( has_post_thumbnail() ) {
+	        echo get_the_post_thumbnail_url(null,'thumbnail');
+        }
+        else {
+	        echo get_template_directory_uri().'/assets/images/img-default-sm.png';
+        }
+        ?> ?>" alt="">
         <span class="recent-post-info">
             <span class="recent-post-title"><?php echo mb_strimwidth(get_the_title(),0,33,'...'); ?></span>
             <span class="recent-post-time">

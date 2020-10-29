@@ -94,7 +94,9 @@
   position: relative;
   z-index: 2;
 }
-
+.post-text a {
+  padding-right: 20px!important;
+}
 
 .post-text .post-categories  {
   margin: 0;

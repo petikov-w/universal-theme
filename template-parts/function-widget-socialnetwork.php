@@ -36,8 +36,9 @@ class Socialnetwork_Widget extends WP_Widget {
 		$twitter = $instance['twitter'];
 		$image_facebook = get_template_directory_uri() . '/assets/images/facebook.svg';
 		$image_twitter = get_template_directory_uri() . '/assets/images/twitter.svg';
-		$image_instagram = get_template_directory_uri() . '/assets/images/instagram.png';
+		$image_instagram = get_template_directory_uri() . '/assets/images/instagram.svg';
 		$image_youtube = get_template_directory_uri() . '/assets/images/youtube.svg';
+		$icon_facebook = get_template_directory_uri().'/assets/images/sprite-socialnet.svg#facebook';
 
 		echo $args['before_widget'];
 		echo '<div class="social-blc">';
@@ -46,7 +47,7 @@ class Socialnetwork_Widget extends WP_Widget {
 		}
 		echo '<div class="set-social-icons">';
             if ( ! empty( $facebook ) ) {
-                echo '<a class="widget-link" href="' . $facebook . '"><img class="icon-social facebook" src="'. $image_facebook . '""></a>';
+	            echo '<a class="widget-link" href="' . $facebook . '"><img  class="icon-social facebook" src="'. $image_facebook . '""></a>';
             }
             if ( ! empty( $instagram ) ) {
                 echo '<a class="widget-link" href="' . $instagram . '"><img  class="icon-social instagram" src="'. $image_instagram . '""></a>';
