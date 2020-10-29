@@ -1207,15 +1207,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 80%;
-  margin-left: 35px;
-  margin-top: 35px;
+  height: 90%;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .career-info p {
   width: 213px;
   color: #4B5157;
-  margin-top: -10px;
 }
 
 .career-info a {
