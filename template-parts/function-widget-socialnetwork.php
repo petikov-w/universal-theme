@@ -34,11 +34,10 @@ class Socialnetwork_Widget extends WP_Widget {
 		$instagram = $instance['instagram'];
 		$youtube = $instance['youtube'];
 		$twitter = $instance['twitter'];
-		$image_facebook = get_template_directory_uri() . '/assets/images/facebook.svg';
-		$image_twitter = get_template_directory_uri() . '/assets/images/twitter.svg';
-		$image_instagram = get_template_directory_uri() . '/assets/images/instagram.svg';
-		$image_youtube = get_template_directory_uri() . '/assets/images/youtube.svg';
 		$icon_facebook = get_template_directory_uri().'/assets/images/sprite-socialnet.svg#facebook';
+		$icon_instagram = get_template_directory_uri().'/assets/images/sprite-socialnet.svg#instagram';
+		$icon_youtube = get_template_directory_uri().'/assets/images/sprite-socialnet.svg#youtube';
+		$icon_twitter = get_template_directory_uri().'/assets/images/sprite-socialnet.svg#twitter';
 
 		echo $args['before_widget'];
 		echo '<div class="social-blc">';
@@ -47,16 +46,20 @@ class Socialnetwork_Widget extends WP_Widget {
 		}
 		echo '<div class="set-social-icons">';
             if ( ! empty( $facebook ) ) {
-	            echo '<a class="widget-link" href="' . $facebook . '"><img  class="icon-social facebook" src="'. $image_facebook . '""></a>';
+	            echo '<a class="widget-link" href="' . $facebook . '"><svg width="10" height="18" class="icon icon-social facebook">
+                            <use xlink:href="' . $icon_facebook . '""></use></svg></a>';
             }
             if ( ! empty( $instagram ) ) {
-                echo '<a class="widget-link" href="' . $instagram . '"><img  class="icon-social instagram" src="'. $image_instagram . '""></a>';
+	            echo '<a class="widget-link" href="' . $instagram . '"><svg width="14" height="14" class="icon icon-social instagram">
+                            <use xlink:href="' . $icon_instagram . '""></use></svg></a>';
             }
             if ( ! empty( $youtube ) ) {
-                echo '<a class="widget-link" href="' . $youtube . '"><img class="icon-social youtube" src="'. $image_youtube . '""></a>';
+	            echo '<a class="widget-link" href="' . $youtube . '"><svg width="18" height="15" class="icon icon-social youtube">
+                            <use xlink:href="' . $icon_youtube . '""></use></svg></a>';
             }
             if ( ! empty( $twitter ) ) {
-                echo '<a class="widget-link" href="' . $twitter . '"><img class="icon-social twitter" src="'. $image_twitter . '""></a>';
+	            echo '<a class="widget-link" href="' . $twitter . '"><svg width="18" height="15" class="icon icon-social twitter">
+                            <use xlink:href="' . $icon_twitter . '""></use></svg></a>';
             }
 		echo '</div>';
 		echo '</div>';

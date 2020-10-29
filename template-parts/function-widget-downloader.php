@@ -31,7 +31,7 @@ class Downloader_Widget extends WP_Widget {
 		$title = $instance['title'];
 		$description = $instance['description'];
 		$link = $instance['link'];
-		$image_link = get_template_directory_uri() . '/assets/images/download.svg';
+		$icon_download = get_template_directory_uri().'/assets/images/sprite.svg#download';
 
 		echo $args['before_widget'];
 		if ( ! empty( $title ) ) {
@@ -41,9 +41,10 @@ class Downloader_Widget extends WP_Widget {
 			echo '<p class="description">' . $description . '</p>';
 		}
 		if ( ! empty( $link ) ) {
-			echo '<a class="widget-link" href="' . $link . '"><img class="widget-link-icon" src="'
-                 . $image_link . '" alt="">Скачать</a>';
+			echo '<a class="widget-link" href="' . $link . '"><svg width="17" height="17" class="icon widget-link-icon white-icon">
+                            <use xlink:href="' . $icon_download . '""></use></svg>Скачать</a>';
 		}
+		echo '</span>';
 		echo $args['after_widget'];
 	}
 
