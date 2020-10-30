@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 29 2020 г., 17:56
+-- Время создания: Окт 30 2020 г., 18:30
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -174,7 +174,7 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (74, 'comment_order', 'asc', 'yes'),
 (75, 'sticky_posts', 'a:0:{}', 'yes'),
 (76, 'widget_categories', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(77, 'widget_text', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
+(77, 'widget_text', 'a:2:{i:2;a:4:{s:5:\"title\";s:0:\"\";s:4:\"text\";s:383:\"Universal — это онлайн издание, в котором мы публикуем полезные материалы о веб разработке: статьи, новости, видеоуроки, подборки, ссылки и курсы. Материалы на сайте бесплатны, но при копировании, указывайте ссылку.\";s:6:\"filter\";b:1;s:6:\"visual\";b:1;}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (78, 'widget_rss', 'a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (79, 'uninstall_plugins', 'a:0:{}', 'no'),
 (80, 'timezone_string', '', 'yes'),
@@ -201,8 +201,8 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (101, 'widget_recent-comments', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (102, 'widget_archives', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (103, 'widget_meta', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(104, 'sidebars_widgets', 'a:8:{s:15:\"sidebar-main-01\";a:1:{i:0;s:10:\"calendar-3\";}s:14:\"sidebar-main-1\";a:1:{i:0;s:10:\"calendar-2\";}s:23:\"sidebar-footer-services\";a:1:{i:0;s:11:\"tag_cloud-2\";}s:15:\"sidebar-main-02\";a:1:{i:0;s:11:\"tag_cloud-3\";}s:19:\"wp_inactive_widgets\";a:0:{}s:4:\"main\";a:3:{i:0;s:19:\"downloader_widget-2\";i:1;s:11:\"tag_cloud-4\";i:2;s:22:\"socialnetwork_widget-2\";}s:6:\"main-2\";a:1:{i:0;s:21:\"recent_posts_widget-2\";}s:13:\"array_version\";i:3;}', 'yes'),
-(105, 'cron', 'a:7:{i:1603984585;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604024185;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604067384;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604067801;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604067804;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604153784;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'yes'),
+(104, 'sidebars_widgets', 'a:10:{s:15:\"sidebar-main-01\";a:1:{i:0;s:10:\"calendar-3\";}s:14:\"sidebar-main-1\";a:1:{i:0;s:10:\"calendar-2\";}s:23:\"sidebar-footer-services\";a:1:{i:0;s:11:\"tag_cloud-2\";}s:15:\"sidebar-main-02\";a:1:{i:0;s:11:\"tag_cloud-3\";}s:19:\"wp_inactive_widgets\";a:0:{}s:4:\"main\";a:3:{i:0;s:19:\"downloader_widget-2\";i:1;s:11:\"tag_cloud-4\";i:2;s:22:\"socialnetwork_widget-2\";}s:6:\"main-2\";a:1:{i:0;s:21:\"recent_posts_widget-2\";}s:14:\"sidebar-footer\";a:6:{i:0;s:10:\"nav_menu-2\";i:1;s:10:\"nav_menu-3\";i:2;s:10:\"nav_menu-4\";i:3;s:10:\"nav_menu-5\";i:4;s:10:\"nav_menu-6\";i:5;s:10:\"nav_menu-7\";}s:19:\"sidebar-footer-text\";a:1:{i:0;s:6:\"text-2\";}s:13:\"array_version\";i:3;}', 'yes'),
+(105, 'cron', 'a:6:{i:1604074585;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604110585;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604153784;a:2:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604154201;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604154204;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (106, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (107, 'widget_calendar', 'a:3:{i:2;a:1:{s:5:\"title\";s:0:\"\";}i:3;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (108, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -210,7 +210,7 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (110, 'widget_media_gallery', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (111, 'widget_media_video', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (112, 'widget_tag_cloud', 'a:4:{i:2;a:3:{s:5:\"title\";s:8:\"Теги\";s:5:\"count\";i:1;s:8:\"taxonomy\";s:8:\"post_tag\";}i:3;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"taxonomy\";s:8:\"post_tag\";}i:4;a:3:{s:5:\"title\";s:8:\"Теги\";s:5:\"count\";i:0;s:8:\"taxonomy\";s:8:\"post_tag\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
-(113, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
+(113, 'widget_nav_menu', 'a:7:{i:2;a:2:{s:5:\"title\";s:14:\"Новости\";s:8:\"nav_menu\";i:30;}i:3;a:2:{s:5:\"title\";s:12:\"Статьи\";s:8:\"nav_menu\";i:31;}i:4;a:2:{s:5:\"title\";s:20:\"Видеоуроки\";s:8:\"nav_menu\";i:32;}i:5;a:2:{s:5:\"title\";s:10:\"Курсы\";s:8:\"nav_menu\";i:34;}i:6;a:2:{s:5:\"title\";s:20:\"Информация\";s:8:\"nav_menu\";i:33;}i:7;a:2:{s:5:\"title\";s:18:\"Категории\";s:8:\"nav_menu\";i:35;}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (114, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (116, 'recovery_keys', 'a:0:{}', 'yes'),
 (118, 'theme_mods_twentytwenty', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1601929813;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:9:\"sidebar-2\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}}}}', 'yes'),
@@ -218,7 +218,7 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (147, 'finished_updating_comment_type', '1', 'yes'),
 (158, '_transient_health-check-site-status-result', '{\"good\":\"13\",\"recommended\":\"6\",\"critical\":\"1\"}', 'yes'),
 (179, 'current_theme', 'universal-theme', 'yes'),
-(180, 'theme_mods_universal-theme', 'a:4:{i:0;b:0;s:18:\"nav_menu_locations\";a:2:{s:11:\"header_menu\";i:2;s:11:\"footer_menu\";i:0;}s:18:\"custom_css_post_id\";i:-1;s:11:\"custom_logo\";i:18;}', 'yes'),
+(180, 'theme_mods_universal-theme', 'a:4:{i:0;b:0;s:18:\"nav_menu_locations\";a:2:{s:11:\"header_menu\";i:2;s:11:\"footer_menu\";i:36;}s:18:\"custom_css_post_id\";i:-1;s:11:\"custom_logo\";i:18;}', 'yes'),
 (181, 'theme_switched', '', 'yes'),
 (198, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:\"auto_add\";a:0:{}}', 'yes'),
 (258, 'recently_activated', 'a:0:{}', 'yes'),
@@ -234,11 +234,14 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (560, '_site_transient_timeout_php_check_a5b4d2808570efd012607394df5c6fa9', '1604438393', 'no'),
 (561, '_site_transient_php_check_a5b4d2808570efd012607394df5c6fa9', 'a:5:{s:19:\"recommended_version\";s:3:\"7.4\";s:15:\"minimum_version\";s:6:\"5.6.20\";s:12:\"is_supported\";b:1;s:9:\"is_secure\";b:1;s:13:\"is_acceptable\";b:1;}', 'no'),
 (586, 'category_children', 'a:1:{i:16;a:1:{i:0;i:20;}}', 'yes'),
-(595, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.1.zip\";s:6:\"locale\";s:5:\"ru_RU\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.1.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.1\";s:7:\"version\";s:5:\"5.5.1\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1603982684;s:15:\"version_checked\";s:5:\"5.5.1\";s:12:\"translations\";a:0:{}}', 'no'),
-(596, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1603982689;s:7:\"checked\";a:2:{s:17:\"universal-example\";s:5:\"1.0.0\";s:15:\"universal-theme\";s:3:\"1.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
-(597, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1603982687;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:0:{}}', 'no'),
-(604, '_site_transient_timeout_theme_roots', '1603984488', 'no'),
-(605, '_site_transient_theme_roots', 'a:2:{s:17:\"universal-example\";s:7:\"/themes\";s:15:\"universal-theme\";s:7:\"/themes\";}', 'no');
+(596, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604067419;s:7:\"checked\";a:2:{s:17:\"universal-example\";s:5:\"1.0.0\";s:15:\"universal-theme\";s:3:\"1.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
+(597, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1604067417;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:0:{}}', 'no'),
+(611, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.2.zip\";s:6:\"locale\";s:5:\"ru_RU\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.2.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.2\";s:7:\"version\";s:5:\"5.5.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1604067416;s:15:\"version_checked\";s:5:\"5.5.2\";s:12:\"translations\";a:0:{}}', 'no'),
+(612, 'auto_core_update_notified', 'a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:17:\"admin@kroxplus.ru\";s:7:\"version\";s:5:\"5.5.2\";s:9:\"timestamp\";i:1604043887;}', 'no'),
+(614, '_site_transient_timeout_browser_ddf8c38351c8c2c2e9ed63f719e58d1c', '1604652628', 'no'),
+(615, '_site_transient_browser_ddf8c38351c8c2c2e9ed63f719e58d1c', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"85.0.4183.102\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
+(623, '_site_transient_timeout_theme_roots', '1604069218', 'no'),
+(624, '_site_transient_theme_roots', 'a:2:{s:17:\"universal-example\";s:7:\"/themes\";s:15:\"universal-theme\";s:7:\"/themes\";}', 'no');
 
 -- --------------------------------------------------------
 
@@ -384,7 +387,242 @@ INSERT INTO `universal_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`
 (304, 104, '_wp_attached_file', '2020/10/image-dev-03.jpg'),
 (305, 104, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1920;s:6:\"height\";i:1280;s:4:\"file\";s:24:\"2020/10/image-dev-03.jpg\";s:5:\"sizes\";a:1:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:24:\"image-dev-03-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (308, 106, '_edit_lock', '1603917982:1'),
-(309, 107, '_edit_lock', '1603918203:1');
+(309, 107, '_edit_lock', '1603918203:1'),
+(312, 109, '_menu_item_type', 'custom'),
+(313, 109, '_menu_item_menu_item_parent', '0'),
+(314, 109, '_menu_item_object_id', '109'),
+(315, 109, '_menu_item_object', 'custom'),
+(316, 109, '_menu_item_target', ''),
+(317, 109, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(318, 109, '_menu_item_xfn', ''),
+(319, 109, '_menu_item_url', '#'),
+(321, 110, '_menu_item_type', 'custom'),
+(322, 110, '_menu_item_menu_item_parent', '0'),
+(323, 110, '_menu_item_object_id', '110'),
+(324, 110, '_menu_item_object', 'custom'),
+(325, 110, '_menu_item_target', ''),
+(326, 110, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(327, 110, '_menu_item_xfn', ''),
+(328, 110, '_menu_item_url', '#'),
+(330, 111, '_menu_item_type', 'custom'),
+(331, 111, '_menu_item_menu_item_parent', '0'),
+(332, 111, '_menu_item_object_id', '111'),
+(333, 111, '_menu_item_object', 'custom'),
+(334, 111, '_menu_item_target', ''),
+(335, 111, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(336, 111, '_menu_item_xfn', ''),
+(337, 111, '_menu_item_url', '#'),
+(339, 112, '_menu_item_type', 'custom'),
+(340, 112, '_menu_item_menu_item_parent', '0'),
+(341, 112, '_menu_item_object_id', '112'),
+(342, 112, '_menu_item_object', 'custom'),
+(343, 112, '_menu_item_target', ''),
+(344, 112, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(345, 112, '_menu_item_xfn', ''),
+(346, 112, '_menu_item_url', '#'),
+(348, 113, '_menu_item_type', 'taxonomy'),
+(349, 113, '_menu_item_menu_item_parent', '0'),
+(350, 113, '_menu_item_object_id', '3'),
+(351, 113, '_menu_item_object', 'category'),
+(352, 113, '_menu_item_target', ''),
+(353, 113, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(354, 113, '_menu_item_xfn', ''),
+(355, 113, '_menu_item_url', ''),
+(357, 114, '_menu_item_type', 'taxonomy'),
+(358, 114, '_menu_item_menu_item_parent', '0'),
+(359, 114, '_menu_item_object_id', '4'),
+(360, 114, '_menu_item_object', 'category'),
+(361, 114, '_menu_item_target', ''),
+(362, 114, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(363, 114, '_menu_item_xfn', ''),
+(364, 114, '_menu_item_url', ''),
+(366, 115, '_menu_item_type', 'taxonomy'),
+(367, 115, '_menu_item_menu_item_parent', '0'),
+(368, 115, '_menu_item_object_id', '5'),
+(369, 115, '_menu_item_object', 'category'),
+(370, 115, '_menu_item_target', ''),
+(371, 115, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(372, 115, '_menu_item_xfn', ''),
+(373, 115, '_menu_item_url', ''),
+(375, 116, '_menu_item_type', 'taxonomy'),
+(376, 116, '_menu_item_menu_item_parent', '0'),
+(377, 116, '_menu_item_object_id', '6'),
+(378, 116, '_menu_item_object', 'category'),
+(379, 116, '_menu_item_target', ''),
+(380, 116, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(381, 116, '_menu_item_xfn', ''),
+(382, 116, '_menu_item_url', ''),
+(384, 117, '_menu_item_type', 'custom'),
+(385, 117, '_menu_item_menu_item_parent', '0'),
+(386, 117, '_menu_item_object_id', '117'),
+(387, 117, '_menu_item_object', 'custom'),
+(388, 117, '_menu_item_target', ''),
+(389, 117, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(390, 117, '_menu_item_xfn', ''),
+(391, 117, '_menu_item_url', '#'),
+(393, 118, '_menu_item_type', 'custom'),
+(394, 118, '_menu_item_menu_item_parent', '0'),
+(395, 118, '_menu_item_object_id', '118'),
+(396, 118, '_menu_item_object', 'custom'),
+(397, 118, '_menu_item_target', ''),
+(398, 118, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(399, 118, '_menu_item_xfn', ''),
+(400, 118, '_menu_item_url', '#'),
+(402, 119, '_menu_item_type', 'custom'),
+(403, 119, '_menu_item_menu_item_parent', '0'),
+(404, 119, '_menu_item_object_id', '119'),
+(405, 119, '_menu_item_object', 'custom'),
+(406, 119, '_menu_item_target', ''),
+(407, 119, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(408, 119, '_menu_item_xfn', ''),
+(409, 119, '_menu_item_url', '#'),
+(411, 120, '_menu_item_type', 'custom'),
+(412, 120, '_menu_item_menu_item_parent', '0'),
+(413, 120, '_menu_item_object_id', '120'),
+(414, 120, '_menu_item_object', 'custom'),
+(415, 120, '_menu_item_target', ''),
+(416, 120, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(417, 120, '_menu_item_xfn', ''),
+(418, 120, '_menu_item_url', '#'),
+(420, 121, '_menu_item_type', 'custom'),
+(421, 121, '_menu_item_menu_item_parent', '0'),
+(422, 121, '_menu_item_object_id', '121'),
+(423, 121, '_menu_item_object', 'custom'),
+(424, 121, '_menu_item_target', ''),
+(425, 121, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(426, 121, '_menu_item_xfn', ''),
+(427, 121, '_menu_item_url', '#'),
+(429, 122, '_menu_item_type', 'custom'),
+(430, 122, '_menu_item_menu_item_parent', '0'),
+(431, 122, '_menu_item_object_id', '122'),
+(432, 122, '_menu_item_object', 'custom'),
+(433, 122, '_menu_item_target', ''),
+(434, 122, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(435, 122, '_menu_item_xfn', ''),
+(436, 122, '_menu_item_url', '#'),
+(438, 123, '_menu_item_type', 'custom'),
+(439, 123, '_menu_item_menu_item_parent', '0'),
+(440, 123, '_menu_item_object_id', '123'),
+(441, 123, '_menu_item_object', 'custom'),
+(442, 123, '_menu_item_target', ''),
+(443, 123, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(444, 123, '_menu_item_xfn', ''),
+(445, 123, '_menu_item_url', '#'),
+(447, 124, '_menu_item_type', 'custom'),
+(448, 124, '_menu_item_menu_item_parent', '0'),
+(449, 124, '_menu_item_object_id', '124'),
+(450, 124, '_menu_item_object', 'custom'),
+(451, 124, '_menu_item_target', ''),
+(452, 124, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(453, 124, '_menu_item_xfn', ''),
+(454, 124, '_menu_item_url', '#'),
+(456, 125, '_menu_item_type', 'custom'),
+(457, 125, '_menu_item_menu_item_parent', '0'),
+(458, 125, '_menu_item_object_id', '125'),
+(459, 125, '_menu_item_object', 'custom'),
+(460, 125, '_menu_item_target', ''),
+(461, 125, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(462, 125, '_menu_item_xfn', ''),
+(463, 125, '_menu_item_url', '#'),
+(465, 126, '_menu_item_type', 'custom'),
+(466, 126, '_menu_item_menu_item_parent', '0'),
+(467, 126, '_menu_item_object_id', '126'),
+(468, 126, '_menu_item_object', 'custom'),
+(469, 126, '_menu_item_target', ''),
+(470, 126, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(471, 126, '_menu_item_xfn', ''),
+(472, 126, '_menu_item_url', '#'),
+(474, 127, '_menu_item_type', 'custom'),
+(475, 127, '_menu_item_menu_item_parent', '0'),
+(476, 127, '_menu_item_object_id', '127'),
+(477, 127, '_menu_item_object', 'custom'),
+(478, 127, '_menu_item_target', ''),
+(479, 127, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(480, 127, '_menu_item_xfn', ''),
+(481, 127, '_menu_item_url', '#'),
+(483, 128, '_menu_item_type', 'custom'),
+(484, 128, '_menu_item_menu_item_parent', '0'),
+(485, 128, '_menu_item_object_id', '128'),
+(486, 128, '_menu_item_object', 'custom'),
+(487, 128, '_menu_item_target', ''),
+(488, 128, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(489, 128, '_menu_item_xfn', ''),
+(490, 128, '_menu_item_url', '#'),
+(492, 129, '_menu_item_type', 'taxonomy'),
+(493, 129, '_menu_item_menu_item_parent', '0'),
+(494, 129, '_menu_item_object_id', '16'),
+(495, 129, '_menu_item_object', 'category'),
+(496, 129, '_menu_item_target', ''),
+(497, 129, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(498, 129, '_menu_item_xfn', ''),
+(499, 129, '_menu_item_url', ''),
+(501, 130, '_menu_item_type', 'taxonomy'),
+(502, 130, '_menu_item_menu_item_parent', '0'),
+(503, 130, '_menu_item_object_id', '20'),
+(504, 130, '_menu_item_object', 'category'),
+(505, 130, '_menu_item_target', ''),
+(506, 130, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(507, 130, '_menu_item_xfn', ''),
+(508, 130, '_menu_item_url', ''),
+(510, 131, '_menu_item_type', 'taxonomy'),
+(511, 131, '_menu_item_menu_item_parent', '0'),
+(512, 131, '_menu_item_object_id', '23'),
+(513, 131, '_menu_item_object', 'category'),
+(514, 131, '_menu_item_target', ''),
+(515, 131, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(516, 131, '_menu_item_xfn', ''),
+(517, 131, '_menu_item_url', ''),
+(519, 132, '_menu_item_type', 'taxonomy'),
+(520, 132, '_menu_item_menu_item_parent', '0'),
+(521, 132, '_menu_item_object_id', '27'),
+(522, 132, '_menu_item_object', 'category'),
+(523, 132, '_menu_item_target', ''),
+(524, 132, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(525, 132, '_menu_item_xfn', ''),
+(526, 132, '_menu_item_url', ''),
+(528, 2, '_edit_lock', '1604049674:1'),
+(529, 2, '_wp_trash_meta_status', 'publish'),
+(530, 2, '_wp_trash_meta_status', 'publish'),
+(531, 2, '_wp_trash_meta_time', '1604049688'),
+(532, 2, '_wp_trash_meta_time', '1604049688'),
+(533, 2, '_wp_desired_post_slug', 'sample-page'),
+(534, 2, '_wp_desired_post_slug', 'sample-page'),
+(535, 134, '_edit_lock', '1604049653:1'),
+(536, 136, '_edit_lock', '1604049750:1'),
+(537, 138, '_edit_lock', '1604049866:1'),
+(538, 140, '_edit_lock', '1604049897:1'),
+(539, 142, '_menu_item_type', 'post_type'),
+(540, 142, '_menu_item_menu_item_parent', '0'),
+(541, 142, '_menu_item_object_id', '140'),
+(542, 142, '_menu_item_object', 'page'),
+(543, 142, '_menu_item_target', ''),
+(544, 142, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(545, 142, '_menu_item_xfn', ''),
+(546, 142, '_menu_item_url', ''),
+(548, 143, '_menu_item_type', 'post_type'),
+(549, 143, '_menu_item_menu_item_parent', '0'),
+(550, 143, '_menu_item_object_id', '138'),
+(551, 143, '_menu_item_object', 'page'),
+(552, 143, '_menu_item_target', ''),
+(553, 143, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(554, 143, '_menu_item_xfn', ''),
+(555, 143, '_menu_item_url', ''),
+(557, 144, '_menu_item_type', 'post_type'),
+(558, 144, '_menu_item_menu_item_parent', '0'),
+(559, 144, '_menu_item_object_id', '136'),
+(560, 144, '_menu_item_object', 'page'),
+(561, 144, '_menu_item_target', ''),
+(562, 144, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(563, 144, '_menu_item_xfn', ''),
+(564, 144, '_menu_item_url', ''),
+(566, 145, '_menu_item_type', 'post_type'),
+(567, 145, '_menu_item_menu_item_parent', '0'),
+(568, 145, '_menu_item_object_id', '134'),
+(569, 145, '_menu_item_object', 'page'),
+(570, 145, '_menu_item_target', ''),
+(571, 145, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(572, 145, '_menu_item_xfn', ''),
+(573, 145, '_menu_item_url', '');
 
 -- --------------------------------------------------------
 
@@ -423,7 +661,7 @@ CREATE TABLE `universal_posts` (
 --
 
 INSERT INTO `universal_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(2, 1, '2020-10-02 17:16:23', '2020-10-02 14:16:23', '<!-- wp:paragraph -->\n<p>Это пример страницы. От записей в блоге она отличается тем, что остаётся на одном месте и отображается в меню сайта (в большинстве тем). На странице &laquo;Детали&raquo; владельцы сайтов обычно рассказывают о себе потенциальным посетителям. Например, так:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Привет! Днём я курьер, а вечером &#8212; подающий надежды актёр. Это мой блог. Я живу в Ростове-на-Дону, люблю своего пса Джека и пинаколаду. (И ещё попадать под дождь.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...или так:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Компания &laquo;Штучки XYZ&raquo; была основана в 1971 году и с тех пор производит качественные штучки. Компания находится в Готэм-сити, имеет штат из более чем 2000 сотрудников и приносит много пользы жителям Готэма.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>Перейдите <a href=\"http://universal.loc/wp-admin/\">в консоль</a>, чтобы удалить эту страницу и создать новые. Успехов!</p>\n<!-- /wp:paragraph -->', 'Пример страницы', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2020-10-02 17:16:23', '2020-10-02 14:16:23', '', 0, 'http://universal.loc/?page_id=2', 0, 'page', '', 0),
+(2, 1, '2020-10-02 17:16:23', '2020-10-02 14:16:23', '<!-- wp:paragraph -->\n<p>Это пример страницы. От записей в блоге она отличается тем, что остаётся на одном месте и отображается в меню сайта (в большинстве тем). На странице &laquo;Детали&raquo; владельцы сайтов обычно рассказывают о себе потенциальным посетителям. Например, так:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Привет! Днём я курьер, а вечером &#8212; подающий надежды актёр. Это мой блог. Я живу в Ростове-на-Дону, люблю своего пса Джека и пинаколаду. (И ещё попадать под дождь.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...или так:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Компания &laquo;Штучки XYZ&raquo; была основана в 1971 году и с тех пор производит качественные штучки. Компания находится в Готэм-сити, имеет штат из более чем 2000 сотрудников и приносит много пользы жителям Готэма.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>Перейдите <a href=\"http://universal.loc/wp-admin/\">в консоль</a>, чтобы удалить эту страницу и создать новые. Успехов!</p>\n<!-- /wp:paragraph -->', 'Пример страницы', '', 'trash', 'closed', 'open', '', 'sample-page__trashed', '', '', '2020-10-30 12:21:28', '2020-10-30 09:21:28', '', 0, 'http://universal.loc/?page_id=2', 0, 'page', '', 0),
 (3, 1, '2020-10-02 17:16:23', '2020-10-02 14:16:23', '<!-- wp:heading --><h2>Кто мы</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Наш адрес сайта: http://universal.loc.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Какие персональные данные мы собираем и с какой целью</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Комментарии</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Если посетитель оставляет комментарий на сайте, мы собираем данные указанные в форме комментария, а также IP адрес посетителя и данные user-agent браузера с целью определения спама.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Анонимизированная строка создаваемая из вашего адреса email (\"хеш\") может предоставляться сервису Gravatar, чтобы определить используете ли вы его. Политика конфиденциальности Gravatar доступна здесь: https://automattic.com/privacy/ . После одобрения комментария ваше изображение профиля будет видимым публично в контексте вашего комментария.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Медиафайлы</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Если вы зарегистрированный пользователь и загружаете фотографии на сайт, вам возможно следует избегать загрузки изображений с метаданными EXIF, так как они могут содержать данные вашего месторасположения по GPS. Посетители могут извлечь эту информацию скачав изображения с сайта.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Формы контактов</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Куки</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Если вы оставляете комментарий на нашем сайте, вы можете включить сохранение вашего имени, адреса email и вебсайта в куки. Это делается для вашего удобства, чтобы не заполнять данные снова при повторном комментировании. Эти куки хранятся в течение одного года.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Если у вас есть учетная запись на сайте и вы войдете в неё, мы установим временный куки для определения поддержки куки вашим браузером, куки не содержит никакой личной информации и удаляется при закрытии вашего браузера.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>При входе в учетную запись мы также устанавливаем несколько куки с данными входа и настройками экрана. Куки входа хранятся в течение двух дней, куки с настройками экрана - год. Если вы выберете возможность \"Запомнить меня\", данные о входе будут сохраняться в течение двух недель. При выходе из учетной записи куки входа будут удалены.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>При редактировании или публикации статьи в браузере будет сохранен дополнительный куки, он не содержит персональных данных и содержит только ID записи отредактированной вами, истекает через 1 день.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Встраиваемое содержимое других вебсайтов</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Статьи на этом сайте могут включать встраиваемое содержимое (например видео, изображения, статьи и др.), подобное содержимое ведет себя так же, как если бы посетитель зашел на другой сайт.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Эти сайты могут собирать данные о вас, использовать куки, внедрять дополнительное отслеживание третьей стороной и следить за вашим взаимодействием с внедренным содержимым, включая отслеживание взаимодействия, если у вас есть учетная запись и вы авторизовались на том сайте.</p><!-- /wp:paragraph --><!-- wp:heading {\"level\":3} --><h3>Веб-аналитика</h3><!-- /wp:heading --><!-- wp:heading --><h2>С кем мы делимся вашими данными</h2><!-- /wp:heading --><!-- wp:heading --><h2>Как долго мы храним ваши данные</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Если вы оставляете комментарий, то сам комментарий и его метаданные сохраняются неопределенно долго. Это делается для того, чтобы определять и одобрять последующие комментарии автоматически, вместо помещения их в очередь на одобрение.</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>Для пользователей с регистрацией на нашем сайте мы храним ту личную информацию, которую они указывают в своем профиле. Все пользователи могут видеть, редактировать или удалить свою информацию из профиля в любое время (кроме имени пользователя). Администрация вебсайта также может видеть и изменять эту информацию.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Какие у вас права на ваши данные</h2><!-- /wp:heading --><!-- wp:paragraph --><p>При наличии учетной записи на сайте или если вы оставляли комментарии, то вы можете запросить файл экспорта персональных данных, которые мы сохранили о вас, включая предоставленные вами данные. Вы также можете запросить удаление этих данных, это не включает данные, которые мы обязаны хранить в административных целях, по закону или целях безопасности.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Куда мы отправляем ваши данные</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Комментарии пользователей могут проверяться автоматическим сервисом определения спама.</p><!-- /wp:paragraph --><!-- wp:heading --><h2>Ваша контактная информация</h2><!-- /wp:heading --><!-- wp:heading --><h2>Дополнительная информация</h2><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Как мы защищаем ваши данные</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Какие принимаются процедуры против взлома данных</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>От каких третьих сторон мы получаем данные</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Какие автоматические решения принимаются на основе данных пользователей</h3><!-- /wp:heading --><!-- wp:heading {\"level\":3} --><h3>Требования к раскрытию отраслевых нормативных требований</h3><!-- /wp:heading -->', 'Политика конфиденциальности', '', 'draft', 'closed', 'open', '', 'privacy-policy', '', '', '2020-10-02 17:16:23', '2020-10-02 14:16:23', '', 0, 'http://universal.loc/?page_id=3', 0, 'page', '', 0),
 (17, 1, '2020-10-07 23:10:40', '2020-10-07 20:10:40', '', 'logo', '', 'inherit', 'open', 'closed', '', 'logo', '', '', '2020-10-07 23:10:40', '2020-10-07 20:10:40', '', 0, 'http://universal.loc/wp-content/uploads/2020/10/logo.png', 0, 'attachment', 'image/png', 0),
 (18, 1, '2020-10-07 23:10:58', '2020-10-07 20:10:58', 'http://universal.loc/wp-content/uploads/2020/10/cropped-logo.png', 'cropped-logo.png', '', 'inherit', 'open', 'closed', '', 'cropped-logo-png', '', '', '2020-10-07 23:10:58', '2020-10-07 20:10:58', '', 0, 'http://universal.loc/wp-content/uploads/2020/10/cropped-logo.png', 0, 'attachment', 'image/png', 0),
@@ -503,7 +741,44 @@ INSERT INTO `universal_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`
 (105, 1, '2020-10-28 00:34:30', '2020-10-27 21:34:30', '<!-- wp:paragraph -->\n<p>Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности способствует подготовки и реализации модели развития. С другой стороны сложившаяся структура организации в значительной степени обуславливает создание дальнейших направлений развития.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание дальнейших направлений развития.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Равным образом сложившаяся структура организации способствует подготовки и реализации направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют от нас анализа новых предложений. Товарищи! дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки форм развития.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:image {\"id\":102,\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://universal.loc/wp-content/uploads/2020/10/image-dev-01.jpg\" alt=\"\" class=\"wp-image-102\"/><figcaption>Это первое фото</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":103,\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://universal.loc/wp-content/uploads/2020/10/image-dev-02.jpg\" alt=\"\" class=\"wp-image-103\"/><figcaption>Это второе фото</figcaption></figure>\n<!-- /wp:image -->\n\n<!-- wp:image {\"id\":104,\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"http://universal.loc/wp-content/uploads/2020/10/image-dev-03.jpg\" alt=\"\" class=\"wp-image-104\"/><figcaption>Это третье фото</figcaption></figure>\n<!-- /wp:image -->', 'Выбор читателей: где удобнее работать фрилансеру', '', 'inherit', 'closed', 'closed', '', '96-revision-v1', '', '', '2020-10-28 00:34:30', '2020-10-27 21:34:30', '', 96, 'http://universal.loc/2020/10/28/96-revision-v1/', 0, 'revision', '', 0),
 (106, 1, '2020-10-28 23:48:42', '0000-00-00 00:00:00', '', 'Черновик', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-10-28 23:48:42', '0000-00-00 00:00:00', '', 0, 'http://universal.loc/?p=106', 0, 'post', '', 0),
 (107, 1, '2020-10-28 23:52:24', '2020-10-28 20:52:24', '<!-- wp:paragraph -->\n<p>Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений. Товарищи! рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Задача организации, в особенности же новая модель организационной деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации систем массового участия.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют определения и уточнения дальнейших направлений развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что рамки и место обучения кадров способствует подготовки и реализации дальнейших направлений развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что новая модель организационной деятельности в значительной степени обуславливает создание модели развития. Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Таким образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений.</p>\n<!-- /wp:paragraph -->', 'Вопросы на собеседовании для джуна', 'Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений.', 'publish', 'open', 'open', '', '%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b-%d0%bd%d0%b0-%d1%81%d0%be%d0%b1%d0%b5%d1%81%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b8-%d0%b4%d0%bb%d1%8f-%d0%b4%d0%b6%d1%83%d0%bd%d0%b0', '', '', '2020-10-28 23:52:24', '2020-10-28 20:52:24', '', 0, 'http://universal.loc/?p=107', 0, 'post', '', 0),
-(108, 1, '2020-10-28 23:52:24', '2020-10-28 20:52:24', '<!-- wp:paragraph -->\n<p>Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений. Товарищи! рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Задача организации, в особенности же новая модель организационной деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации систем массового участия.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют определения и уточнения дальнейших направлений развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что рамки и место обучения кадров способствует подготовки и реализации дальнейших направлений развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что новая модель организационной деятельности в значительной степени обуславливает создание модели развития. Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Таким образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений.</p>\n<!-- /wp:paragraph -->', 'Вопросы на собеседовании для джуна', 'Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений.', 'inherit', 'closed', 'closed', '', '107-revision-v1', '', '', '2020-10-28 23:52:24', '2020-10-28 20:52:24', '', 107, 'http://universal.loc/2020/10/28/107-revision-v1/', 0, 'revision', '', 0);
+(108, 1, '2020-10-28 23:52:24', '2020-10-28 20:52:24', '<!-- wp:paragraph -->\n<p>Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений. Товарищи! рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Задача организации, в особенности же новая модель организационной деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же укрепление и развитие структуры влечет за собой процесс внедрения и модернизации систем массового участия.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют определения и уточнения дальнейших направлений развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что рамки и место обучения кадров способствует подготовки и реализации дальнейших направлений развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет выполнять важные задания по разработке соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что новая модель организационной деятельности в значительной степени обуславливает создание модели развития. Разнообразный и богатый опыт рамки и место обучения кадров влечет за собой процесс внедрения и модернизации новых предложений. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Таким образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации новых предложений.</p>\n<!-- /wp:paragraph -->', 'Вопросы на собеседовании для джуна', 'Не следует, однако забывать, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений.', 'inherit', 'closed', 'closed', '', '107-revision-v1', '', '', '2020-10-28 23:52:24', '2020-10-28 20:52:24', '', 107, 'http://universal.loc/2020/10/28/107-revision-v1/', 0, 'revision', '', 0),
+(109, 1, '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 'Обновления', '', 'publish', 'closed', 'closed', '', '%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f', '', '', '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 0, 'http://universal.loc/?p=109', 1, 'nav_menu_item', '', 0),
+(110, 1, '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 'Экспресс', '', 'publish', 'closed', 'closed', '', '%d1%8d%d0%ba%d1%81%d0%bf%d1%80%d0%b5%d1%81%d1%81', '', '', '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 0, 'http://universal.loc/?p=110', 2, 'nav_menu_item', '', 0),
+(111, 1, '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 'Politics', '', 'publish', 'closed', 'closed', '', 'politics', '', '', '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 0, 'http://universal.loc/?p=111', 3, 'nav_menu_item', '', 0),
+(112, 1, '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 'Solar Eclipse', '', 'publish', 'closed', 'closed', '', 'solar-eclipse', '', '', '2020-10-30 12:04:35', '2020-10-30 09:04:35', '', 0, 'http://universal.loc/?p=112', 4, 'nav_menu_item', '', 0),
+(113, 1, '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 'CSS', '', 'publish', 'closed', 'closed', '', 'css-2', '', '', '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 0, 'http://universal.loc/?p=113', 2, 'nav_menu_item', '', 0),
+(114, 1, '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 'JavaScript', '', 'publish', 'closed', 'closed', '', 'javascript-2', '', '', '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 0, 'http://universal.loc/?p=114', 3, 'nav_menu_item', '', 0),
+(115, 1, '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 'HTML', '', 'publish', 'closed', 'closed', '', 'html-2', '', '', '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 0, 'http://universal.loc/?p=115', 1, 'nav_menu_item', '', 0),
+(116, 1, '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 'Web Design', '', 'publish', 'closed', 'closed', '', 'web-design-2', '', '', '2020-10-30 12:08:13', '2020-10-30 09:08:13', '', 0, 'http://universal.loc/?p=116', 4, 'nav_menu_item', '', 0),
+(117, 1, '2020-10-30 12:10:43', '2020-10-30 09:10:43', '', 'Скринкасты', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%ba%d1%80%d0%b8%d0%bd%d0%ba%d0%b0%d1%81%d1%82%d1%8b', '', '', '2020-10-30 12:10:43', '2020-10-30 09:10:43', '', 0, 'http://universal.loc/?p=117', 1, 'nav_menu_item', '', 0),
+(118, 1, '2020-10-30 12:10:43', '2020-10-30 09:10:43', '', 'Уроки', '', 'publish', 'closed', 'closed', '', '%d1%83%d1%80%d0%be%d0%ba%d0%b8', '', '', '2020-10-30 12:10:43', '2020-10-30 09:10:43', '', 0, 'http://universal.loc/?p=118', 2, 'nav_menu_item', '', 0),
+(119, 1, '2020-10-30 12:10:43', '2020-10-30 09:10:43', '', 'Вебинары', '', 'publish', 'closed', 'closed', '', '%d0%b2%d0%b5%d0%b1%d0%b8%d0%bd%d0%b0%d1%80%d1%8b', '', '', '2020-10-30 12:10:43', '2020-10-30 09:10:43', '', 0, 'http://universal.loc/?p=119', 3, 'nav_menu_item', '', 0),
+(120, 1, '2020-10-30 12:14:40', '2020-10-30 09:14:40', '', 'Политика данных', '', 'publish', 'closed', 'closed', '', '%d0%bf%d0%be%d0%bb%d0%b8%d1%82%d0%b8%d0%ba%d0%b0-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d1%85', '', '', '2020-10-30 12:15:11', '2020-10-30 09:15:11', '', 0, 'http://universal.loc/?p=120', 1, 'nav_menu_item', '', 0),
+(121, 1, '2020-10-30 12:14:40', '2020-10-30 09:14:40', '', 'Оферта сайта', '', 'publish', 'closed', 'closed', '', '%d0%be%d1%84%d0%b5%d1%80%d1%82%d0%b0-%d1%81%d0%b0%d0%b9%d1%82%d0%b0', '', '', '2020-10-30 12:15:11', '2020-10-30 09:15:11', '', 0, 'http://universal.loc/?p=121', 2, 'nav_menu_item', '', 0),
+(122, 1, '2020-10-30 12:14:40', '2020-10-30 09:14:40', '', 'Реквизиты', '', 'publish', 'closed', 'closed', '', '%d1%80%d0%b5%d0%ba%d0%b2%d0%b8%d0%b7%d0%b8%d1%82%d1%8b', '', '', '2020-10-30 12:15:11', '2020-10-30 09:15:11', '', 0, 'http://universal.loc/?p=122', 3, 'nav_menu_item', '', 0),
+(123, 1, '2020-10-30 12:14:40', '2020-10-30 09:14:40', '', 'Контакты', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b', '', '', '2020-10-30 12:15:11', '2020-10-30 09:15:11', '', 0, 'http://universal.loc/?p=123', 4, 'nav_menu_item', '', 0),
+(124, 1, '2020-10-30 12:18:35', '2020-10-30 09:18:35', '', 'Платные интенсивы', '', 'publish', 'closed', 'closed', '', '%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d1%8b%d0%b5-%d0%b8%d0%bd%d1%82%d0%b5%d0%bd%d1%81%d0%b8%d0%b2%d1%8b', '', '', '2020-10-30 12:18:35', '2020-10-30 09:18:35', '', 0, 'http://universal.loc/?p=124', 1, 'nav_menu_item', '', 0),
+(125, 1, '2020-10-30 12:18:35', '2020-10-30 09:18:35', '', 'Бесплатные стримы', '', 'publish', 'closed', 'closed', '', '%d0%b1%d0%b5%d1%81%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d1%8b%d0%b5-%d1%81%d1%82%d1%80%d0%b8%d0%bc%d1%8b', '', '', '2020-10-30 12:18:35', '2020-10-30 09:18:35', '', 0, 'http://universal.loc/?p=125', 2, 'nav_menu_item', '', 0),
+(126, 1, '2020-10-30 12:18:35', '2020-10-30 09:18:35', '', 'Мастер-классы', '', 'publish', 'closed', 'closed', '', '%d0%bc%d0%b0%d1%81%d1%82%d0%b5%d1%80-%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d1%8b', '', '', '2020-10-30 12:18:35', '2020-10-30 09:18:35', '', 0, 'http://universal.loc/?p=126', 3, 'nav_menu_item', '', 0),
+(127, 1, '2020-10-30 12:18:36', '2020-10-30 09:18:36', '', 'Менторство', '', 'publish', 'closed', 'closed', '', '%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d1%80%d1%81%d1%82%d0%b2%d0%be', '', '', '2020-10-30 12:18:36', '2020-10-30 09:18:36', '', 0, 'http://universal.loc/?p=127', 4, 'nav_menu_item', '', 0),
+(128, 1, '2020-10-30 12:18:36', '2020-10-30 09:18:36', '', 'Буткемпы', '', 'publish', 'closed', 'closed', '', '%d0%b1%d1%83%d1%82%d0%ba%d0%b5%d0%bc%d0%bf%d1%8b', '', '', '2020-10-30 12:18:36', '2020-10-30 09:18:36', '', 0, 'http://universal.loc/?p=128', 5, 'nav_menu_item', '', 0),
+(129, 1, '2020-10-30 12:20:59', '2020-10-30 09:20:59', '', 'Статьи', '', 'publish', 'closed', 'closed', '', '%d1%81%d1%82%d0%b0%d1%82%d1%8c%d0%b8-2', '', '', '2020-10-30 12:20:59', '2020-10-30 09:20:59', '', 0, 'http://universal.loc/?p=129', 1, 'nav_menu_item', '', 0),
+(130, 1, '2020-10-30 12:20:59', '2020-10-30 09:20:59', '', 'Расследования', '', 'publish', 'closed', 'closed', '', '%d1%80%d0%b0%d1%81%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f', '', '', '2020-10-30 12:20:59', '2020-10-30 09:20:59', '', 16, 'http://universal.loc/?p=130', 2, 'nav_menu_item', '', 0),
+(131, 1, '2020-10-30 12:20:59', '2020-10-30 09:20:59', ' ', '', '', 'publish', 'closed', 'closed', '', '131', '', '', '2020-10-30 12:20:59', '2020-10-30 09:20:59', '', 0, 'http://universal.loc/?p=131', 3, 'nav_menu_item', '', 0),
+(132, 1, '2020-10-30 12:21:00', '2020-10-30 09:21:00', ' ', '', '', 'publish', 'closed', 'closed', '', '132', '', '', '2020-10-30 12:21:00', '2020-10-30 09:21:00', '', 0, 'http://universal.loc/?p=132', 4, 'nav_menu_item', '', 0),
+(133, 1, '2020-10-30 12:21:28', '2020-10-30 09:21:28', '<!-- wp:paragraph -->\n<p>Это пример страницы. От записей в блоге она отличается тем, что остаётся на одном месте и отображается в меню сайта (в большинстве тем). На странице &laquo;Детали&raquo; владельцы сайтов обычно рассказывают о себе потенциальным посетителям. Например, так:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Привет! Днём я курьер, а вечером &#8212; подающий надежды актёр. Это мой блог. Я живу в Ростове-на-Дону, люблю своего пса Джека и пинаколаду. (И ещё попадать под дождь.)</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>...или так:</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>Компания &laquo;Штучки XYZ&raquo; была основана в 1971 году и с тех пор производит качественные штучки. Компания находится в Готэм-сити, имеет штат из более чем 2000 сотрудников и приносит много пользы жителям Готэма.</p></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:paragraph -->\n<p>Перейдите <a href=\"http://universal.loc/wp-admin/\">в консоль</a>, чтобы удалить эту страницу и создать новые. Успехов!</p>\n<!-- /wp:paragraph -->', 'Пример страницы', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2020-10-30 12:21:28', '2020-10-30 09:21:28', '', 2, 'http://universal.loc/2020/10/30/2-revision-v1/', 0, 'revision', '', 0),
+(134, 1, '2020-10-30 12:23:15', '2020-10-30 09:23:15', '<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что сложившаяся структура организации в значительной степени обуславливает создание направлений прогрессивного развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации новых предложений. С другой стороны начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Равным образом укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание форм развития.</p>\n<!-- /wp:paragraph -->', 'Контакты', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b', '', '', '2020-10-30 12:23:15', '2020-10-30 09:23:15', '', 0, 'http://universal.loc/?page_id=134', 0, 'page', '', 0),
+(135, 1, '2020-10-30 12:23:15', '2020-10-30 09:23:15', '<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что сложившаяся структура организации в значительной степени обуславливает создание направлений прогрессивного развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации новых предложений. С другой стороны начало повседневной работы по формированию позиции позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Равным образом укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание форм развития.</p>\n<!-- /wp:paragraph -->', 'Контакты', '', 'inherit', 'closed', 'closed', '', '134-revision-v1', '', '', '2020-10-30 12:23:15', '2020-10-30 09:23:15', '', 134, 'http://universal.loc/2020/10/30/134-revision-v1/', 0, 'revision', '', 0),
+(136, 1, '2020-10-30 12:24:42', '2020-10-30 09:24:42', '<!-- wp:paragraph -->\n<p>Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. С другой стороны консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Таким образом консультация с широким активом играет важную роль в формировании систем массового участия. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке новых предложений.</p>\n<!-- /wp:paragraph -->', 'Работа у нас', '', 'publish', 'closed', 'closed', '', '%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0-%d1%83-%d0%bd%d0%b0%d1%81', '', '', '2020-10-30 12:24:42', '2020-10-30 09:24:42', '', 0, 'http://universal.loc/?page_id=136', 0, 'page', '', 0),
+(137, 1, '2020-10-30 12:24:42', '2020-10-30 09:24:42', '<!-- wp:paragraph -->\n<p>Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании модели развития. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. С другой стороны консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Таким образом консультация с широким активом играет важную роль в формировании систем массового участия. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке новых предложений.</p>\n<!-- /wp:paragraph -->', 'Работа у нас', '', 'inherit', 'closed', 'closed', '', '136-revision-v1', '', '', '2020-10-30 12:24:42', '2020-10-30 09:24:42', '', 136, 'http://universal.loc/2020/10/30/136-revision-v1/', 0, 'revision', '', 0),
+(138, 1, '2020-10-30 12:26:46', '2020-10-30 09:26:46', '<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Равным образом реализация намеченных плановых заданий представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что укрепление и развитие структуры требуют от нас анализа модели развития. Задача организации, в особенности же укрепление и развитие структуры способствует подготовки и реализации соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития.</p>\n<!-- /wp:paragraph -->', 'Реклама', '', 'publish', 'closed', 'closed', '', '%d1%80%d0%b5%d0%ba%d0%bb%d0%b0%d0%bc%d0%b0', '', '', '2020-10-30 12:26:46', '2020-10-30 09:26:46', '', 0, 'http://universal.loc/?page_id=138', 0, 'page', '', 0),
+(139, 1, '2020-10-30 12:26:46', '2020-10-30 09:26:46', '<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Равным образом реализация намеченных плановых заданий представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что укрепление и развитие структуры требуют от нас анализа модели развития. Задача организации, в особенности же укрепление и развитие структуры способствует подготовки и реализации соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития.</p>\n<!-- /wp:paragraph -->', 'Реклама', '', 'inherit', 'closed', 'closed', '', '138-revision-v1', '', '', '2020-10-30 12:26:46', '2020-10-30 09:26:46', '', 138, 'http://universal.loc/2020/10/30/138-revision-v1/', 0, 'revision', '', 0),
+(140, 1, '2020-10-30 12:27:20', '2020-10-30 09:27:20', '<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Равным образом реализация намеченных плановых заданий представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что укрепление и развитие структуры требуют от нас анализа модели развития. Задача организации, в особенности же укрепление и развитие структуры способствует подготовки и реализации соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития.</p>\n<!-- /wp:paragraph -->', 'Партнерство', '', 'publish', 'closed', 'closed', '', '%d0%bf%d0%b0%d1%80%d1%82%d0%bd%d0%b5%d1%80%d1%81%d1%82%d0%b2%d0%be', '', '', '2020-10-30 12:27:20', '2020-10-30 09:27:20', '', 0, 'http://universal.loc/?page_id=140', 0, 'page', '', 0),
+(141, 1, '2020-10-30 12:27:20', '2020-10-30 09:27:20', '<!-- wp:paragraph -->\n<p>Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Равным образом реализация намеченных плановых заданий представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что укрепление и развитие структуры требуют от нас анализа модели развития. Задача организации, в особенности же укрепление и развитие структуры способствует подготовки и реализации соответствующий условий активизации.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание систем массового участия. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности играет важную роль в формировании форм развития.</p>\n<!-- /wp:paragraph -->', 'Партнерство', '', 'inherit', 'closed', 'closed', '', '140-revision-v1', '', '', '2020-10-30 12:27:20', '2020-10-30 09:27:20', '', 140, 'http://universal.loc/2020/10/30/140-revision-v1/', 0, 'revision', '', 0),
+(142, 1, '2020-10-30 12:32:11', '2020-10-30 09:32:11', ' ', '', '', 'publish', 'closed', 'closed', '', '142', '', '', '2020-10-30 12:32:11', '2020-10-30 09:32:11', '', 0, 'http://universal.loc/?p=142', 4, 'nav_menu_item', '', 0),
+(143, 1, '2020-10-30 12:32:11', '2020-10-30 09:32:11', ' ', '', '', 'publish', 'closed', 'closed', '', '143', '', '', '2020-10-30 12:32:11', '2020-10-30 09:32:11', '', 0, 'http://universal.loc/?p=143', 3, 'nav_menu_item', '', 0),
+(144, 1, '2020-10-30 12:32:11', '2020-10-30 09:32:11', ' ', '', '', 'publish', 'closed', 'closed', '', '144', '', '', '2020-10-30 12:32:11', '2020-10-30 09:32:11', '', 0, 'http://universal.loc/?p=144', 2, 'nav_menu_item', '', 0),
+(145, 1, '2020-10-30 12:32:10', '2020-10-30 09:32:10', ' ', '', '', 'publish', 'closed', 'closed', '', '145', '', '', '2020-10-30 12:32:10', '2020-10-30 09:32:10', '', 0, 'http://universal.loc/?p=145', 1, 'nav_menu_item', '', 0);
 
 -- --------------------------------------------------------
 
@@ -562,7 +837,14 @@ INSERT INTO `universal_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (26, 'фоторепортаж', '%d1%84%d0%be%d1%82%d0%be%d1%80%d0%b5%d0%bf%d0%be%d1%80%d1%82%d0%b0%d0%b6', 0),
 (27, 'Карьера', 'career', 0),
 (28, 'карьера', '%d0%ba%d0%b0%d1%80%d1%8c%d0%b5%d1%80%d0%b0', 0),
-(29, 'работа', '%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0', 0);
+(29, 'работа', '%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0', 0),
+(30, 'News Menu', 'news-menu', 0),
+(31, 'Articles Menu', 'articles-menu', 0),
+(32, 'Video lessons menu', 'video-lessons-menu', 0),
+(33, 'Information Menu', 'information-menu', 0),
+(34, 'Courses Menu', 'courses-menu', 0),
+(35, 'Category Menu', 'category-menu', 0),
+(36, 'Footer Menu', 'footer-menu', 0);
 
 -- --------------------------------------------------------
 
@@ -630,7 +912,35 @@ INSERT INTO `universal_term_relationships` (`object_id`, `term_taxonomy_id`, `te
 (96, 26, 0),
 (107, 27, 0),
 (107, 28, 0),
-(107, 29, 0);
+(107, 29, 0),
+(109, 30, 0),
+(110, 30, 0),
+(111, 30, 0),
+(112, 30, 0),
+(113, 31, 0),
+(114, 31, 0),
+(115, 31, 0),
+(116, 31, 0),
+(117, 32, 0),
+(118, 32, 0),
+(119, 32, 0),
+(120, 33, 0),
+(121, 33, 0),
+(122, 33, 0),
+(123, 33, 0),
+(124, 34, 0),
+(125, 34, 0),
+(126, 34, 0),
+(127, 34, 0),
+(128, 34, 0),
+(129, 35, 0),
+(130, 35, 0),
+(131, 35, 0),
+(132, 35, 0),
+(142, 36, 0),
+(143, 36, 0),
+(144, 36, 0),
+(145, 36, 0);
 
 -- --------------------------------------------------------
 
@@ -678,7 +988,14 @@ INSERT INTO `universal_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`
 (26, 26, 'post_tag', '', 0, 1),
 (27, 27, 'category', '', 0, 1),
 (28, 28, 'post_tag', '', 0, 1),
-(29, 29, 'post_tag', '', 0, 1);
+(29, 29, 'post_tag', '', 0, 1),
+(30, 30, 'nav_menu', '', 0, 4),
+(31, 31, 'nav_menu', '', 0, 4),
+(32, 32, 'nav_menu', '', 0, 3),
+(33, 33, 'nav_menu', '', 0, 4),
+(34, 34, 'nav_menu', '', 0, 5),
+(35, 35, 'nav_menu', '', 0, 4),
+(36, 36, 'nav_menu', '', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -713,7 +1030,7 @@ INSERT INTO `universal_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value
 (13, 1, 'universal_user_level', '10'),
 (14, 1, 'dismissed_wp_pointers', ''),
 (15, 1, 'show_welcome_panel', '1'),
-(16, 1, 'session_tokens', 'a:2:{s:64:\"dfa42830735e58dab1773c10b8b3cc66f1c6a34a4e4cfbf701f473366c5f0a5b\";a:4:{s:10:\"expiration\";i:1604006391;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:147:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 YaBrowser/20.9.2.102 Yowser/2.5 Safari/537.36\";s:5:\"login\";i:1603833591;}s:64:\"33e54073562a254869898396df86417df75ba4ce49555110432876da233beb20\";a:4:{s:10:\"expiration\";i:1604090886;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:147:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 YaBrowser/20.9.2.102 Yowser/2.5 Safari/537.36\";s:5:\"login\";i:1603918086;}}'),
+(16, 1, 'session_tokens', 'a:4:{s:64:\"33e54073562a254869898396df86417df75ba4ce49555110432876da233beb20\";a:4:{s:10:\"expiration\";i:1604090886;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:147:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 YaBrowser/20.9.2.102 Yowser/2.5 Safari/537.36\";s:5:\"login\";i:1603918086;}s:64:\"81f29eb79823a64597d8a808d51ca3d44b5cb9e1acad4fa9f91db7561e8d1419\";a:4:{s:10:\"expiration\";i:1604220626;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:142:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 YaBrowser/20.9.3.136 Yowser/2.5 Safari/537.36\";s:5:\"login\";i:1604047826;}s:64:\"ea55e0d6b5d48b67037dee26745ff375337fd897916b29c386c9ad92c0108561\";a:4:{s:10:\"expiration\";i:1604221043;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:142:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 YaBrowser/20.9.3.136 Yowser/2.5 Safari/537.36\";s:5:\"login\";i:1604048243;}s:64:\"36c9c8864c2cd6d894fe6fe86d36ecf534fb78a928de6de10ac6da40f6f944f9\";a:4:{s:10:\"expiration\";i:1604240133;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:142:\"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 YaBrowser/20.9.3.136 Yowser/2.5 Safari/537.36\";s:5:\"login\";i:1604067333;}}'),
 (17, 1, 'universal_dashboard_quick_press_last_post_id', '98'),
 (18, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}'),
 (19, 1, 'closedpostboxes_dashboard', 'a:0:{}'),
@@ -722,7 +1039,7 @@ INSERT INTO `universal_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value
 (22, 1, 'universal_user-settings-time', '1602102470'),
 (23, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}'),
 (24, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:12:\"add-post_tag\";}'),
-(25, 1, 'nav_menu_recently_edited', '2');
+(25, 1, 'nav_menu_recently_edited', '36');
 
 -- --------------------------------------------------------
 
@@ -880,19 +1197,19 @@ ALTER TABLE `universal_links`
 -- AUTO_INCREMENT для таблицы `universal_options`
 --
 ALTER TABLE `universal_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=606;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=627;
 
 --
 -- AUTO_INCREMENT для таблицы `universal_postmeta`
 --
 ALTER TABLE `universal_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=312;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=575;
 
 --
 -- AUTO_INCREMENT для таблицы `universal_posts`
 --
 ALTER TABLE `universal_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 
 --
 -- AUTO_INCREMENT для таблицы `universal_termmeta`
@@ -904,13 +1221,13 @@ ALTER TABLE `universal_termmeta`
 -- AUTO_INCREMENT для таблицы `universal_terms`
 --
 ALTER TABLE `universal_terms`
-  MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT для таблицы `universal_term_taxonomy`
 --
 ALTER TABLE `universal_term_taxonomy`
-  MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT для таблицы `universal_usermeta`

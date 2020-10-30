@@ -84,6 +84,33 @@ function universal_theme_widgets_init() {
 			'after_title' => '</h2>',
 		)
 	);
+
+	// Сайдбар для вывода группы меню в подвале на главной странице
+	register_sidebar(
+		array(
+			'name' => esc_html__('Меню в подвале', 'universal-theme' ),
+			'id' => 'sidebar-footer',
+			'description' => esc_html__('Добавте меню здесь', 'universal-theme' ),
+			'before_widget' => '<section id="%1$s" class="footer-menu %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h2 class="footer-menu-title">',
+			'after_title' => '</h2>',
+		)
+	);
+
+	// Сайдбар для вывода группы меню в подвале на главной странице
+	register_sidebar(
+		array(
+			'name' => esc_html__('Текст в подвале', 'universal-theme' ),
+			'id' => 'sidebar-footer-text',
+			'description' => esc_html__('Добавте текст здесь', 'universal-theme' ),
+			'before_widget' => '<section id="%1$s" class="footer-text %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '',
+			'after_title' => '',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );
 
