@@ -44,6 +44,7 @@ get_header();
 	    cycle_wp_query($args_articlelist, 'articlelist');
 	    ?>
     </ul>
+
     <div class="main-grid">
         <ul class="article-grid">
 	        <?php

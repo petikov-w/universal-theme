@@ -2,16 +2,6 @@
   background-color: #e5e5e5;
 }
 
-.front-page-header {
-  background-color: #262D33;
-  position: relative;
-  padding-top: 30px;
-  height: 475px;
-}
-
-//=================================================
-// Левый блок
-//=================================================
 .hero {
   //border: 2px solid red;
   display: flex;
@@ -22,6 +12,18 @@
   position: relative;
   z-index: 1;
 }
+
+.front-page-header {
+  background-color: #262D33;
+  position: relative;
+  padding-top: 30px;
+  height: 475px;
+}
+
+//=================================================
+// Левый блок
+//=================================================
+
 
 .hero .left {
   flex-basis: 75%;
