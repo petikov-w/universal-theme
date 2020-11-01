@@ -2,30 +2,20 @@
 //========= Разметка сетки ==========
 //===================================
 .article-grid {
-  width: 75%;
   display: grid;
   grid-gap: 30px;
   padding: 0;
   margin: 30px 0;
   color: #fff;
-  //grid-template-columns: [start]
-  //                        263px [line-1]
-  //                        263px [line-2]
-  //                        263px [end];
-  //grid-template-rows: [top]
-  //                    170px [line-1]
-  //                    170px [center]
-  //                    170px [line-2]
-  //                    170px [bottom]
-
-  //grid-template-columns: repeat(3, minmax(263px, 1fr));
-  //grid-template-rows: repeat(4, 170px);
-
-  grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
-  grid-template-rows: repeat(3,minmax(170px,max-content));
-  grid-auto-rows: minmax(170px,max-content);
-
-
+  grid-template-columns: [start]
+                          263px [line-1]
+                          263px [line-2]
+                          263px [end];
+  grid-template-rows: [top]
+                      170px [line-1]
+                      170px [center]
+                      170px [line-2]
+                      170px [bottom];
 }
 
 
@@ -41,17 +31,13 @@
 
 
 .article-gri-01 {
-  //grid-column: start/line-2;
-  //grid-row: top/center;
-  grid-column: 1/span 2;
-  grid-row: 1/span 2;
+  grid-column: start/line-2;
+  grid-row: top/center;
 }
 
 .article-gri-02 {
-  //grid-column: line-2/end;
-  //grid-row: top/center;
-  grid-column: 3/3;
-  grid-row: 1/span 2;
+  grid-column: line-2/end;
+  grid-row: top/center;
   position: relative;
 }
 
@@ -65,10 +51,8 @@
 }
 
 .article-gri-04 {
-  //grid-column: start/line-1;
-  //grid-row: center/bottom;
-  grid-column: 1/1;
-  grid-row: 3/span 2;
+  grid-column: start/line-1;
+  grid-row: center/bottom;
 }
 
 .article-grid-item a {

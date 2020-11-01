@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   //max-height: 570px;
-  height: 570px;
+  max-height: 100%;
 }
 //===========================================
 //==== Блок "Фоторепортаж" со слайдером =====
@@ -147,7 +147,8 @@
   width: 49%;
   //border: 1px solid red;
   border-radius: 10px;
-  min-height: 570px;
+  //min-height: 570px;
+  height: 100%;
   position: relative;
 
 }
@@ -160,22 +161,13 @@
   grid-gap: 30px;
   padding: 0;
   color: #fff;
-  //grid-template-columns: [start]
-  //                        263px [line-1]
-  //                        263px[end];
-  //grid-template-rows: [top]
-  //                    170px [line-1]
-  //                    170px [line-2]
-  //                    170px [bottom];
-
-  //grid-template-columns: repeat(1, 1fr);
-  //grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
-  ;
-  //grid-template-rows: repeat(3, 170px);
- // grid-template-columns: repeat(auto-fit, minmax(555px, 1fr));
-  grid-template-columns: repeat(2, minmax(263px, 1fr));
-  grid-template-rows: repeat(3, 170px);
-
+  grid-template-columns: [start]
+                          263px [line-1]
+                          263px[end];
+  grid-template-rows: [top]
+                      170px [line-1]
+                      170px [line-2]
+                      170px [bottom];
 }
 
 .other-grid-item {
@@ -186,6 +178,7 @@
   border-radius: 10px;
   overflow: hidden;
   padding: 25px;
+
 }
 
 .other-grid-item a {
@@ -196,16 +189,12 @@
 // Блок "Карьера" с постояным изображением
 //========================================
 .other-gri-01 {
-  grid-column: 1/3;
-  grid-row: 1/3;
-  //grid-column: start/end;
-  //grid-row: top/line-2;
+  grid-column: start/end;
+  grid-row: top/line-2;
   width: 100%;
   position: relative;
   background-color: #B4D1E0;
 }
-
-
 
 .image-career {
   position: absolute;
@@ -249,7 +238,7 @@
 }
 
 .title-p {
- @include use_font($RobotoSlab, 25px);
+  @include use_font($RobotoSlab, 25px);
   line-height: 30px;
   width: 243px;
   color: #262D33;

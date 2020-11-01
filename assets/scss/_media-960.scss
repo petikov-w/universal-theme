@@ -8,6 +8,11 @@
     flex-direction: column;
   }
 
+  .right .post {
+    padding: 5px 25px 5px 25px;
+    min-height: 50px;
+  }
+
   .front-page-header {
     height: auto;
     padding-bottom: 40px;
@@ -17,15 +22,21 @@
     margin-top: 30px;
   }
 
-  //==========================================
-  //Как вариант
-  //.header-wrapper {
-  //  display: flex;
-  //  flex-direction: column;
-  //  justify-content: space-between;
-  //  align-items: center;
-  //}
+  .article-item a {
+    width: 65%;
+  }
 
+  .investigation-title {
+    font-size: 32px;
+  }
 
+  .footer-menu {
+    flex-basis: 50%;
+  }
+
+  .article-grid {
+    grid-template-columns: repeat(1, minmax(263px, 1fr));
+    grid-template-rows: repeat(3, 2fr);
+  }
 
 }

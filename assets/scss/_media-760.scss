@@ -3,5 +3,46 @@
   .article-item {
     width: 100%;
   }
+
+  .article-item a {
+    width: 80%;
+  }
+
+  .post-text .post-title {
+   font-size: 32px;
+  }
+
+  .img-33 {
+   //width: 20%;
+   // height: 30%;
+   // object-fit: cover;
+    display: none;
+  }
+
+  .footer-info {
+    flex-direction: column;
+  }
+
+  .footer-info ul {
+    margin-bottom: 20px;
+  }
+  .footer-info li {
+    margin-bottom: 10px;
+  }
+
+  .footer-nav {
+     flex-direction: column;
+  }
+
+  .footer-text-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+.footer-text {
+  width: 60%;
+}
+
 }
 

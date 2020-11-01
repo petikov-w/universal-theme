@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
 
   .article-list {
     flex-wrap: wrap;
@@ -6,6 +6,27 @@
 
   .article-item {
     width: 50%;
+    padding: 20px;
   }
+
+  .article-item a {
+    width: 80%;
+  }
+
+
+  //.main-grid {
+  //  flex-wrap: wrap;
+  //}
+  //
+  //.article-grid {
+  //  width: 100%;
+  //  grid-template-columns: 1fr;
+  //  grid-template-rows: repeat(3,minmax(270px,max-content));
+  //}
+  //
+  //.article-grid-item {
+  //  grid-area: auto;
+  //}
+
 }
 
