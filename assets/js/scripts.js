@@ -6,6 +6,11 @@ var mySwiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination',
     },
+})
 
-
+let menuTuggle = $('.header-menu-toggle');
+    menuTuggle.on('click', function (event) {
+    event.preventDefault();
+    //console.log('Клик по кнопке меню');
+        $('.header-nav').slideToggle(200);
 })

@@ -1,8 +1,40 @@
 @media screen and (max-width: 960px)
 {
-  .header-menu {
-     display: none;
+
+  .header-wrapper {
+    position: relative;
+
   }
+  .header-nav {
+     //display: none;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 128px;
+    margin-right: calc(30% - 45px);
+    background-color: #fff;
+    padding: 20px;
+    z-index: 99;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 1px 1px 10px rgba(#262D33,0.2);
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-menu .menu-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+
+  .header-menu a {
+    color: #000;
+  }
+
 
   .header-menu-toggle {
     display: flex;
@@ -21,11 +53,7 @@
     background-color: #fff;
   }
 
-  .search-box {
-    //display: flex;
-    //width: auto;
 
-  }
 .search-form {
   width: 50%;
 }
@@ -67,7 +95,11 @@
 
 
   .header-wrapper {
-    height: 100px;
+    height: 120px;
+  }
+
+  .search-form .search-input {
+    height:40px;
   }
 
 }
