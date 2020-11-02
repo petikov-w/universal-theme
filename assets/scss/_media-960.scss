@@ -4,6 +4,32 @@
      display: none;
   }
 
+  .header-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30px;
+    height: 40px;
+    margin-left: 10px;
+    padding-top: 15px;
+
+  }
+  .header-menu-toggle span {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  .search-box {
+    //display: flex;
+    //width: auto;
+
+  }
+.search-form {
+  width: 50%;
+}
+
   .hero {
     flex-direction: column;
   }
@@ -37,6 +63,11 @@
   .article-grid {
     grid-template-columns: repeat(1, minmax(263px, 1fr));
     grid-template-rows: repeat(3, 2fr);
+  }
+
+
+  .header-wrapper {
+    height: 100px;
   }
 
 }

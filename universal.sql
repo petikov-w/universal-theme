@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 30 2020 г., 18:30
--- Версия сервера: 10.3.22-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Ноя 02 2020 г., 12:40
+-- Версия сервера: 10.3.13-MariaDB-log
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -202,7 +203,7 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (102, 'widget_archives', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (103, 'widget_meta', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (104, 'sidebars_widgets', 'a:10:{s:15:\"sidebar-main-01\";a:1:{i:0;s:10:\"calendar-3\";}s:14:\"sidebar-main-1\";a:1:{i:0;s:10:\"calendar-2\";}s:23:\"sidebar-footer-services\";a:1:{i:0;s:11:\"tag_cloud-2\";}s:15:\"sidebar-main-02\";a:1:{i:0;s:11:\"tag_cloud-3\";}s:19:\"wp_inactive_widgets\";a:0:{}s:4:\"main\";a:3:{i:0;s:19:\"downloader_widget-2\";i:1;s:11:\"tag_cloud-4\";i:2;s:22:\"socialnetwork_widget-2\";}s:6:\"main-2\";a:1:{i:0;s:21:\"recent_posts_widget-2\";}s:14:\"sidebar-footer\";a:6:{i:0;s:10:\"nav_menu-2\";i:1;s:10:\"nav_menu-3\";i:2;s:10:\"nav_menu-4\";i:3;s:10:\"nav_menu-5\";i:4;s:10:\"nav_menu-6\";i:5;s:10:\"nav_menu-7\";}s:19:\"sidebar-footer-text\";a:1:{i:0;s:6:\"text-2\";}s:13:\"array_version\";i:3;}', 'yes'),
-(105, 'cron', 'a:6:{i:1604074585;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604110585;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604153784;a:2:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604154201;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604154204;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
+(105, 'cron', 'a:7:{i:1604310511;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604326584;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604326585;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604327001;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604327004;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604758584;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'yes'),
 (106, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (107, 'widget_calendar', 'a:3:{i:2;a:1:{s:5:\"title\";s:0:\"\";}i:3;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (108, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -216,7 +217,7 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (118, 'theme_mods_twentytwenty', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1601929813;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:9:\"sidebar-2\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}}}}', 'yes'),
 (138, 'can_compress_scripts', '1', 'no'),
 (147, 'finished_updating_comment_type', '1', 'yes'),
-(158, '_transient_health-check-site-status-result', '{\"good\":\"13\",\"recommended\":\"6\",\"critical\":\"1\"}', 'yes'),
+(158, '_transient_health-check-site-status-result', '{\"good\":11,\"recommended\":8,\"critical\":1}', 'yes'),
 (179, 'current_theme', 'universal-theme', 'yes'),
 (180, 'theme_mods_universal-theme', 'a:4:{i:0;b:0;s:18:\"nav_menu_locations\";a:2:{s:11:\"header_menu\";i:2;s:11:\"footer_menu\";i:36;}s:18:\"custom_css_post_id\";i:-1;s:11:\"custom_logo\";i:18;}', 'yes'),
 (181, 'theme_switched', '', 'yes'),
@@ -225,8 +226,6 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (421, 'widget_foo_widget', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (422, 'widget_downloader_widget', 'a:2:{i:2;a:3:{s:5:\"title\";s:73:\"Чек-лист сдачи верстки вашему заказчику\";s:11:\"description\";s:13:\"PDF, 125 Мб\";s:4:\"link\";s:25:\"http://yandex.ru/ssss.txt\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (437, 'widget_socialnetwork_widget', 'a:2:{i:2;a:5:{s:5:\"title\";s:23:\"Наши соцсети\";s:8:\"facebook\";s:24:\"https://www.facebook.com\";s:9:\"instagram\";s:25:\"https://www.instagram.com\";s:7:\"youtube\";s:19:\"https://youtube.com\";s:7:\"twitter\";s:19:\"https://twitter.com\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
-(518, '_site_transient_timeout_php_check_f9714bbe413cc376a70847d9c1f86fcc', '1604236658', 'no'),
-(519, '_site_transient_php_check_f9714bbe413cc376a70847d9c1f86fcc', 'a:5:{s:19:\"recommended_version\";s:3:\"7.4\";s:15:\"minimum_version\";s:6:\"5.6.20\";s:12:\"is_supported\";b:1;s:9:\"is_secure\";b:1;s:13:\"is_acceptable\";b:1;}', 'no'),
 (520, 'widget_resent_posts_widget', 'a:2:{i:2;a:2:{s:5:\"title\";s:39:\"Недавно опубликовано\";s:5:\"count\";s:1:\"4\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (521, 'widget_recent_posts_widget', 'a:2:{i:2;a:2:{s:5:\"title\";s:39:\"Недавно опубликовано\";s:5:\"count\";s:1:\"7\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (558, '_site_transient_timeout_browser_3f3746b089409134046eed773f44d88f', '1604438392', 'no'),
@@ -234,14 +233,14 @@ INSERT INTO `universal_options` (`option_id`, `option_name`, `option_value`, `au
 (560, '_site_transient_timeout_php_check_a5b4d2808570efd012607394df5c6fa9', '1604438393', 'no'),
 (561, '_site_transient_php_check_a5b4d2808570efd012607394df5c6fa9', 'a:5:{s:19:\"recommended_version\";s:3:\"7.4\";s:15:\"minimum_version\";s:6:\"5.6.20\";s:12:\"is_supported\";b:1;s:9:\"is_secure\";b:1;s:13:\"is_acceptable\";b:1;}', 'no'),
 (586, 'category_children', 'a:1:{i:16;a:1:{i:0;i:20;}}', 'yes'),
-(596, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604067419;s:7:\"checked\";a:2:{s:17:\"universal-example\";s:5:\"1.0.0\";s:15:\"universal-theme\";s:3:\"1.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
-(597, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1604067417;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:0:{}}', 'no'),
-(611, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.2.zip\";s:6:\"locale\";s:5:\"ru_RU\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.2.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.2\";s:7:\"version\";s:5:\"5.5.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1604067416;s:15:\"version_checked\";s:5:\"5.5.2\";s:12:\"translations\";a:0:{}}', 'no'),
-(612, 'auto_core_update_notified', 'a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:17:\"admin@kroxplus.ru\";s:7:\"version\";s:5:\"5.5.2\";s:9:\"timestamp\";i:1604043887;}', 'no'),
+(612, 'auto_core_update_notified', 'a:4:{s:4:\"type\";s:7:\"success\";s:5:\"email\";s:17:\"admin@kroxplus.ru\";s:7:\"version\";s:5:\"5.5.3\";s:9:\"timestamp\";i:1604161930;}', 'no'),
 (614, '_site_transient_timeout_browser_ddf8c38351c8c2c2e9ed63f719e58d1c', '1604652628', 'no'),
 (615, '_site_transient_browser_ddf8c38351c8c2c2e9ed63f719e58d1c', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"85.0.4183.102\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
-(623, '_site_transient_timeout_theme_roots', '1604069218', 'no'),
-(624, '_site_transient_theme_roots', 'a:2:{s:17:\"universal-example\";s:7:\"/themes\";s:15:\"universal-theme\";s:7:\"/themes\";}', 'no');
+(650, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.3.zip\";s:6:\"locale\";s:5:\"ru_RU\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/ru_RU/wordpress-5.5.3.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.3\";s:7:\"version\";s:5:\"5.5.3\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1604304491;s:15:\"version_checked\";s:5:\"5.5.3\";s:12:\"translations\";a:0:{}}', 'no'),
+(651, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604304495;s:7:\"checked\";a:2:{s:17:\"universal-example\";s:5:\"1.0.0\";s:15:\"universal-theme\";s:3:\"1.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
+(652, '_site_transient_update_plugins', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1604304493;s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:0:{}}', 'no'),
+(665, '_site_transient_timeout_theme_roots', '1604306294', 'no'),
+(666, '_site_transient_theme_roots', 'a:2:{s:17:\"universal-example\";s:7:\"/themes\";s:15:\"universal-theme\";s:7:\"/themes\";}', 'no');
 
 -- --------------------------------------------------------
 
@@ -1197,7 +1196,7 @@ ALTER TABLE `universal_links`
 -- AUTO_INCREMENT для таблицы `universal_options`
 --
 ALTER TABLE `universal_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=627;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=668;
 
 --
 -- AUTO_INCREMENT для таблицы `universal_postmeta`

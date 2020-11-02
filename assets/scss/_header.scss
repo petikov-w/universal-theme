@@ -4,6 +4,10 @@
   color: #fff;
 }
 
+.header-menu-toggle {
+  display: none;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -37,6 +41,7 @@
   //width: 270px;
   width: 25%;
   height: 40px;
+  color: #3c763d;
 }
 
 .search-form .search-input {
