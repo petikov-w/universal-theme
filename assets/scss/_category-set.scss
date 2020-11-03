@@ -17,3 +17,55 @@
   border-radius: 3px;
   font-size: 12px;
 }
+
+.category-link {
+  color: #00b9eb;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+    &:visited {
+      color: #00b9eb;
+    }
+    &.javascript:visited {
+      color: #FF1493;
+    }
+    &.css:visited {
+      color: #3bc48d;
+    }
+    &.html:visited {
+      color: #e074d5;
+    }
+    &.web-design:visited {
+      color: #ffa34d;
+    }
+    &.articles:visited {
+      color: #A0522D;
+    }
+    &.investigation:visited {
+      color: #FF4F52;
+    }
+    &.photo-report:visited {
+      color: #ffa34d;
+    }
+    &.career:visited {
+      color: #6E99AE;
+    }
+}
+//
+//.category-link:visited {
+//  color: #00b9eb;
+//}
+
+
+
+
+//'css'           => '#3bc48d',
+//'html'          => '#e074d5',
+//'javascript'    => '#FF1493',
+//'web-design'    => '#ffa34d',
+//'articles'      => '#A0522D',
+//'investigation' => '#FF4F52',
+//'photo-report'  => '#ffa34d',
+//'career'        => '#6E99AE',

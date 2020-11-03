@@ -446,6 +446,42 @@ body {
   font-size: 12px;
 }
 
+.category-link {
+  color: #00b9eb;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+}
+.category-link:visited {
+  color: #00b9eb;
+}
+.category-link.javascript:visited {
+  color: #FF1493;
+}
+.category-link.css:visited {
+  color: #3bc48d;
+}
+.category-link.html:visited {
+  color: #e074d5;
+}
+.category-link.web-design:visited {
+  color: #ffa34d;
+}
+.category-link.articles:visited {
+  color: #A0522D;
+}
+.category-link.investigation:visited {
+  color: #FF4F52;
+}
+.category-link.photo-report:visited {
+  color: #ffa34d;
+}
+.category-link.career:visited {
+  color: #6E99AE;
+}
+
 .article-list {
   margin: 0;
   padding: 0;
@@ -1818,4 +1854,8 @@ body {
   .search-form {
     width: 80%;
   }
+}
+.post-header {
+  padding: 60px 0 72px;
+  color: #fff;
 }
