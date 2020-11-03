@@ -11,7 +11,7 @@
 <?php wp_body_open();?>
 <header class="header-single">
     <div class="container">
-        <div class="header-wrapper-single">
+        <div class="header-wrapper">
 	        <?php
 	          // Вывод основного меню сайта
 	          wp_nav_menu( [

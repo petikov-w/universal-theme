@@ -73,3 +73,17 @@
   border: none;
   cursor: pointer;
 }
+
+//==============================================
+.header-menu-single {
+  padding: 25px 0;
+}
+
+.header-menu-single .menu-item a {
+  @include use_font($LatoBlack,14px);
+  line-height: 20px;
+  text-decoration: none;
+  color: #939699;
+  margin: 0 15px 0 15px;
+}
+

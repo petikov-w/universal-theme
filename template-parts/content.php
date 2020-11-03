@@ -11,8 +11,8 @@
 
 <!--	Заголовок поста  -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header <?php echo get_post_type() ?>-header" style="background: linear-gradient(0deg, rgba(38, 45, 51, 0.75),
-													rgba(38, 45, 51, 0.75)), url(<?php
+	<header class="entry-header <?php echo get_post_type() ?>-header" style="background: linear-gradient(0deg, rgba(38, 45, 51, 0.5),
+													rgba(38, 45, 51, 0.5)), url(<?php
 													if( has_post_thumbnail() ) {
 														echo get_the_post_thumbnail_url();
 													}
@@ -20,7 +20,7 @@
 														echo get_template_directory_uri().
 														     '/assets/images/img-default.png';
 													}
-													?>)"; ">
+													?>)">
 	<div class="container">
 		<?php
 		foreach ( get_the_category() as $category ) {
@@ -31,6 +31,25 @@
 				esc_html($category->name)
 			);
 		}
+		//=========================================================
+        ?>
+
+        <?php echo get_the_post_navigation(  array('prev_text' => '<span>Назад</span> '
+                                                                       )); ?>
+
+
+
+
+
+
+<!--//		the_post_navigation(-->
+<!--//			array(-->
+<!--//				'prev_text' => 'Назад +',-->
+<!--//				'next_text' => 'Вперед +',-->
+<!--//			)-->
+<!--//		);-->
+        <?php
+        //=========================================================
 
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -38,8 +57,8 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
 				'</a></h2>' );
 		endif;
-
 		?>
+        <span class="entry-excerpt"><?php the_excerpt(); ?> </span>
 	</div>
 	</header>
 <!--	Заголовок поста (конец) -->

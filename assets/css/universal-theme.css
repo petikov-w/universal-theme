@@ -114,6 +114,19 @@ body {
   cursor: pointer;
 }
 
+.header-menu-single {
+  padding: 25px 0;
+}
+
+.header-menu-single .menu-item a {
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #939699;
+  margin: 0 15px 0 15px;
+}
+
 .footer {
   padding: 60px 0 55px;
   background-color: #fff;
@@ -457,28 +470,28 @@ body {
 .category-link:visited {
   color: #00b9eb;
 }
-.category-link.javascript:visited {
+.category-link.javascript {
   color: #FF1493;
 }
-.category-link.css:visited {
+.category-link.css {
   color: #3bc48d;
 }
-.category-link.html:visited {
+.category-link.html {
   color: #e074d5;
 }
-.category-link.web-design:visited {
+.category-link.web-design {
   color: #ffa34d;
 }
-.category-link.articles:visited {
+.category-link.articles {
   color: #A0522D;
 }
-.category-link.investigation:visited {
+.category-link.investigation {
   color: #FF4F52;
 }
-.category-link.photo-report:visited {
+.category-link.photo-report {
   color: #ffa34d;
 }
-.category-link.career:visited {
+.category-link.career {
   color: #6E99AE;
 }
 
@@ -1858,4 +1871,27 @@ body {
 .post-header {
   padding: 60px 0 72px;
   color: #fff;
+  position: relative;
+}
+
+.entry-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 55px;
+  line-height: 70px;
+  width: 750px;
+}
+
+.entry-excerpt {
+  font-size: 18px;
+  line-height: 30px;
+  opacity: 0.85;
+}
+
+.entry-excerpt p {
+  width: 640px;
+}
+
+.nav-subtitle {
+  color: #fff;
+  position: absolute;
 }
