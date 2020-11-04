@@ -1910,6 +1910,7 @@ body {
 
 .navs {
   display: flex;
+  margin-right: 130px;
 }
 
 .navs a {
@@ -1918,4 +1919,23 @@ body {
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
+}
+
+.single-info {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.single-info span {
+  display: flex;
+  align-items: center;
+}
+
+.cons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
