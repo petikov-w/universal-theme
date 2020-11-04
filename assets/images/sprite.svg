@@ -14,4 +14,7 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 72" id="file">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M40 0l16 16v52a4 4 0 01-4 4H4a4 4 0 01-4-4V4a4 4 0 014-4h36zm-4 20V4H4v64h48V20H36z"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 7" id="left-arrow">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3v1H4v3L0 3.5 4 0v3h11z"></path>
+  </symbol>
 </svg>

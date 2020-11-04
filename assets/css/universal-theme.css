@@ -1871,7 +1871,6 @@ body {
 .post-header {
   padding: 60px 0 72px;
   color: #fff;
-  position: relative;
 }
 
 .entry-title {
@@ -1891,7 +1890,32 @@ body {
   width: 640px;
 }
 
-.nav-subtitle {
+.nav-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navs-pred {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.navs-next {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.navs {
+  display: flex;
+}
+
+.navs a {
   color: #fff;
-  position: absolute;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
 }

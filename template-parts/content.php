@@ -22,36 +22,38 @@
 													}
 													?>)">
 	<div class="container">
-		<?php
-		foreach ( get_the_category() as $category ) {
-			printf(
-				'<a href="%s" class="category-link %s">%s</a>',
-				esc_url(get_category_link($category)),
-				esc_html($category->slug),
-				esc_html($category->name)
-			);
-		}
-		//=========================================================
-        ?>
+        <div class="nav-panel">
+	        <?php
+	        foreach ( get_the_category() as $category ) {
+		        printf(
+			        '<a href="%s" class="category-link %s">%s</a>',
+			        esc_url(get_category_link($category)),
+			        esc_html($category->slug),
+			        esc_html($category->name)
+		        );
+	        }
+	        $pred_post = get_previous_post(); // получили и записали в переменную объект предыдущего поста
+	        $next_post = get_next_post(); // получили и записали в переменную объект предыдущего поста
+	        ?>
+            <div class="navs">
+                <a class="navs-pred" href="<?php echo get_permalink( $pred_post ) ?>">
+                    <svg width="19" height="15" class="icon arrow-icon">
+                        <use xlink:href="<?php echo get_template_directory_uri().
+		                                            '/assets/images/sprite.svg#left-arrow'?>">
+                        </use>
+                    </svg> Назад</a>
+                <a class="navs-next" href="<?php echo get_permalink( $next_post ) ?>">Вперед
+                    <svg width="19" height="15" class="icon arrow-icon">
+                        <use xlink:href="<?php echo get_template_directory_uri().
+                                                    '/assets/images/sprite.svg#arrow'?>"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
 
-        <?php echo get_the_post_navigation(  array('prev_text' => '<span>Назад</span> '
-                                                                       )); ?>
-
-
-
-
-
-
-<!--//		the_post_navigation(-->
-<!--//			array(-->
-<!--//				'prev_text' => 'Назад +',-->
-<!--//				'next_text' => 'Вперед +',-->
-<!--//			)-->
-<!--//		);-->
+<!--      =========================================================-->
         <?php
-        //=========================================================
-
-		if ( is_singular() ) :
+       	if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',

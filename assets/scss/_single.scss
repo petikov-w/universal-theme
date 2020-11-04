@@ -1,7 +1,6 @@
 .post-header {
   padding: 60px 0 72px;
   color: #fff;
-  position: relative;
 }
 
 .entry-title {
@@ -20,29 +19,31 @@
   width: 640px;
 }
 
-.nav-subtitle {
-    color: #fff;
- position: absolute;
-
+.nav-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-//
-//.site-main .post-navigation {
-//  display: flex;
-//  flex-direction: column;
-//}
-//
-//.post-navigation .nav-links {
-//  //display: flex;
-//  justify-content: flex-end;
-//}
 
+.navs-pred {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.navs-next {
+  display: flex;
+  align-items: center;
+ margin-left: 20px;
+}
 
-//
-//.post-navigation .nav-links {
-//  display: flex;
-//  justify-content: center;
-//}
-//
-//.nav-previous {
-//  flex-basis: 20%;
-//}
+.navs {
+  display: flex;
+}
+
+.navs a {
+  color: #fff;
+  @include use_font($LatoBlack,14px);
+  line-height: 20px;
+  text-decoration: none;
+}
+
