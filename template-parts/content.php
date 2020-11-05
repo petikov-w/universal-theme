@@ -34,6 +34,7 @@
 	        }
 	        $pred_post = get_previous_post(); // получили и записали в переменную объект предыдущего поста
 	        $next_post = get_next_post(); // получили и записали в переменную объект предыдущего поста
+            //var_dump($pred_post);
 	        ?>
             
             <div class="navs">
@@ -42,19 +43,30 @@
 		                                            '/assets/images/sprite.svg#home'?>">
                         </use>
                     </svg>&nbsp&nbspНа главную</a>
-                
-                <a class="navs-pred" href="<?php echo get_permalink( $pred_post ) ?>">
-                    <svg width="19" height="15" class="icon arrow-icon">
-                        <use xlink:href="<?php echo get_template_directory_uri().
-		                                            '/assets/images/sprite.svg#left-arrow'?>">
-                        </use>
-                    </svg>&nbsp&nbspНазад</a>
-                <a class="navs-next" href="<?php echo get_permalink( $next_post ) ?>">
-                    Вперед<svg width="19" height="15" class="icon arrow-icon">
-                        <use xlink:href="<?php echo get_template_directory_uri().
-                                                    '/assets/images/sprite.svg#arrow'?>"></use>
-                    </svg>
-                </a>
+                <?php
+                    if ($pred_post!="") {
+                        ?>
+                        <a class="navs-pred" href="<?php echo get_permalink( $pred_post ) ?>">
+                            <svg width="19" height="15" class="icon arrow-icon">
+                                <use xlink:href="<?php echo get_template_directory_uri().
+			                                                '/assets/images/sprite.svg#left-arrow'?>">
+                                </use>
+                            </svg>&nbsp&nbspНазад</a>
+                        <?php
+                    }
+                ?>
+	            <?php
+	            if ($next_post!="") {
+		            ?>
+                        <a class="navs-next" href="<?php echo get_permalink( $next_post ) ?>">
+                            Вперед<svg width="19" height="15" class="icon arrow-icon">
+                                <use xlink:href="<?php echo get_template_directory_uri().
+                                                            '/assets/images/sprite.svg#arrow'?>"></use>
+                            </svg>
+                        </a>
+		            <?php
+	            }
+	            ?>
             </div>
         </div>
 
@@ -62,13 +74,19 @@
         <div class="cons">
 	        <?php
 	        if ( is_singular() ) :
-		        the_title( '<h1 class="entry-title">', '</h1>' );
+                ?>
+                    <h1 class="entry-title"><?php echo mb_strimwidth(get_the_title(),0,63,'...'); ?></h1>
+                <?php
 	        else :
 		        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
 			        '</a></h2>' );
 	        endif;
 	        ?>
-            <span class="entry-excerpt"><?php the_excerpt(); ?> </span>
+
+            <span class="entry-excerpt"><?php echo mb_strimwidth(get_the_excerpt(),0,200,'...'); ?></span>
+
+
+<!--            <span class="entry-excerpt">--><?php //the_excerpt(); ?><!-- </span>-->
             <div class="single-info">
             <span>
                 <svg width="14" height="14" class="icon comment-silver-icon">
@@ -91,12 +109,13 @@
             </div>
         </div>
 
-	</div>
-	</header>
+	</div> <!--container-->
+    </header>
 <!--	Заголовок поста (конец) -->
 
 
 <!--	Содержимое поста  -->
+    <div class="container">
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -134,5 +153,6 @@
 		}
 	?>
 	</footer><!-- .entry-footer -->
+</div><!--container-->
 <!--	Подвал поста (конец)  -->
 </article>

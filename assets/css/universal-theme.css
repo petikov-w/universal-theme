@@ -1878,15 +1878,13 @@ body {
   font-size: 55px;
   line-height: 70px;
   width: 750px;
+  height: 210px;
 }
 
 .entry-excerpt {
   font-size: 18px;
   line-height: 30px;
   opacity: 0.85;
-}
-
-.entry-excerpt p {
   width: 640px;
 }
 
@@ -1894,6 +1892,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-height: 20px;
 }
 
 .navs-pred {
@@ -1927,6 +1926,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
+  color: #BCBFC2;
 }
 
 .single-info span {
