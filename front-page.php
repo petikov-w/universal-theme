@@ -96,7 +96,6 @@ get_header();
 	            ?>
 <!--                ----------------------------------------------------->
             <div class="other other-grid">
-<!--                <div class="other-grid-item other-gri-01" style="background-color: #B4D1E0;">-->
                 <div class="other-grid-item other-gri-01">
                     <img src="<?php echo get_template_directory_uri().'/assets/images/image-career.png' ?>" alt=""
                          class="image-career">
@@ -112,10 +111,10 @@ get_header();
 <!--                <div class="other-grid other-gri-02">-->
                 <div class="other-grid other-gri-02">
 	                <?php
-	                $args_other = array(
+	                $args_other = [
 		                'posts_per_page' => 2,
 		                'category_name' => 'javascript, css, html, web-design',
-	                );
+	                ];
 	                cycle_wp_query_switch2($args_other, 'other');
 	                ?>
                 </div>
