@@ -236,7 +236,7 @@ body {
   border-radius: 100%;
 }
 
-.photo-report .avatar {
+.photo-reports .avatar {
   z-index: 2;
 }
 
@@ -488,7 +488,7 @@ body {
 .category-link.investigation {
   color: #FF4F52;
 }
-.category-link.photo-report {
+.category-link.photo-reports {
   color: #ffa34d;
 }
 .category-link.career {
@@ -1195,7 +1195,7 @@ body {
   height: 570px;
 }
 
-.photo-report {
+.photo-reports {
   min-height: 570px;
   width: 49%;
   border-radius: 10px;
@@ -1209,12 +1209,12 @@ body {
   z-index: 1;
 }
 
-.photo-report a {
+.photo-reports a {
   color: #fff;
   text-decoration: none;
 }
 
-.photo-report:after {
+.photo-reports:after {
   position: absolute;
   content: "";
   top: 0;
@@ -1406,7 +1406,7 @@ body {
   height: 570px;
 }
 
-.photo-report {
+.photo-reports {
   min-height: 570px;
   width: 49%;
   border-radius: 10px;
@@ -1420,12 +1420,12 @@ body {
   z-index: 1;
 }
 
-.photo-report a {
+.photo-reports a {
   color: #fff;
   text-decoration: none;
 }
 
-.photo-report:after {
+.photo-reports:after {
   position: absolute;
   content: "";
   top: 0;
@@ -1641,7 +1641,7 @@ body {
     padding-bottom: 30px;
   }
 
-  .photo-report {
+  .photo-reports {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -1938,4 +1938,138 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.entry-content {
+  max-width: 55%;
+  padding-top: 60px;
+}
+
+.entry-content p {
+  color: #4B5157;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.entry-content blockquote p {
+  font-family: "Roboto Slab", serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
+  margin-left: -20px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.entry-content blockquote p::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/quote.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+}
+
+.tags-links a {
+  color: #262D33;
+  text-decoration: none;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 15px;
+  border: 1px solid #D9DADB;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 40px 10px 40px 0;
+}
+
+.has-drop-cap:not(:focus):first-letter {
+  font-family: "Lato Black", sans-serif;
+  font-size: 100px;
+  line-height: 75px;
+  text-align: center;
+  color: #4592FF;
+}
+
+figure figcaption {
+  color: #4B5157;
+  margin: 25px 0 25px 35px;
+}
+
+figure img {
+  border-radius: 10px;
+}
+
+figure table {
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+figure table td:first-child {
+  width: 70%;
+}
+
+figure table tr:first-child {
+  height: 50px;
+  background-color: #65e5b2;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #000;
+}
+
+figure table tr:not(:first-child) {
+  height: 35px;
+  color: #4B5157;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+figure table td:first-child {
+  padding-left: 20px;
+}
+
+figure table td {
+  border: 1px solid #000;
+}
+
+figure figcaption {
+  color: #4B5157;
+  margin: 20px 0 20px 35px;
 }

@@ -14,7 +14,7 @@
 //==== Блок "Фоторепортаж" со слайдером =====
 //===========================================
 
-.photo-report {
+.photo-reports {
   min-height: 570px;
   //border: 1px solid #fff;
   width: 49%;
@@ -30,12 +30,12 @@
   z-index: 1;
 }
 
-.photo-report a {
+.photo-reports a {
   color: #fff;
   text-decoration: none;
 }
 
-.photo-report:after {
+.photo-reports:after {
   position: absolute;
   content: '';
   top: 0;

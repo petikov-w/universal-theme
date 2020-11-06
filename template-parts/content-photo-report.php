@@ -2,7 +2,7 @@
     $author_id=get_the_author_meta('ID');
 ?>
 
-<div class="photo-report">
+<div class="photo-reports">
 <!--  ==================== Подключение слайдера ======================= -->
     <div class="swiper-container photo-report-slider">
         <div class="swiper-wrapper">

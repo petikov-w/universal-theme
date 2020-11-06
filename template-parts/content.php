@@ -147,7 +147,7 @@
 	<footer class="entry-footer">
 	<?php
 
-		$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'universal-theme' ) );
+		$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
 		}
