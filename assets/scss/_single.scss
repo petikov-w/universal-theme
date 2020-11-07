@@ -3,6 +3,28 @@
   color: #fff;
 }
 
+.post-header-wrapper {
+  position: relative;
+}
+
+.author-post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-author {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+
+
+
+
+
+
 .entry-title {
   @include use_font($RobotoSlab, 55px);
   line-height: 70px;

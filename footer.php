@@ -12,15 +12,21 @@
         <div class="footer-menu-bar">
             <?php dynamic_sidebar( 'sidebar-footer' ); ?>
         </div>
-        <div class="footer-info">
-            <?php
-                wp_nav_menu( [
-                    'theme_location'  => 'footer_menu',
-                    'container'       => 'nav',
-                    'menu_class'      => 'footer-nav',
-                    'echo'            => true,
-                ] );
+        <div class="footer-info-main">
+            <div class="footer-info">
+		        <?php
+		        get_template_part( 'template-parts/content', 'footer-logo' );
 
+		        wp_nav_menu( [
+			        'theme_location'  => 'footer_menu',
+			        'container'       => 'nav',
+			        'menu_class'      => 'footer-nav',
+			        'echo'            => true,
+		        ] );
+
+		        ?>
+            </div>
+            <?php
             $instance = array(
 	            'facebook'=>'https://www.facebook.com',
 	            'instagram'=>'https://www.instagram.com',
@@ -36,6 +42,7 @@
             the_widget( 'Socialnetwork_Widget', $instance, $args );
             ?>
         </div>
+
         <div class="footer-text-wrapper">
 	        <?php dynamic_sidebar( 'sidebar-footer-text' ); ?>
             <span class="footer-copyright">

@@ -13,6 +13,8 @@
     <div class="container">
         <div class="header-wrapper">
 	        <?php
+	         get_template_part( 'template-parts/content', 'header-logo' );
+
 	          // Вывод основного меню сайта
 	          wp_nav_menu( [
 		        'theme_location'  => 'header_menu',

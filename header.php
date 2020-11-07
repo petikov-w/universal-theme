@@ -13,12 +13,8 @@
     <div class="container">
         <div class="header-wrapper">
 	        <?php
-              //Вывод логотипа
-	          if(has_custom_logo()){
-		        the_custom_logo();
-	          } else {
-		        echo 'Universal';
-	          }
+	        get_template_part( 'template-parts/content', 'header-logo' );
+
 	          // Вывод основного меню сайта
 	          wp_nav_menu( [
 		        'theme_location'  => 'header_menu',
@@ -27,6 +23,7 @@
 		        'menu_class'      => 'header-menu',
 		        'echo'            => true,
 	        ] );
+
 	        // Вывод поля для поискового запроса
             ?>
                 <?php echo get_search_form(); ?>

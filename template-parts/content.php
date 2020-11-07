@@ -22,93 +22,100 @@
 													}
 													?>)">
 	<div class="container">
-        <div class="nav-panel">
-	        <?php
-	        foreach ( get_the_category() as $category ) {
-		        printf(
-			        '<a href="%s" class="category-link %s">%s</a>',
-			        esc_url(get_category_link($category)),
-			        esc_html($category->slug),
-			        esc_html($category->name)
-		        );
-	        }
-	        $pred_post = get_previous_post(); // получили и записали в переменную объект предыдущего поста
-	        $next_post = get_next_post(); // получили и записали в переменную объект предыдущего поста
-            //var_dump($pred_post);
-	        ?>
-            
-            <div class="navs">
-                <a class="navs-pred" href="/"><svg width="18" height="17" class="icon arrow-icon">
-                        <use xlink:href="<?php echo get_template_directory_uri().
-		                                            '/assets/images/sprite.svg#home'?>">
-                        </use>
-                    </svg>&nbsp&nbspНа главную</a>
-                <?php
-                    if ($pred_post!="") {
-                        ?>
+        <div class="post-header-wrapper">
+            <div class="nav-panel">
+		        <?php
+		        foreach ( get_the_category() as $category ) {
+			        printf(
+				        '<a href="%s" class="category-link %s">%s</a>',
+				        esc_url(get_category_link($category)),
+				        esc_html($category->slug),
+				        esc_html($category->name)
+			        );
+		        }
+		        $pred_post = get_previous_post(); // получили и записали в переменную объект предыдущего поста
+		        $next_post = get_next_post(); // получили и записали в переменную объект предыдущего поста
+		        //var_dump($pred_post);
+		        ?>
+
+                <div class="navs">
+                    <a class="navs-pred" href="/"><svg width="18" height="17" class="icon arrow-icon">
+                            <use xlink:href="<?php echo get_template_directory_uri().
+					                                    '/assets/images/sprite.svg#home'?>">
+                            </use>
+                        </svg>&nbsp&nbspНа главную</a>
+			        <?php
+			        if ($pred_post!="") {
+				        ?>
                         <a class="navs-pred" href="<?php echo get_permalink( $pred_post ) ?>">
                             <svg width="19" height="15" class="icon arrow-icon">
                                 <use xlink:href="<?php echo get_template_directory_uri().
-			                                                '/assets/images/sprite.svg#left-arrow'?>">
+						                                    '/assets/images/sprite.svg#left-arrow'?>">
                                 </use>
                             </svg>&nbsp&nbspНазад</a>
-                        <?php
-                    }
-                ?>
-	            <?php
-	            if ($next_post!="") {
-		            ?>
+				        <?php
+			        }
+			        ?>
+			        <?php
+			        if ($next_post!="") {
+				        ?>
                         <a class="navs-next" href="<?php echo get_permalink( $next_post ) ?>">
                             Вперед<svg width="19" height="15" class="icon arrow-icon">
                                 <use xlink:href="<?php echo get_template_directory_uri().
-                                                            '/assets/images/sprite.svg#arrow'?>"></use>
+						                                    '/assets/images/sprite.svg#arrow'?>"></use>
                             </svg>
                         </a>
-		            <?php
-	            }
-	            ?>
+				        <?php
+			        }
+			        ?>
+                </div>
             </div>
-        </div>
-
-
-        <div class="cons">
-	        <?php
-	        if ( is_singular() ) :
-                ?>
+            <div class="cons">
+		        <?php
+		        if ( is_singular() ) :
+			        ?>
                     <h1 class="entry-title"><?php echo mb_strimwidth(get_the_title(),0,63,'...'); ?></h1>
-                <?php
-	        else :
-		        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
-			        '</a></h2>' );
-	        endif;
-	        ?>
+		        <?php
+		        else :
+			        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
+				        '</a></h2>' );
+		        endif;
+		        ?>
 
-            <span class="entry-excerpt"><?php echo mb_strimwidth(get_the_excerpt(),0,200,'...'); ?></span>
-
-
-<!--            <span class="entry-excerpt">--><?php //the_excerpt(); ?><!-- </span>-->
-            <div class="single-info">
-            <span>
-                <svg width="14" height="14" class="icon comment-silver-icon">
-                        <use xlink:href="<?php echo get_template_directory_uri().
-                                                    '/assets/images/sprite.svg#clock'?>"></use>
-                    </svg>&nbsp&nbsp<?php echo get_the_date( 'j F, H:i' ) ?>
-            </span>
+                <span class="entry-excerpt"><?php echo mb_strimwidth(get_the_excerpt(),0,200,'...'); ?></span>
+                <div class="single-info">
                 <span>
-                <svg width="14" height="14" class="icon comment-silver-icon">
-                        <use xlink:href="<?php echo get_template_directory_uri().
-                                                    '/assets/images/sprite-like.svg#like'?>"></use>
-                    </svg>&nbsp&nbsp<?php comments_number('0','1','%'); ?>
-            </span>
-                <span>
-                <svg width="14" height="14" class="icon comment-silver-icon">
-                        <use xlink:href="<?php echo get_template_directory_uri().
-                                                    '/assets/images/sprite-like.svg#comment'?>"></use>
-                    </svg>&nbsp&nbsp<?php comments_number('0','1','%'); ?>
-            </span>
+                    <svg width="14" height="14" class="icon comment-silver-icon">
+                            <use xlink:href="<?php echo get_template_directory_uri().
+                                                        '/assets/images/sprite.svg#clock'?>"></use>
+                        </svg>&nbsp&nbsp<?php echo get_the_date( 'j F, H:i' ) ?>
+                </span>
+                    <span>
+                    <svg width="14" height="14" class="icon comment-silver-icon">
+                            <use xlink:href="<?php echo get_template_directory_uri().
+                                                        '/assets/images/sprite-like.svg#like'?>"></use>
+                        </svg>&nbsp&nbsp<?php comments_number('0','1','%'); ?>
+                </span>
+                    <span>
+                    <svg width="14" height="14" class="icon comment-silver-icon">
+                            <use xlink:href="<?php echo get_template_directory_uri().
+                                                        '/assets/images/sprite-like.svg#comment'?>"></use>
+                        </svg>&nbsp&nbsp<?php comments_number('0','1','%'); ?>
+                </span>
+                </div>
+            </div>
+            <div class="post-author">
+                <?php $author_id=get_the_author_meta('ID'); ?>
+                <div class="author-post-info">
+                    <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-lr">
+                    <span class="author-name"><?php the_author() ?></span>
+                    <span class="author-rank">Должность</span>
+                    <span class="author-posts"><?php echo plural_form(count_user_posts($author_id),
+                        array('статья','статьи','статей')) ?></span>
+                </div>
+                <a href="<?php echo get_author_posts_url($author_id)?>" class="author">Страница автора</a>
             </div>
         </div>
-
 	</div> <!--container-->
     </header>
 <!--	Заголовок поста (конец) -->

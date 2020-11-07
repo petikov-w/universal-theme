@@ -3,6 +3,10 @@
   background-color: #fff;
 }
 
+//=============================
+//====== footer-menu ==========
+//=============================
+
 .footer-menu {
   flex-basis: 100%;
 }
@@ -58,13 +62,34 @@
   border-top: 5px solid #6E99AE;
 }
 
-.footer-info {
-  border-top: 1px solid #D9DADB;
-  border-bottom: 1px solid #D9DADB;
-  padding: 30px 0;
+//=============================
+//====== logo-footer ==========
+//=============================
+
+.logo-footer img {
+  height: 50px;
+  width: 50px;
+}
+
+.logo-footer {
+  margin-right: 15px;
+}
+//=============================
+//====== footer-info ==========
+//=============================
+
+.footer-info-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid #D9DADB;
+  border-bottom: 1px solid #D9DADB;
+  padding: 30px 0;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
 }
 
 .footer-info ul {
@@ -84,6 +109,12 @@
   display: flex;
   align-items: center;
 }
+
+
+//=============================
+//====== footer-text ==========
+//=============================
+
 
 .footer-text-wrapper {
   display: flex;

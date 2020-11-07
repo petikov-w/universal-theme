@@ -15,6 +15,39 @@
 }
 
 //==========================================
+// =============== Логотип =================
+//==========================================
+
+.header-wrapper a {
+  text-decoration: none;
+}
+
+.logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-name-dark, .logo-name-light {
+
+  @include use_font($RobotoSlab,24px);
+  line-height: 35px;
+  margin-left: 10px;
+
+}
+
+.logo-name-dark {
+  color: #fff;
+}
+
+.logo-name-light {
+  color: #4592FF;
+
+}
+
+
+
+//==========================================
 // ========== Главное меню =================
 //==========================================
 
@@ -87,3 +120,6 @@
   margin: 0 15px 0 15px;
 }
 
+.header-single .search-form input {
+  background-color: #F5F5F5;
+}

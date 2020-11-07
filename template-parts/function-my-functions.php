@@ -26,3 +26,11 @@ function category_colors2 ($colors, $style = 'category-color') {
 		}
 	}
 }
+
+function printss($source) {
+	echo "<pre style='font-size: 20px; 
+                      color: #f52e14;
+                      font-weight: 500'>";
+	print_r($source);
+	echo "</pre>";
+}

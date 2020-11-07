@@ -64,6 +64,31 @@ body {
   align-items: center;
 }
 
+.header-wrapper a {
+  text-decoration: none;
+}
+
+.logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-name-dark, .logo-name-light {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  line-height: 35px;
+  margin-left: 10px;
+}
+
+.logo-name-dark {
+  color: #fff;
+}
+
+.logo-name-light {
+  color: #4592FF;
+}
+
 .header-menu {
   margin: 0;
   padding: 0;
@@ -127,6 +152,10 @@ body {
   margin: 0 15px 0 15px;
 }
 
+.header-single .search-form input {
+  background-color: #F5F5F5;
+}
+
 .footer {
   padding: 60px 0 55px;
   background-color: #fff;
@@ -186,13 +215,27 @@ body {
   border-top: 5px solid #6E99AE;
 }
 
-.footer-info {
-  border-top: 1px solid #D9DADB;
-  border-bottom: 1px solid #D9DADB;
-  padding: 30px 0;
+.logo-footer img {
+  height: 50px;
+  width: 50px;
+}
+
+.logo-footer {
+  margin-right: 15px;
+}
+
+.footer-info-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid #D9DADB;
+  border-bottom: 1px solid #D9DADB;
+  padding: 30px 0;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
 }
 
 .footer-info ul {
@@ -233,6 +276,12 @@ body {
 .avatar {
   width: 45px;
   height: 45px;
+  border-radius: 100%;
+}
+
+.avatar-lr {
+  width: 90px;
+  height: 90px;
   border-radius: 100%;
 }
 
@@ -1871,6 +1920,23 @@ body {
 .post-header {
   padding: 60px 0 72px;
   color: #fff;
+}
+
+.post-header-wrapper {
+  position: relative;
+}
+
+.author-post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-author {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
 }
 
 .entry-title {
