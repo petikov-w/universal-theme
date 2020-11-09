@@ -319,6 +319,10 @@ body {
   opacity: 0.4;
 }
 
+.icon-bookmark {
+  fill: #787B7E;
+}
+
 .home {
   background-color: #e5e5e5;
 }
@@ -1926,17 +1930,61 @@ body {
   position: relative;
 }
 
-.author-post-info {
-  display: flex;
-  flex-direction: column;
-}
-
 .post-author {
   position: absolute;
+  min-width: 263px;
+  border: 1px solid #D9DADB;
+  border-radius: 10px;
   right: 0;
   background-color: #fff;
   color: #000;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-right: 135px;
+}
+
+.post-author .author {
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+  text-decoration: none;
+  padding: 15px 25px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #D9DADB;
+}
+
+.post-author .author-post-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 25px 20px;
+}
+
+.author-post-info .author-name {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #262D33;
+  margin-top: 15px;
+}
+
+.author-post-info .author-rank {
+  color: #4B5157;
+  margin-top: 5px;
+}
+
+.author-post-info .author-posts {
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+  margin-top: 15px;
 }
 
 .entry-title {
@@ -2007,8 +2055,11 @@ body {
 }
 
 .entry-content {
-  max-width: 55%;
   padding-top: 60px;
+}
+
+.entry-content p:first-child {
+  max-width: 55%;
 }
 
 .entry-content p {
@@ -2138,4 +2189,15 @@ figure table td {
 figure figcaption {
   color: #4B5157;
   margin: 20px 0 20px 35px;
+}
+
+.title-bookmark {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.bookmark {
+  margin-top: 60px;
+  margin-right: 135px;
 }

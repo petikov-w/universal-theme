@@ -74,7 +74,15 @@
 		        <?php
 		        if ( is_singular() ) :
 			        ?>
-                    <h1 class="entry-title"><?php echo mb_strimwidth(get_the_title(),0,63,'...'); ?></h1>
+                    <div class="title-bookmark">
+                        <h1 class="entry-title"><?php echo mb_strimwidth(get_the_title(),0,63,'...'); ?></h1>
+                        <svg width="21" height="27" class="icon icon-bookmark bookmark">
+                            <use xlink:href="<?php echo get_template_directory_uri().
+		                                                '/assets/images/sprite.svg#bookmark'?>"></use>
+                        </svg>
+                    </div>
+
+
 		        <?php
 		        else :
 			        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
