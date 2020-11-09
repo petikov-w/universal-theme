@@ -79,7 +79,8 @@ get_header();
 	        ?>
         </ul>
         <!--        Подключаем сайдбар  -->
-	    <?php get_sidebar('main-2') ?>
+	    <?php get_sidebar('main-2'); ?>
+
     </div>
 
 

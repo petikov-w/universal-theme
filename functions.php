@@ -114,6 +114,19 @@ function universal_theme_widgets_init() {
 		)
 	);
 
+	// Сайдбар для вывода группы постов из той же категории, что и основной пост на странице поста
+	register_sidebar(
+		array(
+			'name' => esc_html__('Группа постов', 'universal-theme' ),
+			'id' => 'group-posts',
+			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h2 class="widget-title">',
+			'after_title' => '</h2>',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );
 
@@ -139,6 +152,9 @@ get_template_part( 'template-parts/function', 'widget-socialnetwork' );
 
 // Регистрация нового виджета - Недавно опубликованные посты (resent_posts)
 get_template_part( 'template-parts/function', 'widget-recent-posts' );
+
+// Регистрация нового виджета - Посты в текущей категории (posts_in_current_category)
+get_template_part( 'template-parts/function', 'widget-posts-in-current-category' );
 
 // Мои функции
 get_template_part( 'template-parts/function', 'my-functions' );

@@ -11,6 +11,7 @@
 		the_post();
 
 		get_template_part( 'template-parts/content', get_post_type() );
+
 		?>
     <div class="container">
         <?php
@@ -23,6 +24,7 @@
     </div><!--container-->
     <?php
 	endwhile; // End of the loop.
+
 	?>
 </main><!-- #main -->
 <?php

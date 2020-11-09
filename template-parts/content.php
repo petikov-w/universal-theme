@@ -124,6 +124,8 @@
                 <a href="<?php echo get_author_posts_url($author_id)?>" class="author">Страница автора</a>
             </div>
         </div>
+
+
 	</div> <!--container-->
     </header>
 <!--	Заголовок поста (конец) -->
@@ -164,10 +166,14 @@
 
 		$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</span>', $tags_list );
+			printf( '<div class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</div>', $tags_list );
 		}
 	?>
+	<?php meks_ess_share(); ?>
+        <!--        Подключаем сайдбар  -->
+		<?php get_sidebar('group-posts') ?>
 	</footer><!-- .entry-footer -->
+
 </div><!--container-->
 <!--	Подвал поста (конец)  -->
 </article>

@@ -2123,19 +2123,6 @@ h6 {
   z-index: -1;
 }
 
-.tags-links a {
-  color: #262D33;
-  text-decoration: none;
-  font-family: "Lato Black", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 5px 15px;
-  border: 1px solid #D9DADB;
-  box-sizing: border-box;
-  border-radius: 5px;
-  margin: 40px 10px 40px 0;
-}
-
 .has-drop-cap:not(:focus):first-letter {
   font-family: "Lato Black", sans-serif;
   font-size: 100px;
@@ -2191,6 +2178,25 @@ figure figcaption {
   margin: 20px 0 20px 35px;
 }
 
+.tags-links a {
+  color: #262D33;
+  text-decoration: none;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 15px;
+  border: 1px solid #D9DADB;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 40px 10px 40px 0;
+}
+
+.tags-links {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #BCBFC2;
+  max-width: 55%;
+}
+
 .title-bookmark {
   display: flex;
   align-items: flex-start;
@@ -2200,4 +2206,20 @@ figure figcaption {
 .bookmark {
   margin-top: 60px;
   margin-right: 135px;
+}
+
+.meks_ess {
+  max-width: 55%;
+  margin-top: 0;
+}
+
+.meks_ess_share_label {
+  margin: -18px 0 -20px 0;
+}
+
+.meks_ess_share_label h5 {
+  font-family: "Roboto Slab", serif;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
 }

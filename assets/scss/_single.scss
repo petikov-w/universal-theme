@@ -223,21 +223,6 @@ h6 {
 }
 
 
-//=============================
-//===== Стилизация тегов ======
-//=============================
-
-.tags-links a {
-  color: #262D33;
-  text-decoration: none;
-  @include use_font($LatoBlack, 14px);
-  line-height: 20px;
-  padding: 5px 15px;
-  border: 1px solid #D9DADB;
-  box-sizing: border-box;
-  border-radius: 5px;
-  margin: 40px 10px 40px 0;
-}
 
 //=============================
 //===== Стилизация буквицы ====
@@ -314,6 +299,32 @@ figure figcaption {
   color: #4B5157;
   margin: 20px 0 20px 35px;
 }
+
+
+//=============================
+//===== Стилизация тегов ======
+//=============================
+
+.tags-links a {
+  color: #262D33;
+  text-decoration: none;
+  @include use_font($LatoBlack, 14px);
+  line-height: 20px;
+  padding: 5px 15px;
+  border: 1px solid #D9DADB;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 40px 10px 40px 0;
+}
+
+.tags-links {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #BCBFC2;
+  max-width: 55%;
+
+}
+
+
 //===========================================
 
 .title-bookmark {
@@ -325,4 +336,19 @@ figure figcaption {
 .bookmark {
   margin-top: 60px;
   margin-right: 135px;
+}
+
+.meks_ess {
+  max-width: 55%;
+  margin-top: 0;
+}
+
+.meks_ess_share_label {
+  margin: -18px 0 -20px 0;
+}
+
+.meks_ess_share_label h5 {
+  @include use_font($RobotoSlab,25px);
+  line-height: 30px;
+  color: #262D33;
 }
