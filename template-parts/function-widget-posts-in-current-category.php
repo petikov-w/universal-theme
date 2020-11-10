@@ -35,17 +35,17 @@ class Posts_In_Current_Category_Widget extends WP_Widget {
 		echo $args['before_widget'];
 //==============================================================================================
 		if ( ! empty( $count ) ) {
-			if ( ! empty( $title ) ) {
-
-				echo $args['before_title'] . $title . $args['after_title'];
+			//if ( ! empty( $title ) ) {
+				//echo $args['before_title'] . $title . $args['after_title'];
 				echo '<div class="widget-recent-posts-wrapper">';
 				$args_resent = array(
-					'posts_per_page'   => $count,
+					'posts_per_page' => $count,
 					'category_name' => get_the_category()[0]->slug,
+					'post__not_in' => [get_the_ID()],
 				);
 				cycle_wp_query( $args_resent, 'posts-in-current-category-widget' );
 				echo '</div>';
-			}
+			//}
 		}
 //----------------------------------------------------------------------------------------------
 		echo $args['after_widget'];

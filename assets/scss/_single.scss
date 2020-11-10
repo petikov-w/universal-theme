@@ -352,3 +352,25 @@ figure figcaption {
   line-height: 30px;
   color: #262D33;
 }
+
+.img-post-in-cat {
+  width: 263px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post_in_current_category-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  width: 263px;
+}
+
+.post_in_current_category-title {
+  @include use_font($RobotoSlab,16px);
+  line-height: 25px;
+  color: #262D33;
+
+}
