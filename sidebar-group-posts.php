@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'group-posts' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area">
+<aside class="post-area">
 	<?php dynamic_sidebar( 'group-posts' ); ?>
 </aside><!-- #secondary -->
 

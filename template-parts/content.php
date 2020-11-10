@@ -170,10 +170,9 @@
 		}
 	?>
 	<?php meks_ess_share(); ?>
-        <!--        Подключаем сайдбар  -->
-		<?php get_sidebar('group-posts') ?>
 	</footer><!-- .entry-footer -->
-
 </div><!--container-->
+    <!--        Подключаем сайдбар  -->
+	<?php get_sidebar('group-posts') ?>
 <!--	Подвал поста (конец)  -->
 </article>

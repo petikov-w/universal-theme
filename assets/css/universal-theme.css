@@ -2236,7 +2236,7 @@ figure figcaption {
   flex-direction: column;
   align-items: flex-start;
   text-decoration: none;
-  width: 263px;
+  padding: 60px 30px 90px 0;
 }
 
 .post_in_current_category-title {
@@ -2244,4 +2244,31 @@ figure figcaption {
   font-size: 16px;
   line-height: 25px;
   color: #262D33;
+  margin: 15px 0;
+  width: 263px;
+}
+
+.widget-posts-in-current-category {
+  width: 1920px;
+  background-color: #F5F5F5;
+  margin: auto;
+}
+
+.widget-posts-in-current-category-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 90px auto;
+}
+
+.status-icon-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 70px;
+}
+
+.status-icon-panel span {
+  display: flex;
+  align-items: center;
 }

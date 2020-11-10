@@ -37,7 +37,7 @@ class Posts_In_Current_Category_Widget extends WP_Widget {
 		if ( ! empty( $count ) ) {
 			//if ( ! empty( $title ) ) {
 				//echo $args['before_title'] . $title . $args['after_title'];
-				echo '<div class="widget-recent-posts-wrapper">';
+				echo '<div class="widget-posts-in-current-category-wrapper">';
 				$args_resent = array(
 					'posts_per_page' => $count,
 					'category_name' => get_the_category()[0]->slug,
