@@ -1,17 +1,16 @@
-.avatar {
-  @include wh_size(45px,45px,circle);
-}
-
-.avatar-lr {
-  @include wh_size(90px,90px,circle);
-}
-
-.photo-reports .avatar {
-  z-index: 2;
-}
-
 .avatar-sm {
   @include wh_size(30px,30px,circle);
   margin-right: 10px;
 }
 
+.avatar-md {
+  @include wh_size(45px,45px,circle);
+}
+
+.photo-reports .avatar-md {
+  z-index: 2;
+}
+
+.avatar-lr {
+  @include wh_size(90px,90px,circle);
+}

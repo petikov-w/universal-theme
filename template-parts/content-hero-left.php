@@ -5,7 +5,7 @@
 
 <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="post-thumb">
 <a href="<?php echo get_author_posts_url($author_id)?>" class="author">
-    <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar">
+    <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-md">
     <div class="author-bio">
         <span class="author-name"><?php the_author() ?></span>
         <span class="author-rank">Должность</span>

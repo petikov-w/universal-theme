@@ -43,30 +43,44 @@ function universal_theme_comment( $comment, $args, $depth ) {
 			echo get_avatar( $comment, $args['avatar_size'] );
 		}
 		printf(
-			__( '<cite class="fn">%s</cite> <span class="says">says:</span>' ),
+			__( '<cite class="fn">%s</cite>' ),
 			get_comment_author_link()
 		);
 		?>
-	</div>
-
-	<?php if ( $comment->comment_approved == '0' ) { ?>
-		<em class="comment-awaiting-moderation">
-			<?php _e( 'Your comment is awaiting moderation.' ); ?>
-		</em><br/>
-	<?php } ?>
-
-	<div class="comment-meta commentmetadata">
+        <span class="comment-meta commentmetadata">
 		<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 			<?php
 			printf(
-				__( '%1$s at %2$s' ),
-				get_comment_date(),
+				__( '%1$s, %2$s' ),
+				get_comment_date('F jS'),
 				get_comment_time()
 			); ?>
 		</a>
 
 		<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+	</span>
+
+
 	</div>
+
+	<?php if ( $comment->comment_approved == '0' ) { ?>
+		<em class="comment-awaiting-moderation">
+			<?php _e( 'Ваш комментарий ожидает модерации.' ); ?>
+		</em><br/>
+	<?php } ?>
+
+<!--	<span class="comment-meta commentmetadata">-->
+<!--		<a href="--><?php //echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?><!--">-->
+<!--			--><?php
+//			printf(
+//				__( '%1$s, %2$s' ),
+//				get_comment_date('F jS'),
+//				get_comment_time()
+//			); ?>
+<!--		</a>-->
+<!---->
+<!--		--><?php //edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+<!--	</span>-->
 
 	<?php comment_text(); ?>
 
@@ -123,6 +137,8 @@ if ( post_password_required() ) {
 				array(
 					'style'      => 'ol',
 					'short_ping' => true,
+                    'avatar_size'=> 75,
+                    'callback' => 'universal_theme_comment'
 				)
 			);
 			?>

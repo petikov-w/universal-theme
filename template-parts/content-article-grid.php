@@ -58,7 +58,7 @@
                        <?php $author_id=get_the_author_meta('ID') ?>
                        <div class="author2">
                            <a href="<?php echo get_author_posts_url($author_id)?>" class="author2">
-                               <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar">
+                               <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-md">
                                <div class="author-bio2">
                                    <span class="author-name2"><?php the_author() ?></span>
                                    <a href="<?php echo get_the_permalink() ?>">

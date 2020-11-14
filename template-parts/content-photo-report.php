@@ -21,7 +21,7 @@
 <!--  ==================== Подключение слайдера (конец) =============== -->
             <span class="category-box"><?php echo get_the_category()[0]->name ?></span>
             <a href="<?php echo get_author_posts_url($author_id)?>" class="author-photo-report">
-                <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar">
+                <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-md">
                 <div class="author-info">
                     <span class="author-name-photo-report"><?php the_author() ?></span>
                     <span class="author-rank-photo-report">Должность</span>

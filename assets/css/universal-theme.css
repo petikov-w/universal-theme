@@ -273,27 +273,27 @@ body {
   width: 750px;
 }
 
-.avatar {
+.avatar-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.avatar-md {
   width: 45px;
   height: 45px;
   border-radius: 100%;
+}
+
+.photo-reports .avatar-md {
+  z-index: 2;
 }
 
 .avatar-lr {
   width: 90px;
   height: 90px;
   border-radius: 100%;
-}
-
-.photo-reports .avatar {
-  z-index: 2;
-}
-
-.avatar-sm {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  margin-right: 10px;
 }
 
 .white-icon {
