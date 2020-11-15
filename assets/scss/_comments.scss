@@ -1,0 +1,96 @@
+.comments-area {
+  max-width: 750px;
+}
+
+.commments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#comments .comments-title, {
+  @include use_font($RobotoSlab,40px);
+  line-height: 50px;
+  color: #262D33;
+}
+
+#comments .comment-count {
+  @include use_font($LatoRegular,40px);
+  line-height: 50px;
+  color: #939699;
+}
+
+#comments .comments-add-button {
+  @include use_font($LatoBlack,14px);
+  line-height: 20px;
+  text-decoration: none;
+  color: #262D33;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #D9DADB;
+  border-radius: 20px;
+}
+
+.comments-list {
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.comment-author-avatar {
+  margin-right: 15px;
+}
+
+.comment-author-avatar img {
+  border-radius: 50%;
+}
+
+.comment {
+  opacity: 1;
+}
+
+.comment a {
+  text-decoration: none;
+}
+
+
+.comment-author-name {
+  @include use_font($RobotoSlab,16px);
+  line-height: 25px;
+  color: #262D33;
+  font-style: normal;
+  margin-right: 10px;
+}
+
+.comment-body {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid #D9DADB;
+  padding-top: 20px;
+  padding-bottom: 29px;
+}
+
+
+.comment-body p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #4B5157;
+}
+
+.commentmetadata a {
+  font-size: 12px;
+  line-height: 15px;
+  color: #939699;
+}
+
+.reply {
+  display: flex;
+  align-items: center;
+}
+.reply a {
+  font-size: 12px;
+  line-height: 15px;
+  color: #262D33;
+}

@@ -36,18 +36,22 @@ function universal_theme_comment( $comment, $args, $depth ) {
 	<?php if ( 'div' != $args['style'] ) { ?>
 		<div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php
 	} ?>
-
-	<div class="comment-author vcard">
-		<?php
-		if ( $args['avatar_size'] != 0 ) {
-			echo get_avatar( $comment, $args['avatar_size'] );
-		}
-		printf(
-			__( '<cite class="fn">%s</cite>' ),
-			get_comment_author_link()
-		);
-		?>
-        <span class="comment-meta commentmetadata">
+    <div class="comment-author-avatar">
+        <?php
+            if ( $args['avatar_size'] != 0 ) {
+                echo get_avatar( $comment, $args['avatar_size'] );
+            }
+        ?>
+    </div>
+    <div class="comment-content">
+        <div class="comment-author vcard">
+		    <?php
+		    printf(
+			    __( '<cite class="comment-author-name">%s</cite>' ),
+			    get_comment_author_link()
+		    );
+		    ?>
+            <span class="comment-meta commentmetadata">
 		<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 			<?php
 			printf(
@@ -61,42 +65,37 @@ function universal_theme_comment( $comment, $args, $depth ) {
 	</span>
 
 
-	</div>
+        </div>
 
-	<?php if ( $comment->comment_approved == '0' ) { ?>
-		<em class="comment-awaiting-moderation">
-			<?php _e( 'Ваш комментарий ожидает модерации.' ); ?>
-		</em><br/>
-	<?php } ?>
+	    <?php if ( $comment->comment_approved == '0' ) { ?>
+            <em class="comment-awaiting-moderation">
+			    <?php _e( 'Ваш комментарий ожидает модерации.' ); ?>
+            </em><br/>
+	    <?php } ?>
 
-<!--	<span class="comment-meta commentmetadata">-->
-<!--		<a href="--><?php //echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?><!--">-->
-<!--			--><?php
-//			printf(
-//				__( '%1$s, %2$s' ),
-//				get_comment_date('F jS'),
-//				get_comment_time()
-//			); ?>
-<!--		</a>-->
-<!---->
-<!--		--><?php //edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
-<!--	</span>-->
+	    <?php comment_text(); ?>
 
-	<?php comment_text(); ?>
+        <div class="reply">
+            <svg width="14" height="14" class="icon comment-silver-icon">
+                <use xlink:href="
+                             <?php echo get_template_directory_uri().'/assets/images/sprite-like.svg#comment'?>">
+                </use>
+            </svg>&nbsp
+		    <?php
+		    comment_reply_link(
+			    array_merge(
+				    $args,
+				    array(
+					    'add_below' => $add_below,
+					    'depth'     => $depth,
+					    'max_depth' => $args['max_depth']
+				    )
+			    )
+		    ); ?>
+        </div>
 
-	<div class="reply">
-		<?php
-		comment_reply_link(
-			array_merge(
-				$args,
-				array(
-					'add_below' => $add_below,
-					'depth'     => $depth,
-					'max_depth' => $args['max_depth']
-				)
-			)
-		); ?>
-	</div>
+    </div>
+
 
 	<?php if ( 'div' != $args['style'] ) { ?>
 		</div>
@@ -120,9 +119,18 @@ if ( post_password_required() ) {
 	// Проверка на наличие комментариев к посту
 	if ( have_comments() ) :
 		?>
+    <div class="commments-header">
         <h2 class="comments-title">
-			<?php echo 'Комментарии ' . '<span class="comment-count">' . get_comments_number() . '</span>' ?>
+		    <?php echo 'Комментарии  ' . '<span class="comment-count">' . get_comments_number() . '</span>' ?>
         </h2><!-- .comments-title -->
+        <a href="#" class="comments-add-button">
+            <svg width="18" height="18" class="icon comment-silver-icon">
+                <use xlink:href="
+                             <?php echo get_template_directory_uri().'/assets/images/sprite.svg#pencil'?>">
+                </use>
+            </svg>&nbsp Добавить комментарий</a>
+    </div>
+
 <!--    ===============================================================-->
 
 
@@ -130,7 +138,7 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 <!--Выводим список комментариев-->
-        <ol class="comment-list">
+        <ol class="comments-list">
 <!--    Выводим отдельные комментарии-->
 			<?php
 			wp_list_comments(
