@@ -2310,6 +2310,41 @@ figure figcaption {
   border-radius: 20px;
 }
 
+.comment-form {
+  background-color: #F5F5F5;
+  padding: 30px 40px 35px 30px;
+  border-radius: 10px;
+}
+
+.comment-label {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #262D33;
+  display: block;
+  margin-left: 95px;
+}
+
+.comment-textarea {
+  min-height: 130px;
+  max-width: 86%;
+  resize: none;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.comment-form .avatar {
+  border-radius: 50%;
+  margin-bottom: 50px;
+  margin-right: 15px;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
 .comments-list {
   margin-left: 0;
   padding: 0;
@@ -2322,6 +2357,8 @@ figure figcaption {
 
 .comment-author-avatar img {
   border-radius: 50%;
+  height: 75px;
+  max-width: 75px;
 }
 
 .comment {
@@ -2330,6 +2367,10 @@ figure figcaption {
 
 .comment a {
   text-decoration: none;
+  color: #262D33;
+}
+.comment a:hover, .comment a:focus, .comment a:active {
+  color: #262D33;
 }
 
 .comment-author-name {
@@ -2353,6 +2394,8 @@ figure figcaption {
   font-size: 18px;
   line-height: 30px;
   color: #4B5157;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .commentmetadata a {
