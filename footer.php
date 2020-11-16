@@ -2,6 +2,28 @@
 
 <footer class="footer">
     <div class="container">
+        <?php
+        if ( !is_page( 'thanksyou' )) {
+        ?>
+            <div class="footer-form-wrapper">
+                <h3 class="footer-form-title">Подпишитесь на нашу рассылку</h3>
+                <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post"
+                      class="footer-form">
+                    <!-- Поле Email (обязательно) -->
+                    <input required type="text" name="email" placeholder="Введите email" class="input footer-form-input">
+                    <!-- Токен списка -->
+                    <!-- Получить API ID на: https://app.getresponse.com/campaign_list.html -->
+                    <input type="hidden" name="campaign_token" value="BeKOk" />
+                    <!-- Добавить подписчика в цикл на определенный день (по желанию) -->
+                    <input type="hidden" name="start_day" value="0" />
+                    <!-- Страница благодарности -->
+                    <input type="hidden" name="thankyou_url" value="<?php echo home_url('thanksyou') ?>"/>
+                    <!-- Кнопка подписаться -->
+                    <button type="submit" class="more-button">Подписаться</button>
+                </form>
+            </div>
+        <?php } ?>
+
 
         <?php
             if ( ! is_active_sidebar( 'sidebar-footer' ) ) {
