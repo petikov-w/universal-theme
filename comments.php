@@ -93,7 +93,6 @@ function universal_theme_comment( $comment, $args, $depth ) {
 				)
 			); ?>
         </div>
-
     </div>
 
 
@@ -150,9 +149,17 @@ if ( post_password_required() ) {
 					'login_text' => 'Зарегистрируйтесь, если хотите прокомментировать'
 				)
 			);
+			$icon_loading = get_template_directory_uri().'/assets/images/sprite.svg#loading';
 			?>
         </ol><!-- .comment-list -->
-
+        <a href="#">
+            <div class="loading-more">
+                <svg width="15" height="15" class="icon loading-icon">
+                    <use xlink:href="<?php echo $icon_loading; ?>"></use>
+                </svg>
+                Загрузить еще
+            </div>
+        </a>
 		<?php
 		the_comments_navigation();
 
@@ -164,18 +171,26 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
+	$icon_arrow = get_template_directory_uri().'/assets/images/sprite.svg#arrow';
 
 	comment_form(
 		[
-			'label_submit' => 'Отправить',
-			'title_reply' => '',
 			// переопределим textarea (тело формы)
 			'comment_field' => '<div class="comment-form-comment"><label for="comment" class="comment-label">' .
 			                   _x( 'Что Вы думаете на этот счет?', 'noun' ) . '</label><br /> 
-                               <div class="comment-wrapper">'. get_avatar(get_current_user_id(),75) . '                                  
-                               <textarea id="comment" name="comment" aria-required="true" class="comment-textarea"></textarea>
-                                </div></div>',
+                                <div class="comment-wrapper">'. get_avatar(get_current_user_id(),75) . '                                                      <div class="comment-textarea-wrapper">
+                                   <textarea id="comment" name="comment" aria-required="true" 
+                                   class="comment-textarea"></textarea>
+                                </div></div></div>',
+			'title_reply'          => '',
 			'logged_in_as'         => '',
+			'class_submit'         => 'comment-submit more-button',
+			'label_submit'         => 'Отправить',
+			'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s
+                                    <svg width="15" height="7" class="icon arrow-icon">
+                                        <use xlink:href="'. $icon_arrow .'"></use>
+                                    </svg>
+                                    </button>',
 		]
 	);
 	?>

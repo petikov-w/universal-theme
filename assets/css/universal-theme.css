@@ -44,6 +44,23 @@ body {
   text-decoration: none;
 }
 
+.more-button {
+  display: flex;
+  align-items: center;
+  max-width: 155px;
+  color: #fff;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  background: #4592FF;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
 .more:hover, .more:focus, .more:visited {
   color: #fff;
 }
@@ -300,6 +317,11 @@ body {
   fill: #fff;
 }
 
+.white-icon-2 {
+  fill: #fff;
+  margin-left: 15px;
+}
+
 .photo-report-icon {
   fill: #fff;
   margin-right: 8px;
@@ -308,6 +330,11 @@ body {
 .arrow-icon {
   fill: #fff;
   margin-left: 8px;
+}
+
+.loading-icon {
+  fill: #BCBFC2;
+  margin-right: 8px;
 }
 
 .comment-silver-icon {
@@ -2310,9 +2337,35 @@ figure figcaption {
   border-radius: 20px;
 }
 
+.loading-more {
+  width: 100%;
+  padding: 15px 0;
+  text-transform: lowercase;
+  border: 1px solid #D9DADB;
+  border-radius: 50px;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262D33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 67px;
+  margin-top: -20px;
+}
+
+#comments a {
+  text-decoration: none;
+  color: #262D33;
+}
+#comments a:hover, #comments a:focus, #comments a:active {
+  color: #262D33;
+}
+
 .comment-form {
   background-color: #F5F5F5;
-  padding: 30px 40px 35px 30px;
+  padding: 30px 40px 20px 30px;
+  margin-top: 30px;
   border-radius: 10px;
 }
 
@@ -2327,11 +2380,27 @@ figure figcaption {
 
 .comment-textarea {
   min-height: 130px;
-  max-width: 86%;
+  width: 585px;
   resize: none;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
+}
+
+.comment-textarea-wrapper {
+  display: inline-block;
+  position: relative;
+}
+.comment-textarea-wrapper::before {
+  content: "";
+  background-image: url("../images/vector.svg");
+  background-position: center center;
+  background-size: 100%;
+  width: 12px;
+  height: 20px;
+  position: absolute;
+  top: 35px;
+  left: -10px;
 }
 
 .comment-form .avatar {
@@ -2343,6 +2412,10 @@ figure figcaption {
 .form-wrapper {
   display: flex;
   align-items: flex-start;
+}
+
+.comment-submit {
+  margin-left: 95px;
 }
 
 .comments-list {
