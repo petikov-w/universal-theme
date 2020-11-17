@@ -266,3 +266,13 @@
   line-height: 20px;
   color: #939699;
 }
+
+.read-more {
+  padding-top: 11px;
+  padding-bottom: 14px;
+  text-align: center;
+  border-top: 1px solid #D9DADB;
+  @include use_font($LatoBlack,14px);
+  line-height: 20px;
+  color: #262D33;
+}

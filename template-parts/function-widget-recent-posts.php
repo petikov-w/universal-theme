@@ -44,6 +44,7 @@ class Recent_Posts_Widget extends WP_Widget {
 				cycle_wp_query( $args_resent, 'recent-posts-widget' );
 				echo '</div>';
 			}
+			echo '<div class="read-more">Читать далее</div>';
 		}
 //----------------------------------------------------------------------------------------------
 		echo $args['after_widget'];

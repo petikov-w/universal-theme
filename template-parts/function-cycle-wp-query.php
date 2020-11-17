@@ -62,4 +62,17 @@ function cycle_wp_query_switch2 ($args_query, $content_block) {
 	wp_reset_postdata(); // Сбрасываем $post
 }
 
-?>
+
+function cycle_wp_posts ($content_block) {
+	global $post;
+if ( have_posts() ) {
+	while ( have_posts() )
+    { the_post();
+		get_template_part( 'template-parts/content', $content_block );
+	} } else { ?>
+    <p>Постов не найдено</p>
+<?php }
+wp_reset_postdata();
+}
+
+
