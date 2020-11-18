@@ -1,6 +1,7 @@
 <?php
 //use ru\universal_theme\variables;
 ?>
+
 <div class="box">
     <li class="article-item-area">
 	    <a href="<?php echo get_the_permalink() ?>">
