@@ -32,7 +32,7 @@
   line-height: 25px;
   color: #262D33;
   margin: 0;
-  padding: 0px 25px;
+  //padding: 0px 25px;
   margin-top: 15px;
 }
 
@@ -40,7 +40,15 @@
   line-height: 20px;
   color: #4B5157;
   margin: 0;
-  padding: 5px 25px 15px 25px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  //padding: 5px 25px 15px 25px;
+}
+
+.post-card-info {
+  margin: 0;
+  padding: 0px 25px;
+  margin-bottom: 25px;
 }
 
 .cat-author-name {
@@ -49,10 +57,44 @@
 
 }
 
-.post-card .cat-author-name a {
-
+.author-bio-cat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  //justify-content: space-between;
+  margin-left: 10px;
 }
 
-.author-bio3 a {
+.author-bio-cat a {
   text-decoration: none;
+}
+
+//==========================================
+
+.author-cat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.date-comm-like-cat {
+  display: flex;
+  margin-top: 2px;
+  width: 120px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comms, .likes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30px;
+}
+
+
+.date-post-cat, .comments-count {
+  font-size: 12px;
+  line-height: 15px;
+  color: #939699;
 }
