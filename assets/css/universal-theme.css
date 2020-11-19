@@ -2624,7 +2624,17 @@ figure figcaption {
 
 .category-wrapper {
   background-color: #E5E5E5;
-  margin-top: -20px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.category-title {
+  margin-bottom: 60px;
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: #262D33;
+  text-transform: capitalize;
 }
 
 .posts-list {
@@ -2712,4 +2722,15 @@ figure figcaption {
   font-size: 12px;
   line-height: 15px;
   color: #939699;
+}
+
+.category-pagination {
+  width: 1140px;
+  margin-top: 12px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
