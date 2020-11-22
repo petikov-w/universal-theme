@@ -1,0 +1,29 @@
+.section-dark {
+  background-color: #262D33;
+  color: #ffffff;
+  padding: 50px 122px;
+}
+
+.page-title {
+  @include use_font($RobotoSlab,40px);
+  line-height: 50px;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.page-text {
+  @include use_font($LatoBlack,18px);
+  line-height: 30px;
+}
+
+.contacts-wrapper {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.contact-left, .contact-right {
+  width: 50%;
+  //border: 1px solid #ffffff;
+  //border-radius: 10px;
+}
