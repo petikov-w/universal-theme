@@ -29,42 +29,6 @@ body {
   margin: auto;
 }
 
-.more {
-  display: flex;
-  align-items: center;
-  max-width: 155px;
-  color: #fff;
-  font-family: "Lato Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 10px 30px 10px 20px;
-  border-radius: 20px;
-  background: #4592FF;
-  text-decoration: none;
-}
-
-.more-button {
-  display: flex;
-  align-items: center;
-  max-width: 155px;
-  color: #fff;
-  font-family: "Lato Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-  background: #4592FF;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
-
-.more:hover, .more:focus, .more:visited {
-  color: #fff;
-}
-
 .header {
   background-color: #262D33;
   padding: 15px 0 15px 0;
@@ -352,6 +316,26 @@ body {
 
 .icon-bookmark {
   fill: #787B7E;
+}
+
+.more, .more-button {
+  display: flex;
+  align-items: center;
+  max-width: 155px;
+  color: #fff;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  background: #4592FF;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.more:hover, .more:focus, .more:visited, .more-button:hover, .more-button:focus, .more-button:visited {
+  color: #fff;
 }
 
 .home {
@@ -2757,9 +2741,41 @@ figure figcaption {
 
 .contacts-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-.contact-left, .contact-right {
-  width: 50%;
+.contacts-form {
+  max-width: 460px;
+}
+
+.contacts-form input {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contacts-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  min-height: 120px;
+  resize: none;
+}
+
+.contacts-info {
+  opacity: 0.8;
+}
+
+.contact-left {
+  width: 40%;
+}
+
+.contact-right {
+  width: 53%;
 }

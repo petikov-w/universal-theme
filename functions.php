@@ -143,6 +143,34 @@ function universal_tag_cloud($args){
 }
 add_filter('widget_tag_cloud_args','universal_tag_cloud');
 
+// ================== AJAX ========================================
+
+add_action( 'wp_enqueue_scripts', 'adminAjax_data', 99 );
+function adminAjax_data(){
+wp_localize_script( 'jquery', 'adminAjax',
+		array(
+			'url' => admin_url('admin-ajax.php')
+		)
+	);
+}
+
+//-----------------------------------------------------------------
+
+add_action('wp_ajax_contacts_form', 'ajax_form');
+add_action('wp_ajax_nopriv_contacts_form', 'ajax_form');
+function ajax_form() {
+	$contact_name = $_POST['contact_name'];
+	$contact_email = $_POST['contact_email'];
+	$contact_comment = $_POST['contact_comment'];
+	$message = 'Пользователь ' . $contact_name . ' задал вопрос "' . $contact_comment . '". Его email для связи: '
+	           . $contact_email . ' .';
+	mail('developer-krox@yandex.ru', 'Новая заявка', $message);
+    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	wp_die();
+}
+
+//===================== AJAX (конец) ==============================
+
 
 // Регистрация нового виджета - Полезные файлы (downloader)
 get_template_part( 'template-parts/function', 'widget-downloader' );

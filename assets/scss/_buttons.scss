@@ -1,0 +1,20 @@
+.more, .more-button {
+  display: flex;
+  align-items: center;
+  max-width: 155px;
+  color: #fff;
+  @include use_font($LatoBlack,14px);
+  line-height: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  background: #4592FF;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+    &:hover, &:focus, &:visited {
+      color: #fff;
+    }
+}
+
+

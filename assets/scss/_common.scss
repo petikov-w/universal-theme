@@ -6,7 +6,6 @@ body {
   counter-reset: section;
 }
 
-
 .container {
   max-width: 1140px;
   width: 90%;
@@ -14,38 +13,3 @@ body {
 }
 
 
-.more {
-  //display: inline-block;
-  display: flex;
-  align-items: center;
-  max-width: 155px;
-  color: #fff;
-  @include use_font($LatoRegular,14px);
-  font-weight: 500;
-  line-height: 20px;
-  padding: 10px 30px 10px 20px;
-  border-radius: 20px;
-  background: #4592FF;
-  text-decoration: none;
-}
-
-.more-button {
-  //display: inline-block;
-  display: flex;
-  align-items: center;
-  max-width: 155px;
-  color: #fff;
-  @include use_font($LatoRegular,14px);
-  font-weight: 500;
-  line-height: 20px;
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-  background: #4592FF;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
-
-.more:hover, .more:focus, .more:visited {
-  color: #fff;
-}

@@ -18,12 +18,43 @@
 
 .contacts-wrapper {
   display: flex;
-  justify-content: flex-start;
-
+  justify-content: space-between;
 }
 
-.contact-left, .contact-right {
-  width: 50%;
+.contacts-form {
+  max-width: 460px;
+}
+
+.contacts-form input {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contacts-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  min-height: 120px;
+  resize: none;
+}
+
+.contacts-info {
+  opacity: 0.8;
+}
+
+.contact-left  {
+  width: 40%;
   //border: 1px solid #ffffff;
   //border-radius: 10px;
+}
+
+.contact-right {
+  width: 53%;
 }
