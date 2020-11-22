@@ -164,10 +164,18 @@ function ajax_form() {
 	$contact_comment = $_POST['contact_comment'];
 	$message = 'Пользователь ' . $contact_name . ' задал вопрос "' . $contact_comment . '". Его email для связи: '
 	           . $contact_email . ' .';
-	mail('developer-krox@yandex.ru', 'Новая заявка', $message);
-    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	$headers = "From: universal.loc <admin@first.kroxplus.ru>\r\nContent-type: text/plain; charset=UTF-8\r\n";
+
+	$return_path = '-f admin@first.kroxplus.ru';
+
+	$send_message = mail('developer-krox@yandex.ru', 'Новая заявка', $message, $headers);
+	if ($send_message){
+		echo 'Все получилось!';
+	} else {echo 'Где-то ошибка!';}
 	wp_die();
 }
+
+
 
 //===================== AJAX (конец) ==============================
 
