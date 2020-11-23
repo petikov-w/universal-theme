@@ -30,9 +30,16 @@ get_header();
                 <div class="contact-right">
                     <p class="page-text">или по этим контактам</p>
                     <div class="contacts-info">
-                        <div class="contacts-info-email">hello@forpeople.studio</div>
-                        <p class="contacts-info-address">3522 I-75, Business Spur Sault Sainte Marie, MI, 49783</p>
-                        <div class="contacts-info-telefon">+2 800 089 45-34</div>
+                        <?php
+                        $email = get_post_meta(get_the_ID(), 'email', true);
+                            if ($email) {echo  '<a href="mailto:'. $email . '">' . $email . '</a>'; }
+
+                        $address = get_post_meta(get_the_ID(), 'address', true);
+                        if ($address) {echo  '<address>'. $address . '</address>'; }
+                        $telefon = get_field('telefon');
+                        if ($telefon) {echo  '<a href="tel:'. $telefon . '">' . $telefon . '</a>';}
+                        ?>
+
                     </div>
                 </div>
             </div>

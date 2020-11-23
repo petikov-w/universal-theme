@@ -97,3 +97,24 @@
   max-height: 120px;
   resize: none;
 }
+
+.contacts-info {
+  color: #fff;
+  opacity: 0.8;
+}
+
+
+.contacts-info a {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+  &:hover, &:focus, &:visited {
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+
+address {
+  font-style: normal;
+  margin: 15px 0;
+}

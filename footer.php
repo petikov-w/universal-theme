@@ -69,6 +69,10 @@
 	        <?php dynamic_sidebar( 'sidebar-footer-text' ); ?>
             <span class="footer-copyright">
                 <?php echo date('Y').' &copy '.get_bloginfo('name'); ?>
+                <div class="footer-telefon">
+                    <?php $telefon = get_field('telefon',134);
+                    if ($telefon) {echo  '<a href="tel:'. $telefon . '">' . $telefon . '</a>';} ?>
+                </div>
             </span>
         </div>
     </div>

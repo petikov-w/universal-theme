@@ -250,6 +250,12 @@ body {
   margin-bottom: 25px;
 }
 
+.footer-text-wrapper a {
+  text-decoration: none;
+  color: #939699;
+  font-weight: 600;
+}
+
 .footer-text {
   width: 750px;
 }
@@ -2818,4 +2824,24 @@ figure figcaption {
   margin-bottom: 15px;
   max-height: 120px;
   resize: none;
+}
+
+.contacts-info {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.contacts-info a {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.contacts-info a:hover, .contacts-info a:focus, .contacts-info a:visited {
+  color: #fff;
+  opacity: 0.8;
+}
+
+address {
+  font-style: normal;
+  margin: 15px 0;
 }
