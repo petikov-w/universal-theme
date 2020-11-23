@@ -25,7 +25,7 @@ get_header();
                             </svg>
                         </button>
                     </form>
-
+	                <?php echo do_shortcode('[contact-form-7 id="227" title="Контакты"]'); ?>
                 </div>
                 <div class="contact-right">
                     <p class="page-text">или по этим контактам</p>

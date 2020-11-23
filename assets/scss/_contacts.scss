@@ -58,3 +58,42 @@
 .contact-right {
   width: 53%;
 }
+
+//.wpcf7-form .more {
+//  display: flex;
+//  align-items: center;
+//  max-width: 155px;
+//  color: #fff;
+//  @include use_font($LatoBlack,14px);
+//  line-height: 20px;
+//  padding: 10px 20px 10px 20px;
+//  border-radius: 20px;
+//  background: #4592FF;
+//  text-decoration: none;
+//  border: none;
+//  cursor: pointer;
+//  outline: none;
+//  &:hover, &:focus, &:visited {
+//    color: #fff;
+//  }
+//}
+
+.wpcf7-form .contacts-input {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wpcf7-form .contacts-textarea {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  max-height: 120px;
+  resize: none;
+}

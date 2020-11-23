@@ -338,6 +338,26 @@ body {
   color: #fff;
 }
 
+.wpcf7-form .more {
+  display: flex;
+  align-items: center;
+  max-width: 155px;
+  color: #fff;
+  font-family: "Lato Black", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  background: #4592FF;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.wpcf7-form .more:hover, .wpcf7-form .more:focus, .wpcf7-form .more:visited {
+  color: #fff;
+}
+
 .home {
   background-color: #e5e5e5;
 }
@@ -2778,4 +2798,24 @@ figure figcaption {
 
 .contact-right {
   width: 53%;
+}
+
+.wpcf7-form .contacts-input {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wpcf7-form .contacts-textarea {
+  width: 100%;
+  padding: 10px 15px;
+  line-height: 20px;
+  color: #939699;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  max-height: 120px;
+  resize: none;
 }
