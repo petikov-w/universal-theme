@@ -179,6 +179,8 @@ function ajax_form() {
 
 //===================== AJAX (конец) ==============================
 
+// Регистрация новых типов записей
+get_template_part( 'template-parts/function', 'register-post-types' );
 
 // Регистрация нового виджета - Полезные файлы (downloader)
 get_template_part( 'template-parts/function', 'widget-downloader' );
