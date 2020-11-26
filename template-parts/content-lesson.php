@@ -9,21 +9,39 @@
 
 ?>
 
+<!--<iframe src="https://player.vimeo.com/video/482125225" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
+<!--<p><a href="https://vimeo.com/482125225">Venrez show me Vimeo</a> from <a href="https://vimeo.com/user20567042">Diana</a> on <a href="https://vimeo.com">Vimeo</a>.</p>-->
+
+
+<!--<iframe src="https://player.vimeo.com/video/90754460" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
+<!--<p><a href="https://vimeo.com/90754460">Видеоинструкция по  загрузки видео на VIMEO</a> from <a href="https://vimeo.com/mosobltv">360 Подмосковье</a> on <a href="https://vimeo.com">Vimeo</a>.</p>-->
+
+<!--<iframe src="https://player.vimeo.com/video/90754460" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
+
+
 <!--	Заголовок поста  -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header <?php echo get_post_type() ?>-header" style="background: linear-gradient(0deg,
 	                              rgba(38, 45, 51, 0.75),	rgba(38, 45, 51, 0.75))">
 	<div class="container">
         <div class="video">
-            <iframe width="100%" height="450" src="https://www.youtube.com/embed/uhyLPZ5_TZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <?php the_field('video_link'); ?>
+            <?php
+
+            if (is_youtube(get_field('video_link'))>0) { ?>
+            <iframe width="100%" height="450" src="<?php echo 'https://www.youtube.com/embed/' . dsd(get_field('video_link'),'?v='); ?>" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <?php } ?>
+
         </div>
+<!--        https://www.youtube.com/embed/uhyLPZ5_TZw-->
         <div class="post-header-wrapper">
 		        <?php
 		        if ( is_singular() ) :
 			        ?>
                 <div class="lesson-header-title"><?php echo mb_strimwidth(get_the_title(),0,63,'...'); ?></div>
 <!--                <h1 class="entry-title">--><?php //echo mb_strimwidth(get_the_title(),0,63,'...'); ?><!--</h1>-->
+<!--                --><?php //echo dsd(get_field('video_link'),'?v='); ?>
 		        <?php
 		        else :
 			        the_title( '<div class="lesson-header-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
@@ -37,6 +55,7 @@
                         </svg>&nbsp&nbsp<?php echo get_the_date( 'j F, H:i' ) ?>
                 </span>
         </div>
+
 
 
 	</div> <!--container-->

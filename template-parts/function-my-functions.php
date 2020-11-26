@@ -34,3 +34,17 @@ function printss($source) {
 	print_r($source);
 	echo "</pre>";
 }
+
+function dsd($source, $cuts) {
+	return substr($source,strpos($source, $cuts)+3);
+}
+
+function is_youtube($source) {
+    $ddd = strpos($source, 'youtube.com');
+    if($ddd===false) {
+        return 0;
+    }
+    else {
+        return 1;
+    }
+}
