@@ -2852,6 +2852,15 @@ address {
 }
 
 .lesson-header-title {
-  font-size: 30px;
-  line-height: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 36px;
+  line-height: 46px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
 }

@@ -35,16 +35,50 @@ function printss($source) {
 	echo "</pre>";
 }
 
-function dsd($source, $cuts) {
-	return substr($source,strpos($source, $cuts)+3);
+function link_cut($source) {
+	$cuts = [
+	        'vimeo.com'   => 'vimeo.com/',
+            'youtube.com' => '?v=',
+            ];
+	$result = false;
+
+	if(is_videohosting($source)!== false) {
+	    foreach ($cuts as $s => $v ) {
+	        if ($s==is_videohosting($source)) {
+	            $result = substr($source,strpos($source, $v)+strlen($v));
+            }
+        }
+    }
+	return $result;
 }
 
+function is_videohosting($source) {
+    $vhosts = [ 'vimeo.com', 'youtube.com', ];
+	$result=false;
+    foreach ($vhosts as $host){
+	    if(strpos($source, $host)!==false){
+	        $result = $host;
+        }
+    }
+	return $result;
+}
+
+
 function is_youtube($source) {
-    $ddd = strpos($source, 'youtube.com');
-    if($ddd===false) {
-        return 0;
+    if(strpos($source, 'youtube.com')===false) {
+        return false;
     }
     else {
-        return 1;
+        return true;
     }
 }
+
+function is_vimeo($source) {
+	if(strpos($source, 'vimeo.com')===false) {
+		return false;
+	}
+	else {
+		return true;
+	}
+}
+
