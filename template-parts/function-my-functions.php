@@ -27,6 +27,8 @@ function category_colors2 ($colors, $style = 'category-color') {
 	}
 }
 
+
+// Функция для отладки
 function printss($source) {
 	echo "<pre style='font-size: 20px; 
                       color: #f52e14;
@@ -35,6 +37,9 @@ function printss($source) {
 	echo "</pre>";
 }
 
+
+
+// Функции для работы с видеохостингами
 function link_cut($source) {
 	$cuts = [
 	        'vimeo.com'   => 'vimeo.com/',
@@ -64,21 +69,4 @@ function is_videohosting($source) {
 }
 
 
-function is_youtube($source) {
-    if(strpos($source, 'youtube.com')===false) {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
-
-function is_vimeo($source) {
-	if(strpos($source, 'vimeo.com')===false) {
-		return false;
-	}
-	else {
-		return true;
-	}
-}
 
