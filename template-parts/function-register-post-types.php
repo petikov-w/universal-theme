@@ -19,9 +19,10 @@ function register_post_types(){
 		],
 		'description'         => 'Раздел с видеоуроками',
 		'public'              => true,
+		'publicly_queryable' => true,  //******************
 		// 'publicly_queryable'  => null, // зависит от public
 		// 'exclude_from_search' => null, // зависит от public
-		// 'show_ui'             => null, // зависит от public
+		'show_ui'             => true, // зависит от public ******
 		// 'show_in_nav_menus'   => null, // зависит от public
 		'show_in_menu'        => true, // показывать ли в меню адмнки
 		// 'show_in_admin_bar'   => null, // зависит от show_in_menu
@@ -33,8 +34,8 @@ function register_post_types(){
 		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'        => false,
-		'supports'            => [ 'title', 'editor', 'thumbnail', 'custom-fields'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'          => [],
+		'supports'            => [ 'title', 'thumbnail', 'custom-fields'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		//'taxonomies'          => ['teacher'],
 		'has_archive'         => true,
 		'rewrite'             => true,
 		'query_var'           => true,

@@ -6,7 +6,9 @@
  *
  * @package universal-theme
  */
-
+$cur_terms = get_the_terms( get_the_ID(), 'teacher' );
+$teacher = $cur_terms[0]->name;
+$url_teacher=get_term_link($cur_terms[0]->term_id, 'teacher' );
 ?>
 <!--	Заголовок поста  -->
 
@@ -35,18 +37,31 @@
                                                         '/assets/images/sprite.svg#clock'?>"></use>
                         </svg>&nbsp&nbsp<?php echo get_the_date( 'j F, H:i' ) ?>
                 </span>
+            <div class="teacher">Преподователь:
+                <a href="<?php echo $url_teacher ?>" class="teacher"><?php echo $teacher ?></a>
+                </div>
         </div>
-
+		<?php
+//		$cur_terms = get_the_terms( get_the_ID(), 'teacher' );
+//		printss($cur_terms);
+//		printss($url_teacher);
+		?>
 
 
 	</div> <!--container-->
     </header>
+
 <!--	Заголовок поста (конец) -->
 
 
 <!--	Содержимое поста  -->
     <div class="container">
 <!--	<div class="entry-content">-->
+<!--        --><?php
+//            $cur_terms = get_the_terms( $post->ID, 'lesson' );
+//            printss($cur_terms);
+//        ?>
+
 	<div class="lesson-content">
 		<?php
 		the_content(

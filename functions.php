@@ -5,7 +5,7 @@ if (! function_exists('universal_theme_setup')) :
 		// добавление тега title
 		add_theme_support('title-tag');
 		// добавление миниатюр
-		add_theme_support( 'post-thumbnails', array( 'post' ) );
+		add_theme_support( 'post-thumbnails', array( 'post', 'lesson' ) );
 
 		if (function_exists('add_image_size')){
 //			add_image_size('post-img',335,195,true);
@@ -205,15 +205,13 @@ function plural_form($number, $after) {
 
 //==================================================================
 
-
-
 function add_new_taxonomies() {
 	/* создаем функцию с произвольным именем и вставляем
 	в неё register_taxonomy() */
 	register_taxonomy('teacher',
 		array('lesson'),
 		array(
-			'hierarchical' => false,
+			'hierarchical' => true,
 			/* true - по типу рубрик, false - по типу меток,
 			по умолчанию - false */
 			'labels' => array(
@@ -228,9 +226,6 @@ function add_new_taxonomies() {
 				'update_item' => 'Изменить преподавателя',
 				'add_new_item' => 'Добавить преподавателя',
 				'new_item_name' => 'Название нового преподавателя',
-				'separate_items_with_commas' => 'Разделяйте платформы запятыми',
-				'add_or_remove_items' => 'Добавить или удалить платформу',
-				'choose_from_most_used' => 'Выбрать из наиболее часто используемых платформ',
 				'menu_name' => 'Преподаватели'
 			),
 			'show_admin_column' => true,
