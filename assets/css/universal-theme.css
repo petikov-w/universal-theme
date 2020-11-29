@@ -2864,3 +2864,56 @@ address {
   align-items: center;
   opacity: 0.7;
 }
+
+.teacher {
+  font-family: "Lato Black", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.5;
+  margin: 15px 0;
+}
+
+.teacher a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fio-teacher {
+  color: #ffa200;
+}
+
+.lesson-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title-lesson {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.lesson-card {
+  width: 263px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+.lesson-card .card-thumb {
+  height: 180px;
+}
+
+.lesson-card:not(:nth-child(4n+4)) {
+  margin-right: 28px;
+}
+
+.lesson-card a {
+  text-decoration: none;
+}

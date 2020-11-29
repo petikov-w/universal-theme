@@ -1,20 +1,13 @@
 
-<div class="post-card">
+<div class="lesson-card">
+    <a href="<?php echo get_the_permalink() ?>">
     <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" class="card-thumb">
     <div class="post-card-info">
-        <div class="title-pst"><?php echo mb_strimwidth(get_the_title(),0,30,'...'); ?></div>
+        <div class="title-lesson"><?php echo mb_strimwidth(get_the_title(),0,30,'...'); ?></div>
 
         <!-- ======================================================= -->
-		<?php $author_id=get_the_author_meta('ID') ?>
-        <div class="author-cat">
-            <a href="<?php echo get_author_posts_url($author_id)?>" >
-                <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-md">
-            </a>
-            <div class="author-bio-cat">
-                <a href="<?php echo get_author_posts_url($author_id)?>" >
-                    <div class="cat-author-name"><?php the_author() ?></div>
-                </a>
-                <a href="<?php echo get_the_permalink() ?>">
+
+            <div class="lesson-info">
                     <div class="date-comm-like-cat">
                         <span class="date-post-cat"><?php echo get_the_date('j M') ?></span>
                         <div class="comms">
@@ -34,9 +27,8 @@
                             <span class="comments-count"><?php comments_number('0','1','%'); ?></span>
                         </div>
                     </div>
-                </a>
             </div>
-        </div>
         <!-- ======================================================= -->
     </div>
+    </a>
 </div>

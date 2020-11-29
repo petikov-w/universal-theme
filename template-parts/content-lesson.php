@@ -31,15 +31,15 @@ $url_teacher=get_term_link($cur_terms[0]->term_id, 'teacher' );
 				        '</a></div>' );
 		        endif;
 		        ?>
+                <div class="teacher">Преподователь:&nbsp&nbsp
+                    <a href="<?php echo $url_teacher ?>"> <span class="fio-teacher"><?php echo $teacher ?></span></a>
+                </div>
                 <span class="clock">
                     <svg width="14" height="14" class="icon comment-silver-icon">
                             <use xlink:href="<?php echo get_template_directory_uri().
                                                         '/assets/images/sprite.svg#clock'?>"></use>
                         </svg>&nbsp&nbsp<?php echo get_the_date( 'j F, H:i' ) ?>
                 </span>
-            <div class="teacher">Преподователь:
-                <a href="<?php echo $url_teacher ?>" class="teacher"><?php echo $teacher ?></a>
-                </div>
         </div>
 		<?php
 //		$cur_terms = get_the_terms( get_the_ID(), 'teacher' );
