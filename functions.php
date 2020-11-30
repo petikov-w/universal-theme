@@ -179,6 +179,9 @@ function ajax_form() {
 
 //===================== AJAX (конец) ==============================
 
+// Подключение функции вывода "хлебных крошек"
+//include( get_template_directory_uri() . '/template-parts/function-breadcrumbs.php' );
+get_template_part( 'template-parts/function', 'breadcrumbs' );
 // Регистрация новых типов записей
 get_template_part( 'template-parts/function', 'register-post-types' );
 

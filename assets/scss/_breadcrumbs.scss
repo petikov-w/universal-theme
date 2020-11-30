@@ -1,0 +1,24 @@
+.breadcrumbs {
+  @include use_font($LatoBlack, 14px);
+  line-height: 20px;
+  color: #262D33;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #262D33;
+}
+
+.breadcrumbs__separator {
+  margin: 0 10px;
+  color: #BCBFC2;
+}
+
+.breadcrumbs__link {
+
+}
+
+.breadcrumbs__current {
+  text-transform: capitalize;
+}

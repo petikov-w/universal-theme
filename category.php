@@ -5,6 +5,7 @@ get_header();
 ?>
 	<div class="category-wrapper">
         <div class="container mxz">
+	        <?php if ( function_exists( 'the_breadcrumbs' ) ) the_breadcrumbs(); ?>
             <div class="category-title">
 		        <?php single_cat_title(); ?>
             </div>
