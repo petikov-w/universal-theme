@@ -1,6 +1,6 @@
 .lesson-header {
   color: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .lesson-header-title {
@@ -17,9 +17,9 @@
 }
 
 .teacher {
-  @include use_font($LatoBlack,20px);
-  line-height: 30px;
-  opacity: 0.5;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.9;
   margin: 15px 0;
 }
 
@@ -28,17 +28,14 @@
   color: #fff;
 }
 
-
 .fio-teacher {
-  color: #ffa200;
+  color: #00b9eb;
 }
 
 .lesson-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  //justify-content: space-between;
-  //margin-left: 10px;
 }
 
 .title-lesson {
@@ -69,4 +66,29 @@
 
 .lesson-card a {
   text-decoration: none;
+}
+
+.genre {
+  margin-bottom: 30px;
+}
+
+.genre-link {
+  color: #00b9eb;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  &:visited {
+    color: #00b9eb;
+  }
+  &.verstka {
+    color: #ffa34d;
+  }
+  &.development {
+    color: #ffcd06;
+  }
+  &.trends {
+    color: #FF4F52;
+  }
 }

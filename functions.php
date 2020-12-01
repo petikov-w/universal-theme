@@ -143,6 +143,13 @@ function universal_tag_cloud($args){
 }
 add_filter('widget_tag_cloud_args','universal_tag_cloud');
 
+
+
+function plural_form($number, $after) {
+	$cases = array (2, 0, 1, 1, 1, 2);
+	echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
+}
+
 // ================== AJAX ========================================
 
 add_action( 'wp_enqueue_scripts', 'adminAjax_data', 99 );
@@ -182,8 +189,12 @@ function ajax_form() {
 // Подключение функции вывода "хлебных крошек"
 //include( get_template_directory_uri() . '/template-parts/function-breadcrumbs.php' );
 get_template_part( 'template-parts/function', 'breadcrumbs' );
+
 // Регистрация новых типов записей
 get_template_part( 'template-parts/function', 'register-post-types' );
+
+// Регистрация таксономий
+get_template_part( 'template-parts/function', 'taxonomy' );
 
 // Регистрация нового виджета - Полезные файлы (downloader)
 get_template_part( 'template-parts/function', 'widget-downloader' );
@@ -201,59 +212,4 @@ get_template_part( 'template-parts/function', 'widget-posts-in-current-category'
 get_template_part( 'template-parts/function', 'my-functions' );
 get_template_part( 'template-parts/function', 'cycle-wp-query' );
 
-function plural_form($number, $after) {
-	$cases = array (2, 0, 1, 1, 1, 2);
-	echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
-}
 
-//==================================================================
-
-function add_new_taxonomies() {
-	/* создаем функцию с произвольным именем и вставляем
-	в неё register_taxonomy() */
-	register_taxonomy('teacher',
-		array('lesson'),
-		array(
-			'hierarchical' => true,
-			/* true - по типу рубрик, false - по типу меток,
-			по умолчанию - false */
-			'labels' => array(
-				/* ярлыки, нужные при создании UI, можете
-				не писать ничего, тогда будут использованы
-				ярлыки по умолчанию */
-				'name' => 'Преподователи',
-				'singular_name' => 'Преподаватель',
-				'search_items' =>  'Найти преподавателя',
-				'all_items' => 'Все преподаватели',
-				'edit_item' => 'Редактировать преподавателя',
-				'update_item' => 'Изменить преподавателя',
-				'add_new_item' => 'Добавить преподавателя',
-				'new_item_name' => 'Название нового преподавателя',
-				'menu_name' => 'Преподаватели'
-			),
-			'show_admin_column' => true,
-			'public' => true,
-			/* каждый может использовать таксономию, либо
-			только администраторы, по умолчанию - true */
-			'show_in_nav_menus' => true,
-			/* добавить на страницу создания меню */
-			'show_ui' => true,
-			/* добавить интерфейс создания и редактирования */
-			'show_tagcloud' => false,
-			/* нужно ли разрешить облако тегов для этой таксономии */
-			'update_count_callback' => '_update_post_term_count',
-			/* callback-функция для обновления счетчика $object_type */
-			'query_var' => true,
-			/* разрешено ли использование query_var, также можно
-			указать строку, которая будет использоваться в качестве
-			него, по умолчанию - имя таксономии */
-			'rewrite' => array(
-				/* настройки URL пермалинков */
-				'slug' => 'teacher', // ярлык
-				'hierarchical' => false // разрешить вложенность
-
-			),
-		)
-	);
-}
-add_action( 'init', 'add_new_taxonomies', 0 );

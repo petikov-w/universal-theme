@@ -1,6 +1,6 @@
 <?php
-//$icon_right_arrow = get_template_directory_uri().'/assets/images/sprite.svg#arrow';
-//$icon_left_arrow = get_template_directory_uri().'/assets/images/sprite.svg#left-arrow';
+$icon_right_arrow = get_template_directory_uri().'/assets/images/sprite.svg#arrow';
+$icon_left_arrow = get_template_directory_uri().'/assets/images/sprite.svg#left-arrow';
 get_header();
 ?>
 	<div class="category-wrapper">
@@ -11,16 +11,16 @@ get_header();
 			<div class="posts-list">
 				<?php cycle_wp_posts('list-posts-in-taxonomy'); ?>
 			</div>
-<!--			<div class="category-pagination">-->
-<!--				--><?php //the_posts_pagination([
-//					'prev_text'    => __('<svg width="15" height="7" class="icon pagination-icon">
-//                                        <use xlink:href="'. $icon_left_arrow .'"></use>
-//                                    </svg>&nbsp Назад'),
-//					'next_text'    => __('Вперед &nbsp<svg width="15" height="7" class="icon pagination-icon">
-//                                        <use xlink:href="'. $icon_right_arrow .'"></use>
-//                                    </svg>'),
-//				]); ?>
-<!--			</div>-->
+			<div class="category-pagination">
+				<?php the_posts_pagination([
+					'prev_text'    => __('<svg width="15" height="7" class="icon pagination-icon">
+                                        <use xlink:href="'. $icon_left_arrow .'"></use>
+                                    </svg>&nbsp Назад'),
+					'next_text'    => __('Вперед &nbsp<svg width="15" height="7" class="icon pagination-icon">
+                                        <use xlink:href="'. $icon_right_arrow .'"></use>
+                                    </svg>'),
+				]); ?>
+			</div>
 		</div>
 	</div>
 

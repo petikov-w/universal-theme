@@ -3,6 +3,7 @@ $icon_right_arrow = get_template_directory_uri().'/assets/images/sprite.svg#arro
 $icon_left_arrow = get_template_directory_uri().'/assets/images/sprite.svg#left-arrow';
 get_header();
 ?>
+<!--   --><?php //echo 'это страница категорий'?>
 	<div class="category-wrapper">
         <div class="container mxz">
 	        <?php if ( function_exists( 'the_breadcrumbs' ) ) the_breadcrumbs(); ?>

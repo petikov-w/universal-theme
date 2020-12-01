@@ -6,6 +6,7 @@ get_header();
 ?>
 <main class="front-page-header">
 <div class="container">
+
 	<div class="hero">
 		<div class="left">
         <?php

@@ -2870,7 +2870,7 @@ address {
 
 .lesson-header {
   color: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .lesson-header-title {
@@ -2888,10 +2888,9 @@ address {
 }
 
 .teacher {
-  font-family: "Lato Black", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  opacity: 0.5;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.9;
   margin: 15px 0;
 }
 
@@ -2901,7 +2900,7 @@ address {
 }
 
 .fio-teacher {
-  color: #ffa200;
+  color: #00b9eb;
 }
 
 .lesson-info {
@@ -2938,4 +2937,29 @@ address {
 
 .lesson-card a {
   text-decoration: none;
+}
+
+.genre {
+  margin-bottom: 30px;
+}
+
+.genre-link {
+  color: #00b9eb;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+}
+.genre-link:visited {
+  color: #00b9eb;
+}
+.genre-link.verstka {
+  color: #ffa34d;
+}
+.genre-link.development {
+  color: #ffcd06;
+}
+.genre-link.trends {
+  color: #FF4F52;
 }

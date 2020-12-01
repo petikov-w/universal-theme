@@ -6,9 +6,10 @@
  *
  * @package universal-theme
  */
-$cur_terms = get_the_terms( get_the_ID(), 'teacher' );
-$teacher = $cur_terms[0]->name;
-$url_teacher=get_term_link($cur_terms[0]->term_id, 'teacher' );
+
+$teacher = get_the_terms( get_the_ID(), 'teacher' )[0]->name;
+$genre = get_the_terms( get_the_ID(), 'genre' )[0]->name;
+$url_teacher=get_term_link(get_the_terms( get_the_ID(), 'teacher' )[0]->term_id, 'teacher' );
 ?>
 <!--	Заголовок поста  -->
 
@@ -16,6 +17,17 @@ $url_teacher=get_term_link($cur_terms[0]->term_id, 'teacher' );
 	<header class="entry-header <?php echo get_post_type() ?>-header" style="background: linear-gradient(0deg,
 	                              rgba(38, 45, 51, 0.75),	rgba(38, 45, 51, 0.75))">
 	<div class="container">
+        <div class="genre">
+	        <?php
+	        printf(
+		        '<a href="%s" class="genre-link %s">%s</a>',
+		        esc_url(get_term_link(get_the_terms( get_the_ID(), 'genre' )[0]->term_id, 'genre' )),
+		        esc_html(get_the_terms( get_the_ID(), 'genre' )[0]->slug),
+		        esc_html(get_the_terms( get_the_ID(), 'genre' )[0]->name)
+	        );
+	        ?>
+        </div>
+
         <div class="video">
             <?php get_template_part( 'template-parts/content', 'videohosts' ); ?>
         </div>
