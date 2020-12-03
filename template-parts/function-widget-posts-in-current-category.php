@@ -10,8 +10,8 @@ class Posts_In_Current_Category_Widget extends WP_Widget {
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
 			'posts_in_current_category_widget',
-            'Посты в текущей категории',
-			array( 'description' => 'Посты в текущей категории', 'classname' => 'widget-posts-in-current-category',)
+			__( 'Посты в текущей категории', 'universal' ),
+			array( 'description' => __('Посты в текущей категории' , 'universal' ), 'classname' => 'widget-posts-in-current-category',)
 		);
 
 		// скрипты/стили виджета, только если он активен
@@ -57,17 +57,17 @@ class Posts_In_Current_Category_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-		$title = @ $instance['title'] ?: 'Заголовок по умолчанию';
+		$title = @ $instance['title'] ?: __( 'Заголовок по умолчанию', 'universal' );
 		$count = @ $instance['count'] ?: 7;
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:', 'universal'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php
 			echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' , 'universal' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php
 			echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
 		</p>

@@ -54,9 +54,6 @@ $url_teacher=get_term_link(get_the_terms( get_the_ID(), 'teacher' )[0]->term_id,
                 </span>
         </div>
 		<?php
-//		$cur_terms = get_the_terms( get_the_ID(), 'teacher' );
-//		printss($cur_terms);
-//		printss($url_teacher);
 		?>
 
 
@@ -80,7 +77,7 @@ $url_teacher=get_term_link(get_the_terms( get_the_ID(), 'teacher' )[0]->term_id,
 			sprintf(
 				wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -93,7 +90,7 @@ $url_teacher=get_term_link(get_the_terms( get_the_ID(), 'teacher' )[0]->term_id,
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal' ),
 				'after'  => '</div>',
 			)
 		);
@@ -105,7 +102,7 @@ $url_teacher=get_term_link(get_the_terms( get_the_ID(), 'teacher' )[0]->term_id,
 	<footer class="entry-footer">
 	<?php
 
-		$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
+		$tags_list = get_the_tag_list( '', esc_html_x( '', 'разделитель элементов списка', 'universal' ) );
 		if ( $tags_list ) {
 			printf( '<div class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</div>', $tags_list );
 		}

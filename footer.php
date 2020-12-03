@@ -6,7 +6,7 @@
         if ( !is_page( 'thanksyou' )) {
         ?>
             <div class="footer-form-wrapper">
-                <h3 class="footer-form-title">Подпишитесь на нашу рассылку</h3>
+                <h3 class="footer-form-title"><?php echo __( 'Подпишитесь на нашу рассылку', 'universal' ) ?></h3>
                 <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post"
                       class="footer-form">
                     <!-- Поле Email (обязательно) -->
@@ -19,7 +19,7 @@
                     <!-- Страница благодарности -->
                     <input type="hidden" name="thankyou_url" value="<?php echo home_url('thanksyou') ?>"/>
                     <!-- Кнопка подписаться -->
-                    <button type="submit" class="more-button">Подписаться</button>
+                    <button type="submit" class="more-button"><?php echo __( 'Подписаться', 'universal' ) ?></button>
                 </form>
             </div>
         <?php } ?>

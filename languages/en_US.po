@@ -1,0 +1,318 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: universal\n"
+"POT-Creation-Date: 2020-12-03 21:11+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: My Super Team\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: category.php:20 search.php:20 taxonomy.php:18
+msgid "Назад"
+msgstr "Back"
+
+#: category.php:21 search.php:21 taxonomy.php:19
+msgid "Вперед"
+msgstr "Forward"
+
+#: comments.php:50
+#, php-format
+msgid "<cite class=\"comment-author-name\">%s</cite>"
+msgstr ""
+
+#: comments.php:58
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: comments.php:64
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:72
+msgid "Ваш комментарий ожидает модерации."
+msgstr "Your comment is awaiting moderation."
+
+#: comments.php:169
+msgid "Комментарии закрыты."
+msgstr "Comments are closed."
+
+#: comments.php:180
+msgid "Что Вы думаете на этот счет?"
+msgstr "What do you think about this?"
+
+#: footer.php:9
+msgid "Подпишитесь на нашу рассылку"
+msgstr "Subscribe to our newsletter"
+
+#: footer.php:22
+msgid "Подписаться"
+msgstr "Subscribe"
+
+#: functions.php:70
+msgid "Сайдбар на главной"
+msgstr "Sidebar on the main page"
+
+#: functions.php:72 functions.php:85 functions.php:124
+msgid "Добавте виджеты здесь"
+msgstr "Add widgets here"
+
+#: functions.php:83
+msgid "Сайдбар на главной - 2"
+msgstr "Sidebar on the main page - 2"
+
+#: functions.php:96
+msgid "Меню в подвале"
+msgstr "Menu in the basement"
+
+#: functions.php:98
+msgid "Добавте меню здесь"
+msgstr "Add a menu here"
+
+#: functions.php:109
+msgid "Текст в подвале"
+msgstr "The text is in the basement"
+
+#: functions.php:111
+msgid "Добавте текст здесь"
+msgstr "Add text here"
+
+#: functions.php:122
+msgid "Группа постов"
+msgstr "Group of posts"
+
+#: searchform.php:2
+msgid "Поиск"
+msgstr "Search"
+
+#: template-parts/content-career.php:9 template-parts/content-hero-left.php:17
+#: template-parts/function-widget-recent-posts.php:48
+msgid "Читать далее"
+msgstr "Read more"
+
+#: template-parts/content-investigation.php:6
+msgid "Читать статью"
+msgstr "Read the article"
+
+#: template-parts/content-lesson.php:80 template-parts/content.php:142
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-lesson.php:93 template-parts/content.php:155
+msgid "Страницы:"
+msgstr "Pages:"
+
+#: template-parts/content-lesson.php:107 template-parts/content.php:169
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: template-parts/content-photo-report.php:34
+msgid "Смотреть фото"
+msgstr "View photos"
+
+#: template-parts/function-register-post-types.php:7
+#: template-parts/function-register-post-types.php:18
+msgid "Уроки"
+msgstr "Lessons"
+
+#: template-parts/function-register-post-types.php:8
+msgid "Урок"
+msgstr "Lesson"
+
+#: template-parts/function-register-post-types.php:9
+msgid "Добавить урок"
+msgstr "Add a lesson"
+
+#: template-parts/function-register-post-types.php:10
+msgid "Добавление урока"
+msgstr "Adding a lesson"
+
+#: template-parts/function-register-post-types.php:11
+msgid "Редактирование урока"
+msgstr "Editing a lesson"
+
+#: template-parts/function-register-post-types.php:12
+msgid "Новый урок"
+msgstr "New lesson"
+
+#: template-parts/function-register-post-types.php:13
+msgid "Смотреть уроки"
+msgstr "View lessons"
+
+#: template-parts/function-register-post-types.php:14
+msgid "Искать уроки"
+msgstr "Search for lessons"
+
+#: template-parts/function-register-post-types.php:15
+msgid "Не найдено"
+msgstr "Not found"
+
+#: template-parts/function-register-post-types.php:16
+msgid "Не найдено в корзине"
+msgstr "Not found in the trash"
+
+#: template-parts/function-register-post-types.php:20
+msgid "Раздел с видеоуроками"
+msgstr "Section with video tutorials"
+
+#: template-parts/function-taxonomy.php:14
+msgid "Преподователи"
+msgstr "Teachers"
+
+#: template-parts/function-taxonomy.php:15
+msgid "Преподаватель"
+msgstr "Teacher"
+
+#: template-parts/function-taxonomy.php:16
+msgid "Найти преподавателя"
+msgstr "Find a teacher"
+
+#: template-parts/function-taxonomy.php:17
+msgid "Все преподаватели"
+msgstr "All teachers"
+
+#: template-parts/function-taxonomy.php:18
+msgid "Редактировать преподавателя"
+msgstr "Edit a teacher"
+
+#: template-parts/function-taxonomy.php:19
+msgid "Изменить преподавателя"
+msgstr "Change the teacher"
+
+#: template-parts/function-taxonomy.php:20
+msgid "Добавить преподавателя"
+msgstr "Add a teacher"
+
+#: template-parts/function-taxonomy.php:21
+msgid "Название нового преподавателя"
+msgstr "Name of the new teacher"
+
+#: template-parts/function-taxonomy.php:22
+msgid "Преподаватели"
+msgstr "Teachers"
+
+#: template-parts/function-taxonomy.php:57
+#: template-parts/function-taxonomy.php:65
+msgid "Жанры"
+msgstr "Genres"
+
+#: template-parts/function-taxonomy.php:58
+msgid "Жанр"
+msgstr "Genre"
+
+#: template-parts/function-taxonomy.php:59
+msgid "Найти жанры"
+msgstr "Find genres"
+
+#: template-parts/function-taxonomy.php:60
+msgid "Все жанры"
+msgstr "All genres"
+
+#: template-parts/function-taxonomy.php:61
+msgid "Редактировать жанр"
+msgstr "Edit genre"
+
+#: template-parts/function-taxonomy.php:62
+msgid "Изменить жанр"
+msgstr "Change the genre"
+
+#: template-parts/function-taxonomy.php:63
+msgid "Добавить жанр"
+msgstr "Add a genre"
+
+#: template-parts/function-taxonomy.php:64
+msgid "Название нового жанра"
+msgstr "Name of the new genre"
+
+#: template-parts/function-widget-downloader.php:13
+msgid "Полезные файлы"
+msgstr "Useful files"
+
+#: template-parts/function-widget-downloader.php:14
+msgid "Файлы для скачивания"
+msgstr "Download files"
+
+#: template-parts/function-widget-downloader.php:45
+msgid "Скачать"
+msgstr "Download"
+
+#: template-parts/function-widget-downloader.php:57
+#: template-parts/function-widget-posts-in-current-category.php:60
+#: template-parts/function-widget-recent-posts.php:60
+#: template-parts/function-widget-socialnetwork.php:75
+msgid "Заголовок по умолчанию"
+msgstr "Default title"
+
+#: template-parts/function-widget-downloader.php:58
+msgid "Описание"
+msgstr "Description"
+
+#: template-parts/function-widget-downloader.php:62
+#: template-parts/function-widget-posts-in-current-category.php:65
+#: template-parts/function-widget-recent-posts.php:65
+#: template-parts/function-widget-socialnetwork.php:82
+msgid "Заголовок:"
+msgstr "Header:"
+
+#: template-parts/function-widget-downloader.php:67
+msgid "Описание:"
+msgstr "Description:"
+
+#: template-parts/function-widget-downloader.php:72
+msgid "Ссылка на файл:"
+msgstr "File reference:"
+
+#: template-parts/function-widget-posts-in-current-category.php:13
+#: template-parts/function-widget-posts-in-current-category.php:14
+msgid "Посты в текущей категории"
+msgstr "Posts in the current category"
+
+#: template-parts/function-widget-posts-in-current-category.php:70
+#: template-parts/function-widget-recent-posts.php:70
+msgid "Количество постов:"
+msgstr "Number of posts:"
+
+#: template-parts/function-widget-recent-posts.php:13
+msgid "Недавно опубликовано"
+msgstr "Recent posts"
+
+#: template-parts/function-widget-recent-posts.php:14
+msgid "Последние посты"
+msgstr "Last post"
+
+#: template-parts/function-widget-socialnetwork.php:13
+msgid "Социальные сети"
+msgstr "Social network"
+
+#: template-parts/function-widget-socialnetwork.php:14
+msgid "Наши соцсети"
+msgstr "Our social networks"
+
+#: template-parts/function-widget-socialnetwork.php:87
+msgid "Facebook:"
+msgstr ""
+
+#: template-parts/function-widget-socialnetwork.php:92
+msgid "Instagram:"
+msgstr ""
+
+#: template-parts/function-widget-socialnetwork.php:97
+msgid "Youtube:"
+msgstr ""
+
+#: template-parts/function-widget-socialnetwork.php:102
+msgid "Twitter:"
+msgstr ""

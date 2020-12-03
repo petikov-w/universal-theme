@@ -10,8 +10,8 @@ class Recent_Posts_Widget extends WP_Widget {
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
 			'recent_posts_widget',
-            'Недавно опубликовано',
-			array( 'description' => 'Последние посты', 'classname' => 'widget-recent-posts',)
+			__( 'Недавно опубликовано', 'universal' ),
+			array( 'description' => __( 'Последние посты', 'universal' ), 'classname' => 'widget-recent-posts',)
 		);
 
 		// скрипты/стили виджета, только если он активен
@@ -31,6 +31,7 @@ class Recent_Posts_Widget extends WP_Widget {
 
 		$title = $instance['title'];
 		$count = $instance['count'];
+		//$readm = __('Read more', 'universal');
 
 		echo $args['before_widget'];
 //==============================================================================================
@@ -44,9 +45,9 @@ class Recent_Posts_Widget extends WP_Widget {
 				cycle_wp_query( $args_resent, 'recent-posts-widget' );
 				echo '</div>';
 			}
-			echo '<div class="read-more">Читать далее</div>';
+			echo '<div class="read-more">' . __('Читать далее', 'universal') . '</div>';
 		}
-//----------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------
 		echo $args['after_widget'];
 	}
 
@@ -56,17 +57,17 @@ class Recent_Posts_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-		$title = @ $instance['title'] ?: 'Заголовок по умолчанию';
+		$title = @ $instance['title'] ?: __( 'Заголовок по умолчанию', 'universal' );
 		$count = @ $instance['count'] ?: 7;
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' , 'universal' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php
 			echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' , 'universal' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php
 			echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
 		</p>

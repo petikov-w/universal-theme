@@ -11,15 +11,15 @@ function add_new_taxonomies() {
 				/* ярлыки, нужные при создании UI, можете
 				не писать ничего, тогда будут использованы
 				ярлыки по умолчанию */
-				'name' => 'Преподователи',
-				'singular_name' => 'Преподаватель',
-				'search_items' =>  'Найти преподавателя',
-				'all_items' => 'Все преподаватели',
-				'edit_item' => 'Редактировать преподавателя',
-				'update_item' => 'Изменить преподавателя',
-				'add_new_item' => 'Добавить преподавателя',
-				'new_item_name' => 'Название нового преподавателя',
-				'menu_name' => 'Преподаватели'
+				'name' => __('Преподователи', 'universal' ),
+				'singular_name' => __('Преподаватель', 'universal' ) ,
+				'search_items' => __('Найти преподавателя', 'universal' ) ,
+				'all_items' => __('Все преподаватели', 'universal' ),
+				'edit_item' => __('Редактировать преподавателя', 'universal' ),
+				'update_item' => __('Изменить преподавателя', 'universal' ),
+				'add_new_item' => __('Добавить преподавателя', 'universal' ),
+				'new_item_name' => __('Название нового преподавателя', 'universal' ),
+				'menu_name' => __('Преподаватели', 'universal' )
 			),
 			'show_admin_column' => true,
 			'public' => true,
@@ -54,15 +54,15 @@ function add_new_taxonomies() {
 				/* ярлыки, нужные при создании UI, можете
 				не писать ничего, тогда будут использованы
 				ярлыки по умолчанию */
-				'name' => 'Жанры',
-				'singular_name' => 'Жанр',
-				'search_items' =>  'Найти жанры',
-				'all_items' => 'Все жанры',
-				'edit_item' => 'Редактировать жанр',
-				'update_item' => 'Изменить жанр',
-				'add_new_item' => 'Добавить жанр',
-				'new_item_name' => 'Название нового жанра',
-				'menu_name' => 'Жанры'
+				'name' => __('Жанры', 'universal' ),
+				'singular_name' => __('Жанр', 'universal' ),
+				'search_items' =>  __('Найти жанры', 'universal' ),
+				'all_items' => __('Все жанры', 'universal' ),
+				'edit_item' => __('Редактировать жанр', 'universal' ),
+				'update_item' => __('Изменить жанр', 'universal' ),
+				'add_new_item' => __('Добавить жанр', 'universal' ),
+				'new_item_name' => __('Название нового жанра', 'universal' ),
+				'menu_name' => __('Жанры', 'universal' )
 			),
 			'show_admin_column' => true,
 			'public' => true,

@@ -15,12 +15,12 @@
 		    <?php get_sidebar('main-2'); ?>
         </div>
 	        <?php the_posts_pagination([
-		        'prev_text'    => __('<svg width="15" height="7" class="icon pagination-icon">
+		        'prev_text'    => '<svg width="15" height="7" class="icon pagination-icon">
                                         <use xlink:href="'. $icon_left_arrow .'"></use>
-                                    </svg>&nbsp Назад'),
-		        'next_text'    => __('Вперед &nbsp<svg width="15" height="7" class="icon pagination-icon">
+                                    </svg>&nbsp' . __( 'Назад', 'universal' ),
+		        'next_text'    => __( 'Вперед', 'universal' ) . '&nbsp<svg width="15" height="7" class="icon pagination-icon">
                                         <use xlink:href="'. $icon_right_arrow .'"></use>
-                                    </svg>'),
+                                    </svg>',
             ]); ?>
     </div>
 

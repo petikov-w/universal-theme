@@ -10,8 +10,8 @@ class Downloader_Widget extends WP_Widget {
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
 			'downloader_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
-			'Полезные файлы',
-			array( 'description' => 'Файлы для скачивания', 'classname' => 'widget-downloader',)
+			__('Полезные файлы' , 'universal' ),
+			array( 'description' => __('Файлы для скачивания' , 'universal' ), 'classname' => 'widget-downloader',)
 		);
 
 		// скрипты/стили виджета, только если он активен
@@ -42,7 +42,7 @@ class Downloader_Widget extends WP_Widget {
 		}
 		if ( ! empty( $link ) ) {
 			echo '<a class="widget-link" href="' . $link . '"><svg width="17" height="17" class="icon widget-link-icon white-icon">
-                            <use xlink:href="' . $icon_download . '""></use></svg>Скачать</a>';
+                            <use xlink:href="' . $icon_download . '""></use></svg>' . __( 'Скачать', 'universal' ) . '</a>';
 		}
 		echo '</span>';
 		echo $args['after_widget'];
@@ -54,22 +54,22 @@ class Downloader_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-		$title = @ $instance['title'] ?: 'Заголовок по умолчанию';
-		$description = @ $instance['description'] ?: 'Описание';
+		$title = @ $instance['title'] ?:  __( 'Заголовок по умолчанию', 'universal' );
+		$description = @ $instance['description'] ?: __( 'Описание', 'universal' );
 		$link = @ $instance['link'] ?: 'http://yandex.ru';
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:', 'universal' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php
 			echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Описание:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Описание:' , 'universal'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php
 			echo $this->get_field_name( 'description' ); ?>" type="text" value="<?php echo esc_attr( $description ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Ссылка на файл:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Ссылка на файл:' , 'universal'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php
 			echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>">
 		</p>

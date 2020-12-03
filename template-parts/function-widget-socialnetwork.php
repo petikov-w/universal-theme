@@ -10,8 +10,8 @@ class Socialnetwork_Widget extends WP_Widget {
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
 			'socialnetwork_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: socialnetwork
-			'Социальные сети',
-			array( 'description' => 'Наши соцсети', 'classname' => 'widget-socialnetwork',)
+			__('Социальные сети', 'universal'),
+			array( 'description' => __('Наши соцсети', 'universal'), 'classname' => 'widget-socialnetwork',)
 		);
 
 		// скрипты/стили виджета, только если он активен
@@ -72,14 +72,14 @@ class Socialnetwork_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-		$title = @ $instance['title'] ?: 'Заголовок по умолчанию';
+		$title = @ $instance['title'] ?: __('Заголовок по умолчанию', 'universal');
 		$facebook = @ $instance['facebook'] ?: 'https://www.facebook.com';
         $instagram = @ $instance['instagram'] ?: 'https://www.instagram.com';
         $youtube = @ $instance['youtube'] ?: 'https://youtube.com';
         $twitter = @ $instance['twitter'] ?: 'https://twitter.com';
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Заголовок:' , 'universal'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php
 			echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>

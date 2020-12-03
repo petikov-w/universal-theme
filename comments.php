@@ -166,7 +166,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'universal-example' ); ?></p>
+            <p class="no-comments"><?php esc_html_e( 'Комментарии закрыты.', 'universal-example' ); ?></p>
 		<?php
 		endif;
 
@@ -177,7 +177,7 @@ if ( post_password_required() ) {
 		[
 			// переопределим textarea (тело формы)
 			'comment_field' => '<div class="comment-form-comment"><label for="comment" class="comment-label">' .
-			                   _x( 'Что Вы думаете на этот счет?', 'noun' ) . '</label><br /> 
+			                   __( 'Что Вы думаете на этот счет?', 'universal' ) . '</label><br /> 
                                 <div class="comment-wrapper">'. get_avatar(get_current_user_id(),75) . '                                                      <div class="comment-textarea-wrapper">
                                    <textarea id="comment" name="comment" aria-required="true" 
                                    class="comment-textarea"></textarea>

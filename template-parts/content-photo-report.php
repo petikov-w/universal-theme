@@ -31,7 +31,7 @@
             <a href="<?php get_the_permalink() ?>" class="button photo-report-button">
                 <svg width="19" height="15" class="icon photo-report-icon">
                     <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#photo'?>"></use>
-                </svg>Смотреть фото
+                </svg><?php echo __( 'Смотреть фото', 'universal' ) ?>
             <span class="button-photo-counter"><?php echo $images_count; ?></span></a>
 </div>
 

@@ -2,6 +2,8 @@
 // добавление расширенных возможностей
 if (! function_exists('universal_theme_setup')) :
 	function universal_theme_setup() {
+		load_theme_textdomain('universal', get_template_directory() . '/languages');
+		//echo get_template_directory_uri() . '/languages/ru.mo';
 		// добавление тега title
 		add_theme_support('title-tag');
 		// добавление миниатюр
@@ -65,9 +67,9 @@ function universal_theme_widgets_init() {
 	// Сайдбар для вывода трех виджетов (файлом, тегами и соцсетями) на главной странице
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Сайдбар на главной', 'universal-theme' ),
+			'name'          => esc_html__( 'Сайдбар на главной', 'universal' ),
 			'id'            => 'main',
-			'description'   => esc_html__( 'Добавте виджеты здесь', 'universal-theme' ),
+			'description'   => esc_html__( 'Добавте виджеты здесь', 'universal' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -78,9 +80,9 @@ function universal_theme_widgets_init() {
 	// Сайдбар для вывода виджета последних постов на главной странице
 	register_sidebar(
 		array(
-			'name' => esc_html__('Сайдбар на главной - 2', 'universal-theme' ),
+			'name' => esc_html__('Сайдбар на главной - 2', 'universal' ),
 			'id' => 'main-2',
-			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
+			'description' => esc_html__('Добавте виджеты здесь', 'universal' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
@@ -91,9 +93,9 @@ function universal_theme_widgets_init() {
 	// Сайдбар для вывода группы меню в подвале на главной странице
 	register_sidebar(
 		array(
-			'name' => esc_html__('Меню в подвале', 'universal-theme' ),
+			'name' => esc_html__('Меню в подвале', 'universal' ),
 			'id' => 'sidebar-footer',
-			'description' => esc_html__('Добавте меню здесь', 'universal-theme' ),
+			'description' => esc_html__('Добавте меню здесь', 'universal' ),
 			'before_widget' => '<section id="%1$s" class="footer-menu %2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '<h2 class="footer-menu-title">',
@@ -104,9 +106,9 @@ function universal_theme_widgets_init() {
 	// Сайдбар для вывода группы меню в подвале на главной странице
 	register_sidebar(
 		array(
-			'name' => esc_html__('Текст в подвале', 'universal-theme' ),
+			'name' => esc_html__('Текст в подвале', 'universal' ),
 			'id' => 'sidebar-footer-text',
-			'description' => esc_html__('Добавте текст здесь', 'universal-theme' ),
+  			'description' => esc_html__('Добавте текст здесь', 'universal' ),
 			'before_widget' => '<section id="%1$s" class="footer-text %2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '',
@@ -117,9 +119,9 @@ function universal_theme_widgets_init() {
 	// Сайдбар для вывода группы постов из той же категории, что и основной пост на странице поста
 	register_sidebar(
 		array(
-			'name' => esc_html__('Группа постов', 'universal-theme' ),
+			'name' => esc_html__('Группа постов', 'universal' ),
 			'id' => 'group-posts',
-			'description' => esc_html__('Добавте виджеты здесь', 'universal-theme' ),
+			'description' => esc_html__('Добавте виджеты здесь', 'universal' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '<h2 class="widget-title">',
