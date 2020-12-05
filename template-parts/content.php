@@ -117,7 +117,7 @@
                 <div class="author-post-info">
                     <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-lr">
                     <span class="author-name"><?php the_author() ?></span>
-                    <span class="author-rank">Должность</span>
+                    <span class="author-rank"><?php echo get_user_role($author_id) ?></span>
                     <span class="author-posts"><?php echo plural_form(count_user_posts($author_id),
                         array('статья','статьи','статей')) ?></span>
                 </div>

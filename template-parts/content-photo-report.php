@@ -24,7 +24,7 @@
                 <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-md">
                 <div class="author-info">
                     <span class="author-name-photo-report"><?php the_author() ?></span>
-                    <span class="author-rank-photo-report">Должность</span>
+                    <span class="author-rank-photo-report"><?php echo get_user_role($author_id) ?></span>
                 </div>
             </a>
             <h3 class="photo-report-title"><?php the_title() ?></h3>

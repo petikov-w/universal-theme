@@ -8,7 +8,7 @@
     <img src="<?php echo get_avatar_url($author_id)?>" alt="" class="avatar-md">
     <div class="author-bio">
         <span class="author-name"><?php the_author() ?></span>
-        <span class="author-rank">Должность</span>
+        <span class="author-rank"><?php echo get_user_role($author_id) ?></span>
     </div>
 </a>
 <div class="post-text">
