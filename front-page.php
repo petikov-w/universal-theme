@@ -1,7 +1,7 @@
 <?php
 use ru\universal_theme\variables;
 require_once 'variables.php';
-$tag_filters = 'популярное';
+$tag_filters = 'populyarnoe';
 get_header();
 ?>
 <main class="front-page-header">
@@ -39,12 +39,13 @@ get_header();
 	    <?php
 	    $args_articlelist = array(
 		    'posts_per_page' => 4,
-		    'category_name' => 'articles',
-		    'category__not_in' => 20,
+		    'post_type' => 'lesson',
 	    );
-	    cycle_wp_query($args_articlelist, 'articlelist');
+	    cycle_wp_query($args_articlelist, 'lessonlist');
 	    ?>
     </ul>
+    <?php
+    ?>
 
     <div class="main-grid">
         <ul class="article-grid">
@@ -110,7 +111,6 @@ get_header();
 	                cycle_wp_query($args_career, 'career');
 	                ?>
                 </div>
-<!--                <div class="other-grid other-gri-02">-->
                 <div class="other-grid other-gri-02">
 	                <?php
 	                $args_other = [

@@ -33,11 +33,19 @@
 .article-item a {
   color: #fff;
   text-decoration: none;
-  width: 155px;
+  width: 240px;
+}
+
+.article-permalink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .article-title {
   margin: 0;
-  font-weight: 400;
+  width: 155px;
+  @include use_font($LatoBlack,14px);
+  line-height: 20px;
 }
 

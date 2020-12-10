@@ -13,9 +13,6 @@
   }
 
   .img-33 {
-   //width: 20%;
-   // height: 30%;
-   // object-fit: cover;
     display: none;
   }
 
@@ -40,9 +37,16 @@
     text-align: center;
   }
 
-.footer-text {
-  width: 60%;
-}
+  .footer-text {
+    width: 60%;
+  }
+
+  .logo-footer {
+    margin-bottom: 30px;
+  }
+  .footer-text-wrapper p {
+    text-align: justify;
+  }
 
 }
 

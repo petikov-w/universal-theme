@@ -86,11 +86,6 @@
   color: rgba(#fff,0.4);
 }
 
-
-//.hero .left .author .avatar {
-//  @include wh_size(45px,45px,circle);
-//}
-
 // Блок post-text с информацией о посте
 .post-text {
   position: relative;
@@ -137,10 +132,12 @@
 }
 
 .right .post {
+  //padding: 17px 50px 19px 25px;
   padding: 17px 25px 19px 25px;
   border-top: 1px solid #D9DADB;
   margin: 0;
-  min-height: 100px
+  min-height: 100px;
+  min-width: 285px;
 }
 
 .right .post:hover {

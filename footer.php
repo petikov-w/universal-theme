@@ -10,7 +10,7 @@
                 <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post"
                       class="footer-form">
                     <!-- Поле Email (обязательно) -->
-                    <input required type="text" name="email" placeholder="Введите email" class="input footer-form-input">
+                    <input required type="text" name="email" placeholder="Введите email" class="input fmedia footer-form-input">
                     <!-- Токен списка -->
                     <!-- Получить API ID на: https://app.getresponse.com/campaign_list.html -->
                     <input type="hidden" name="campaign_token" value="BeKOk" />

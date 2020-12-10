@@ -16,5 +16,24 @@
     width: 80%;
   }
 
+  .more-button {
+    margin-top: 20px;
+    justify-content: center;
+    min-width: 313px;
+  }
+
+  .footer-form-title {
+    text-align: center;
+  }
+
+  .footer-form {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer-info-main {
+    flex-direction: column;
+  }
+
 }
 

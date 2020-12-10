@@ -30,7 +30,7 @@ function category_colors2 ($colors, $style = 'category-color') {
 
 // Функция для отладки
 function printss($source) {
-	echo "<pre style='font-size: 20px; 
+	echo "<pre style='font-size: 16px; 
                       color: #f52e14;
                       font-weight: 500'>";
 	print_r($source);
@@ -73,6 +73,18 @@ function get_user_role($user_id) {
 	foreach ($roles as $role => $value) {
 		if($role==$current_role){
 			$result = translate_user_role($value['name']);
+		}
+	}
+	return $result;
+}
+
+function tag_name_extract($source) {
+	$result = '';
+	$array_tags = get_terms('post_tag');
+
+	foreach ($array_tags as $tag) {
+		if($tag->slug == $source){
+			$result = $tag->name;
 		}
 	}
 	return $result;

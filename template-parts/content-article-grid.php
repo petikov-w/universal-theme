@@ -46,7 +46,7 @@
 
                        <div class="top-blc">
                            <a href="<?php echo get_the_permalink() ?>">
-                           <span class="tag-info"><?php echo $tag_filters ?></span>
+                           <span class="tag-info"><?php echo tag_name_extract($tag_filters) ?></span>
                            </a>
                        </div>
 
