@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-03 21:11+0300\n"
+"POT-Creation-Date: 2020-12-11 15:46+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Super Team\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: category.php:20 search.php:20 taxonomy.php:18
+#: category.php:20 search.php:20 taxonomy.php:18 template-parts/content.php:55
 msgid "Назад"
 msgstr "Back"
 
-#: category.php:21 search.php:21 taxonomy.php:19
+#: category.php:21 search.php:21 taxonomy.php:19 template-parts/content.php:63
 msgid "Вперед"
 msgstr "Forward"
 
@@ -56,41 +56,60 @@ msgstr "What do you think about this?"
 msgid "Подпишитесь на нашу рассылку"
 msgstr "Subscribe to our newsletter"
 
+#: footer.php:13
+msgid "Введите"
+msgstr "Enter"
+
 #: footer.php:22
 msgid "Подписаться"
 msgstr "Subscribe"
 
-#: functions.php:70
+#: functions.php:69
 msgid "Сайдбар на главной"
 msgstr "Sidebar on the main page"
 
-#: functions.php:72 functions.php:85 functions.php:124
+#: functions.php:71 functions.php:84 functions.php:123
 msgid "Добавте виджеты здесь"
 msgstr "Add widgets here"
 
-#: functions.php:83
+#: functions.php:82
 msgid "Сайдбар на главной - 2"
 msgstr "Sidebar on the main page - 2"
 
-#: functions.php:96
+#: functions.php:95
 msgid "Меню в подвале"
 msgstr "Menu in the basement"
 
-#: functions.php:98
+#: functions.php:97
 msgid "Добавте меню здесь"
 msgstr "Add a menu here"
 
-#: functions.php:109
+#: functions.php:108
 msgid "Текст в подвале"
 msgstr "The text is in the basement"
 
-#: functions.php:111
+#: functions.php:110
 msgid "Добавте текст здесь"
 msgstr "Add text here"
 
-#: functions.php:122
+#: functions.php:121
 msgid "Группа постов"
 msgstr "Group of posts"
+
+#: functions.php:199
+msgctxt "User role"
+msgid "Разработчик"
+msgstr "Developer"
+
+#: functions.php:200
+msgctxt "User role"
+msgid "Дизайнер"
+msgstr "Designer"
+
+#: functions.php:201
+msgctxt "User role"
+msgid "Фотограф"
+msgstr "Photographer"
 
 #: searchform.php:2
 msgid "Поиск"
@@ -105,7 +124,7 @@ msgstr "Read more"
 msgid "Читать статью"
 msgstr "Read the article"
 
-#: template-parts/content-lesson.php:80 template-parts/content.php:142
+#: template-parts/content-lesson.php:80
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -122,6 +141,19 @@ msgstr ""
 #: template-parts/content-photo-report.php:34
 msgid "Смотреть фото"
 msgstr "View photos"
+
+#: template-parts/content.php:46
+msgid "На главную"
+msgstr "Home"
+
+#: template-parts/content.php:124
+msgid "Страница автора"
+msgstr "Author's page"
+
+#: template-parts/content.php:142
+#, php-format
+msgid "Читать далее<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/function-register-post-types.php:7
 #: template-parts/function-register-post-types.php:18

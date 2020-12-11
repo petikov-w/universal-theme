@@ -14,7 +14,7 @@
 <div class="post-text">
 	<?php category_colors(variables::$color_category); ?>
     <h2 class="post-title"><?php echo mb_strimwidth(get_the_title(),0,60,'...'); ?></h2>
-    <a href="<?php echo get_the_permalink(); ?>" class="more"><?php echo __( 'Читать далее', 'universal' ) ?><svg width="19" height="15" class="icon arrow-icon">
+    <a href="<?php echo get_the_permalink(); ?>" class="more"><?php echo _e( 'Читать далее', 'universal' ) ?><svg width="19" height="15" class="icon arrow-icon">
             <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#arrow'?>"></use>
         </svg></a>
 </div>

@@ -43,7 +43,7 @@
                             <use xlink:href="<?php echo get_template_directory_uri().
 					                                    '/assets/images/sprite.svg#home'?>">
                             </use>
-                        </svg>&nbsp&nbspНа главную</a>
+                        </svg>&nbsp&nbsp<?php _e( 'На главную', 'universal' ) ?></a>
 			        <?php
 			        if ($pred_post!="") {
 				        ?>
@@ -52,7 +52,7 @@
                                 <use xlink:href="<?php echo get_template_directory_uri().
 						                                    '/assets/images/sprite.svg#left-arrow'?>">
                                 </use>
-                            </svg>&nbsp&nbspНазад</a>
+                            </svg>&nbsp&nbsp<?php _e( 'Назад', 'universal' ) ?></a>
 				        <?php
 			        }
 			        ?>
@@ -60,7 +60,7 @@
 			        if ($next_post!="") {
 				        ?>
                         <a class="navs-next" href="<?php echo get_permalink( $next_post ) ?>">
-                            Вперед<svg width="19" height="15" class="icon arrow-icon">
+	                        <?php _e( 'Вперед', 'universal' ) ?><svg width="19" height="15" class="icon arrow-icon">
                                 <use xlink:href="<?php echo get_template_directory_uri().
 						                                    '/assets/images/sprite.svg#arrow'?>"></use>
                             </svg>
@@ -121,7 +121,7 @@
                     <span class="author-posts"><?php echo plural_form(count_user_posts($author_id),
                         array('статья','статьи','статей')) ?></span>
                 </div>
-                <a href="<?php echo get_author_posts_url($author_id)?>" class="author">Страница автора</a>
+                <a href="<?php echo get_author_posts_url($author_id)?>" class="author"><?php _e( 'Страница автора', 'universal' ) ?></a>
             </div>
         </div>
 
@@ -139,7 +139,7 @@
 			sprintf(
 				wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal-theme' ),
+					__( 'Читать далее<span class="screen-reader-text"> "%s"</span>', 'universal' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -152,7 +152,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal-theme' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'universal' ),
 				'after'  => '</div>',
 			)
 		);
@@ -164,9 +164,9 @@
 	<footer class="entry-footer">
 	<?php
 
-		$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal-theme' ) );
+		$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universal' ) );
 		if ( $tags_list ) {
-			printf( '<div class="tags-links">' . esc_html__( '%1$s', 'universal-theme' ) . '</div>', $tags_list );
+			printf( '<div class="tags-links">' . esc_html__( '%1$s', 'universal' ) . '</div>', $tags_list );
 		}
 	?>
 	<?php meks_ess_share(); ?>

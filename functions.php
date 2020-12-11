@@ -3,7 +3,6 @@
 if (! function_exists('universal_theme_setup')) :
 	function universal_theme_setup() {
 		load_theme_textdomain('universal', get_template_directory() . '/languages');
-		//echo get_template_directory_uri() . '/languages/ru.mo';
 		// добавление тега title
 		add_theme_support('title-tag');
 		// добавление миниатюр
@@ -197,9 +196,9 @@ function deactivate_universal_theme() {
 add_action( 'after_switch_theme', 'activate_universal_theme' );
 function activate_universal_theme() {
 	$author = get_role( 'author' );
-	add_role( 'developer', 'Разработчик', $author->capabilities );
-	add_role( 'designer', 'Дизайнер', $author->capabilities );
-	add_role( 'photographer', 'Фотограф', $author->capabilities );
+	add_role( 'developer', _x( 'Разработчик', 'User role' ,'universal' ), $author->capabilities );
+	add_role( 'designer',  _x( 'Дизайнер', 'User role' ,'universal' ), $author->capabilities );
+	add_role( 'photographer', _x( 'Фотограф', 'User role', 'universal' ), $author->capabilities );
 }
 
 
