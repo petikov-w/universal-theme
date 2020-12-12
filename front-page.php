@@ -3,6 +3,7 @@ use ru\universal_theme\variables;
 require_once 'variables.php';
 $tag_filters = 'populyarnoe';
 get_header();
+//printss(get_locale());
 ?>
 <main class="front-page-header">
 <div class="container">
