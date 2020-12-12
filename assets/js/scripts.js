@@ -32,3 +32,18 @@ let contactsForm = $('.contacts-form');
         }
     });
 });
+
+
+//document.querySelector('.earth').innerHTML += '<div class="card-theme">'+theme+'<h2> \n';
+
+let buttonEarth = $('.earth');
+    buttonEarth.on('click', function (event) {
+    event.preventDefault();
+    //console.log('Клик по кнопке меню');
+    console.log('Нажата кнопка "Земля"');
+})
+
+// document.querySelector('.earth').onclick = function (){
+//     console.log('Нажата кнопка "Земля"');
+// };
+

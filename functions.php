@@ -196,13 +196,16 @@ function deactivate_universal_theme() {
 add_action( 'after_switch_theme', 'activate_universal_theme' );
 function activate_universal_theme() {
 	$author = get_role( 'author' );
+
 	add_role( 'developer', _x( 'Разработчик', 'User role' ,'universal' ), $author->capabilities );
 	add_role( 'designer',  _x( 'Дизайнер', 'User role' ,'universal' ), $author->capabilities );
 	add_role( 'photographer', _x( 'Фотограф', 'User role', 'universal' ), $author->capabilities );
+
+
 }
 
-
-
+//remove_role( 'photographer' );
+//add_role( 'photographer', _x( 'Photographer', 'User role', 'universal' ), get_role( 'author' )->capabilities );
 
 //===================== AJAX (конец) ==============================
 

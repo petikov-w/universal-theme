@@ -95,7 +95,7 @@ function get_user_role2($user_id) {
 	$current_role = get_the_author_meta('roles', $user_id)[0];
 	foreach ($roles as $role => $value) {
 		if($role==$current_role){
-			$result = translate_user_role($value['name']);
+			$result = translate_user_role($value['name'],'universal');
 		}
 	}
 	return $result;

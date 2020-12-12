@@ -12,7 +12,8 @@
 <header class="header">
     <div class="container">
         <div class="header-wrapper">
-	        <?php
+
+            <?php
 	        get_template_part( 'template-parts/content', 'header-logo' );
 
 	          // Вывод основного меню сайта
@@ -26,6 +27,13 @@
 
 	        // Вывод поля для поискового запроса
             ?>
+            <div class="earth">
+                <svg width="30" height="30" class="icon white-icon">
+                    <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#global'?>"></use>
+                </svg>
+            </div>
+
+
                 <?php echo get_search_form(); ?>
                 <a href="#" class="header-menu-toggle">
                     <span></span>

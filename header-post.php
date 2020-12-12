@@ -12,6 +12,7 @@
 <header class="header-single">
     <div class="container">
         <div class="header-wrapper">
+
 	        <?php
 	         get_template_part( 'template-parts/content', 'header-logo' );
 
@@ -25,6 +26,10 @@
 	        ] );
 	        // Вывод поля для поискового запроса
             ?>
+            <svg width="30" height="30" class="icon silver-icon earth">
+                <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#global'?>"></use>
+            </svg>
+
                 <?php echo get_search_form(); ?>
                 <a href="#" class="header-menu-toggle">
                     <span></span>
