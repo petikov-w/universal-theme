@@ -1,8 +1,23 @@
 <div class="post-card">
-	<img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" class="card-thumb">
+
+    <a href="<?php echo get_the_permalink() ?>">
+        <img src="<?php if( has_post_thumbnail() ) {
+		    echo get_the_post_thumbnail_url();
+	    }
+	    else {
+		    echo get_template_directory_uri().'/assets/images/img-default.png';
+	    } ?>" alt="" class="card-thumb">
+    </a>
+
+
+
+
     <div class="post-card-info">
-        <div class="title-pst"><?php echo mb_strimwidth(get_the_title(),0,20,'...'); ?></div>
-        <p><?php echo mb_strimwidth(get_the_excerpt(),0,90,'...'); ?></p>
+        <a href="<?php echo get_the_permalink(); ?> ">
+            <div class="title-pst"><?php echo mb_strimwidth(get_the_title(),0,20,'...'); ?></div>
+            <p><?php echo mb_strimwidth(get_the_excerpt(),0,90,'...'); ?></p>
+        </a>
+
         <!-- ======================================================= -->
 	    <?php $author_id=get_the_author_meta('ID') ?>
         <div class="author-cat">

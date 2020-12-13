@@ -199,7 +199,7 @@ function the_breadcrumbs() {
 				echo $sep . $before . sprintf( $text['page'], get_query_var( 'paged' ) ) . $after;
 			} else {
 				if ( $show_home_link && $show_current ) echo $sep;
-				if ( $show_current ) echo $before . sprintf( $text['author'], $author->display_name ) . $after;
+				if ( $show_current ) echo $before . sprintf( $text['author'], $sep . $author->display_name ) . $after;
 				elseif ( $show_home_link && $show_last_sep ) echo $sep;
 			}
 

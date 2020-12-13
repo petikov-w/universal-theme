@@ -19,7 +19,7 @@ get_header();
         ?>
 		</div><!-- /.left -->
 		<div class="right">
-            <h3 class="recommend">Рекомендуем</h3>
+            <h3 class="recommend"><?php _e('Рекомендуем', 'universal') ?></h3>
             <ul class="posts-list">
 	            <?php
                     $args_postlist = array(
@@ -110,7 +110,8 @@ get_header();
 		                'category_name' => 'career',
 	                );
 	                cycle_wp_query($args_career, 'career');
-	                ?>
+                    ?>
+
                 </div>
                 <div class="other-grid other-gri-02">
 	                <?php

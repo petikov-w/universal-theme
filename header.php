@@ -27,11 +27,24 @@
 
 	        // Вывод поля для поискового запроса
             ?>
-            <div class="earth">
-                <svg width="30" height="30" class="icon white-icon">
-                    <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#global'?>"></use>
-                </svg>
-            </div>
+<?php
+function sas () {
+    $ccc = 'dsdssdsd';
+	return $ccc ;
+}
+?>
+<!--            <button class="form-submit" type="submit" onsubmit="--><?php //echo sas(); ?><!--">-->
+<!--                <svg width="30" height="30" class="icon white-icon" >-->
+<!--                    <use xlink:href="--><?php //echo get_template_directory_uri().'/assets/images/sprite.svg#global'?><!--"></use>-->
+<!--                </svg>-->
+<!--            </button>-->
+
+    <svg width="30" height="30" class="icon white-icon" >
+        <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#global'?>"></use>
+    </svg>
+
+
+
 
 
                 <?php echo get_search_form(); ?>

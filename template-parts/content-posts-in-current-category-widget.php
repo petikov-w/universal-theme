@@ -5,7 +5,7 @@
 	        echo get_the_post_thumbnail_url();
         }
         else {
-	        echo get_template_directory_uri().'/assets/images/img-default-sm.png';
+	        echo get_template_directory_uri().'/assets/images/img-default.png';
         }
         ?> ?>" alt="" class="img-post-in-cat">
        <div class="post_in_current_category-title"><?php echo mb_strimwidth(get_the_title(),0,50,'...'); ?></div>

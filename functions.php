@@ -183,6 +183,18 @@ function ajax_form() {
 	wp_die();
 }
 
+//===================== AJAX (конец) ==============================
+
+//===================== Роли пользователей ========================
+
+// Добавляем роль при активации нашей темы
+add_action( 'after_switch_theme', 'activate_universal_theme' );
+function activate_universal_theme() {
+	$author = get_role( 'author' );
+	add_role( 'developer', _x( 'Разработчик', 'User role' ,'universal' ), $author->capabilities );
+	add_role( 'designer',  _x( 'Дизайнер', 'User role' ,'universal' ), $author->capabilities );
+	add_role( 'photographer', _x( 'Фотограф', 'User role', 'universal' ), $author->capabilities );
+}
 
 // Удаляем роль при деактивации нашей темы
 add_action( 'switch_theme', 'deactivate_universal_theme' );
@@ -192,32 +204,17 @@ function deactivate_universal_theme() {
 	remove_role( 'photographer' );
 }
 
-// Добавляем роль при активации нашей темы
-add_action( 'after_switch_theme', 'activate_universal_theme' );
-function activate_universal_theme() {
-	$author = get_role( 'author' );
+//===================== Роли пользователей (конец) ==================
 
-	add_role( 'developer', _x( 'Разработчик', 'User role' ,'universal' ), $author->capabilities );
-	add_role( 'designer',  _x( 'Дизайнер', 'User role' ,'universal' ), $author->capabilities );
-	add_role( 'photographer', _x( 'Фотограф', 'User role', 'universal' ), $author->capabilities );
-
-
-}
-
-//remove_role( 'photographer' );
-//add_role( 'photographer', _x( 'Photographer', 'User role', 'universal' ), get_role( 'author' )->capabilities );
-
-//===================== AJAX (конец) ==============================
 
 // Подключение функции вывода "хлебных крошек"
-//include( get_template_directory_uri() . '/template-parts/function-breadcrumbs.php' );
 get_template_part( 'template-parts/function', 'breadcrumbs' );
 
 // Регистрация новых типов записей
 get_template_part( 'template-parts/function', 'register-post-types' );
 
 // Регистрация таксономий
-get_template_part( 'template-parts/function', 'taxonomy' );
+get_template_part( 'template-parts/function', 'register-taxonomy' );
 
 // Регистрация нового виджета - Полезные файлы (downloader)
 get_template_part( 'template-parts/function', 'widget-downloader' );

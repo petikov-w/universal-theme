@@ -10,7 +10,7 @@
   @include use_font($RobotoSlab,40px);
   line-height: 50px;
   color: #262D33;
-  text-transform: capitalize;
+  //text-transform: capitalize;
 }
 
 .posts-list {
@@ -58,6 +58,10 @@
   margin: 0;
   padding: 0px 25px;
   margin-bottom: 25px;
+}
+
+.post-card-info a {
+  text-decoration: none;
 }
 
 .cat-author-name {
