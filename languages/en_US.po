@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-12 16:21+0300\n"
+"POT-Creation-Date: 2020-12-14 11:26+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Super Team\n"
@@ -18,27 +18,40 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: category.php:20 search.php:20 taxonomy.php:18 template-parts/content.php:55
+#: 404.php:7
+msgid "Ошибка!"
+msgstr "Error!"
+
+#: 404.php:8
+msgid ""
+"Страница не найдена. Видимо она не существует, либо указана неверная ссылка."
+msgstr "Page not found. It probably doesn't exist, or the link is incorrect."
+
+#: 404.php:10
+msgid "Вернуться на главную"
+msgstr "Back to  home"
+
+#: archive.php:33 lesson.php:25 search.php:20 template-parts/content.php:55
 msgid "Назад"
 msgstr "Back"
 
-#: category.php:21 search.php:21 taxonomy.php:19 template-parts/content.php:63
+#: archive.php:34 lesson.php:26 search.php:21 template-parts/content.php:63
 msgid "Вперед"
 msgstr "Forward"
 
 #: comments.php:50
 #, php-format
 msgid "<cite class=\"comment-author-name\">%s</cite>"
-msgstr ""
+msgstr "<cite class=\"comment-author-name\">%s</cite>"
 
 #: comments.php:58
 #, php-format
 msgid "%1$s, %2$s"
-msgstr ""
+msgstr "%1$s, %2$s"
 
 #: comments.php:64
 msgid "(Edit)"
-msgstr ""
+msgstr "(Edit)"
 
 #: comments.php:72
 msgid "Ваш комментарий ожидает модерации."
@@ -63,6 +76,10 @@ msgstr "Enter"
 #: footer.php:22
 msgid "Подписаться"
 msgstr "Subscribe"
+
+#: front-page.php:22
+msgid "Рекомендуем"
+msgstr "Recommend"
 
 #: functions.php:69
 msgid "Сайдбар на главной"
@@ -96,17 +113,17 @@ msgstr "Add text here"
 msgid "Группа постов"
 msgstr "Group of posts"
 
-#: functions.php:200
+#: functions.php:194
 msgctxt "User role"
 msgid "Разработчик"
 msgstr "Developer"
 
-#: functions.php:201
+#: functions.php:195
 msgctxt "User role"
 msgid "Дизайнер"
 msgstr "Designer"
 
-#: functions.php:202
+#: functions.php:196
 msgctxt "User role"
 msgid "Фотограф"
 msgstr "Photographer"
@@ -115,7 +132,7 @@ msgstr "Photographer"
 msgid "Поиск"
 msgstr "Search"
 
-#: template-parts/content-career.php:9 template-parts/content-hero-left.php:17
+#: template-parts/content-career.php:10 template-parts/content-hero-left.php:17
 #: template-parts/function-widget-recent-posts.php:48
 msgid "Читать далее"
 msgstr "Read more"
@@ -124,10 +141,10 @@ msgstr "Read more"
 msgid "Читать статью"
 msgstr "Read the article"
 
-#: template-parts/content-lesson.php:80
+#: template-parts/content-lesson.php:80 template-parts/content.php:142
 #, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgid "Читать далее<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content-lesson.php:93 template-parts/content.php:155
 msgid "Страницы:"
@@ -136,7 +153,7 @@ msgstr "Pages:"
 #: template-parts/content-lesson.php:107 template-parts/content.php:169
 #, php-format
 msgid "%1$s"
-msgstr ""
+msgstr "%1$s"
 
 #: template-parts/content-photo-report.php:34
 msgid "Смотреть фото"
@@ -149,11 +166,6 @@ msgstr "Home"
 #: template-parts/content.php:124
 msgid "Страница автора"
 msgstr "Author's page"
-
-#: template-parts/content.php:142
-#, php-format
-msgid "Читать далее<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/function-register-post-types.php:7
 #: template-parts/function-register-post-types.php:18
@@ -200,72 +212,72 @@ msgstr "Not found in the trash"
 msgid "Раздел с видеоуроками"
 msgstr "Section with video tutorials"
 
-#: template-parts/function-taxonomy.php:14
+#: template-parts/function-register-taxonomy.php:14
 msgid "Преподователи"
 msgstr "Teachers"
 
-#: template-parts/function-taxonomy.php:15
+#: template-parts/function-register-taxonomy.php:15
 msgid "Преподаватель"
 msgstr "Teacher"
 
-#: template-parts/function-taxonomy.php:16
+#: template-parts/function-register-taxonomy.php:16
 msgid "Найти преподавателя"
 msgstr "Find a teacher"
 
-#: template-parts/function-taxonomy.php:17
+#: template-parts/function-register-taxonomy.php:17
 msgid "Все преподаватели"
 msgstr "All teachers"
 
-#: template-parts/function-taxonomy.php:18
+#: template-parts/function-register-taxonomy.php:18
 msgid "Редактировать преподавателя"
 msgstr "Edit a teacher"
 
-#: template-parts/function-taxonomy.php:19
+#: template-parts/function-register-taxonomy.php:19
 msgid "Изменить преподавателя"
 msgstr "Change the teacher"
 
-#: template-parts/function-taxonomy.php:20
+#: template-parts/function-register-taxonomy.php:20
 msgid "Добавить преподавателя"
 msgstr "Add a teacher"
 
-#: template-parts/function-taxonomy.php:21
+#: template-parts/function-register-taxonomy.php:21
 msgid "Название нового преподавателя"
 msgstr "Name of the new teacher"
 
-#: template-parts/function-taxonomy.php:22
+#: template-parts/function-register-taxonomy.php:22
 msgid "Преподаватели"
 msgstr "Teachers"
 
-#: template-parts/function-taxonomy.php:57
-#: template-parts/function-taxonomy.php:65
+#: template-parts/function-register-taxonomy.php:57
+#: template-parts/function-register-taxonomy.php:65
 msgid "Жанры"
 msgstr "Genres"
 
-#: template-parts/function-taxonomy.php:58
+#: template-parts/function-register-taxonomy.php:58
 msgid "Жанр"
 msgstr "Genre"
 
-#: template-parts/function-taxonomy.php:59
+#: template-parts/function-register-taxonomy.php:59
 msgid "Найти жанры"
 msgstr "Find genres"
 
-#: template-parts/function-taxonomy.php:60
+#: template-parts/function-register-taxonomy.php:60
 msgid "Все жанры"
 msgstr "All genres"
 
-#: template-parts/function-taxonomy.php:61
+#: template-parts/function-register-taxonomy.php:61
 msgid "Редактировать жанр"
 msgstr "Edit genre"
 
-#: template-parts/function-taxonomy.php:62
+#: template-parts/function-register-taxonomy.php:62
 msgid "Изменить жанр"
 msgstr "Change the genre"
 
-#: template-parts/function-taxonomy.php:63
+#: template-parts/function-register-taxonomy.php:63
 msgid "Добавить жанр"
 msgstr "Add a genre"
 
-#: template-parts/function-taxonomy.php:64
+#: template-parts/function-register-taxonomy.php:64
 msgid "Название нового жанра"
 msgstr "Name of the new genre"
 
@@ -335,19 +347,19 @@ msgstr "Our social networks"
 
 #: template-parts/function-widget-socialnetwork.php:87
 msgid "Facebook:"
-msgstr ""
+msgstr "Facebook:"
 
 #: template-parts/function-widget-socialnetwork.php:92
 msgid "Instagram:"
-msgstr ""
+msgstr "Instagram:"
 
 #: template-parts/function-widget-socialnetwork.php:97
 msgid "Youtube:"
-msgstr ""
+msgstr "Youtube:"
 
 #: template-parts/function-widget-socialnetwork.php:102
 msgid "Twitter:"
-msgstr ""
+msgstr "Twitter:"
 
 #~ msgctxt "User role"
 #~ msgid "Администратор"

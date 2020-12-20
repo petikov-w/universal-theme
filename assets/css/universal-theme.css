@@ -29,6 +29,10 @@ body {
   margin: auto;
 }
 
+.m-top {
+  margin-top: 40px;
+}
+
 .breadcrumbs {
   font-family: "Lato Black", sans-serif;
   font-size: 14px;
@@ -346,6 +350,10 @@ body {
   fill: #787B7E;
 }
 
+.gl-hidden {
+  display: none;
+}
+
 .more, .more-button {
   display: flex;
   align-items: center;
@@ -363,6 +371,23 @@ body {
   outline: none;
 }
 .more:hover, .more:focus, .more:visited, .more-button:hover, .more-button:focus, .more-button:visited {
+  color: #fff;
+}
+
+.button-404 {
+  font-family: "Lato Black", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #0F41AB;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 30px 0 90px 0;
+}
+.button-404:hover, .button-404:focus, .button-404:visited {
   color: #fff;
 }
 
@@ -1512,6 +1537,7 @@ body {
   height: 90%;
   margin-left: 10px;
   margin-top: 10px;
+  z-index: 2;
 }
 
 .career-info p {
@@ -1723,6 +1749,7 @@ body {
   height: 90%;
   margin-left: 10px;
   margin-top: 10px;
+  z-index: 2;
 }
 
 .career-info p {
@@ -3008,4 +3035,36 @@ address {
 }
 .genre-link.trends {
   color: #FF4F52;
+}
+
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.i-404 {
+  font-family: "Roboto Slab", serif;
+  font-size: 200px;
+  line-height: 200px;
+  margin: 40px 0;
+  color: #0f41ab;
+}
+
+.e-404 {
+  font-family: "Lato Black", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 30px;
+  color: #ff0e0e;
+  letter-spacing: 2px;
+}
+
+.e-message {
+  font-size: 24px;
+  line-height: 34px;
+  width: 50%;
+  text-align: center;
+  margin: 0;
 }

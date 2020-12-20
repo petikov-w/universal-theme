@@ -3,7 +3,7 @@
 <footer class="footer">
     <div class="container">
         <?php
-        if ( !is_page( 'thanksyou' )) {
+        if ( !is_page( 'thanksyou' ) && !is_404()) {
         ?>
             <div class="footer-form-wrapper">
                 <h3 class="footer-form-title"><?php echo __( 'Подпишитесь на нашу рассылку', 'universal' ) ?></h3>

@@ -26,7 +26,7 @@
 	        ] );
 	        // Вывод поля для поискового запроса
             ?>
-            <svg width="30" height="30" class="icon silver-icon earth">
+            <svg width="30" height="30" class="icon silver-icon gl-hidden">
                 <use xlink:href="<?php echo get_template_directory_uri().'/assets/images/sprite.svg#global'?>"></use>
             </svg>
 

@@ -77,7 +77,7 @@ $url_teacher=get_term_link(get_the_terms( get_the_ID(), 'teacher' )[0]->term_id,
 			sprintf(
 				wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'universal' ),
+					__( 'Читать далее<span class="screen-reader-text"> "%s"</span>', 'universal' ),
 					array(
 						'span' => array(
 							'class' => array(),

@@ -1,0 +1,29 @@
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.i-404 {
+  @include use_font($RobotoSlab, 200px);
+  line-height: 200px;
+  margin: 40px 0;
+  color: #0f41ab;
+}
+
+.e-404 {
+  @include use_font($LatoBlack, 50px);
+  line-height: 60px;
+  margin-bottom: 30px;
+  color: #ff0e0e;
+  letter-spacing: 2px;
+}
+
+.e-message {
+  font-size: 24px;
+  line-height: 34px;
+  width: 50%;
+  text-align: center;
+  margin: 0;
+}

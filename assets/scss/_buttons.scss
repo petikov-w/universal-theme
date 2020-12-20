@@ -17,6 +17,22 @@
     }
 }
 
+.button-404 {
+  @include use_font($LatoBlack,18px);
+  line-height: 25px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #0F41AB;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin: 30px 0 90px 0;
+  &:hover, &:focus, &:visited {
+    color: #fff;
+  }
+}
+
 
 .wpcf7-form .more {
   display: flex;
